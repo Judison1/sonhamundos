@@ -1,0 +1,26 @@
+.login{
+	border-radius: 10px;
+	background: #fff;
+	overflow: hidden;
+	margin-top: 50px;
+	padding-left: 30px !important;
+	padding-right: 30px !important;
+	padding-bottom: 20px !important;
+
+}
+.header-login{
+	background: #428bca;
+	margin-top: -20px;
+	margin-left: -30px;
+	margin-right: -30px;
+	margin-bottom: 20px;
+	padding: 20px;
+	color:#fff;
+}
+.login input[type="text"],.login input[type="password"]{
+	padding: 20px;
+	margin-bottom: 20px;
+}
+.login input[name="relembrar"]{
+	margin-bottom: 20px;
+}

@@ -1,0 +1,57 @@
+.container-fluid{
+	background: #6B6B6B;
+}
+.header{
+	background: #31bc86;
+	color: #fff;
+	height: 65px;
+	overflow: hidden;
+}
+.logout{
+	background: #6B6B6B;
+	height: 65px;
+	padding-top: 20px;
+}
+.logout a{
+	color: #fff !important;
+	overflow: hidden;
+	padding: 20px 10px;
+	font-size: 1.75rem;
+	text-decoration: none !important;
+}
+#menu{
+	padding: 0px !important;
+}
+#menu ul{
+	padding: 0;
+	margin: 0;
+}
+#menu ul li{
+	border-bottom: 1px #777 solid;
+}
+#menu ul li a{
+	padding: 15px 1.5rem !important;
+	display: block;
+	overflow: hidden;
+	margin: 0;
+	color: #fff;
+	text-decoration: none;
+	font-size: 1.5rem;
+}
+#menu ul li a:hover{
+	color:  #31bc86;
+}
+#container{
+	background: #fff;
+	padding: 3rem;
+	overflow: hidden;
+	display: block;
+}
+.painel-top{
+	border-bottom: 1px #ccc solid;
+	padding-bottom: 10px !important;
+	margin-bottom: 40px;
+}
+.painel-top h3{
+	margin: 5px 0 0 0;
+}
