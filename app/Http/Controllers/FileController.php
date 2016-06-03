@@ -106,6 +106,15 @@ class FileController extends Controller
 		return $response;
 	}
 
+	public static function saveImageBase64($base64_string, $directory)
+	{
+		$ifp = fopen( $directory, "wb" ); 
+    	$data = explode(',', $base64_string);
+		fwrite($ifp, base64_decode($data[1])); 
+    	fclose( $ifp ); 
+    	return( $directory ); 
+	}
+
 	public function getName()
 	{
 		return $this->name();

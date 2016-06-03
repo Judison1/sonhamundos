@@ -57,11 +57,14 @@ class ArticleController extends Controller
    public function getEditarImagem($id)
    {
       $article = Article::find($id);
-      return view('article.editImg', ['article' => $article]);
+      return view('articles.editImg', ['article' => $article]);
    }
 
    public function postEditarImagem(Request $request, $id)
    {
-      echo $request->input('img');
+      $img = $request->input('img');
+      $article = Article::find($id);
+      $file = FileController::saveImageBase64($img, public_path("img/$article->path/$article->filename"));
+      var_dump($file);
    }
 }
