@@ -7,17 +7,17 @@ class PublicController extends Controller
 {
 	public function index()
 	{
-		$headlines = Article::where('headline', '=', 1)
+		$headlines = Article::where('headline', '=', 0)
 			->where('status', '=', 1)
 			->take(3)
 			->get();
 		$articles1 = Article::where('headline', '=',0)
 			->where('status', '=', 1)
-			->take(3)
+			->take(2)
 			->get();
 		$articles2 = Article::where('headline', '=',0)
 			->where('status', '=', 1)
-			->skip(3)
+			->skip(2)
 			->take(3)
 			->get();
 

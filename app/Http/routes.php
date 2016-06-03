@@ -29,6 +29,7 @@ Route::controller('/admin/categoria', 'CategoryController', [
 ]);
 Route::controller('/admin/artigo', 'ArticleController', [
 	'getCadastro' 	=> 'article.register',
+	'getEditarImagem' 	=> 'article.editImg',
 	// 'getIndex' 		=> 'article.list',
 	// 'getAlterar' 	=> 'article.update',
 	// 'deleteDeletar' => 'article.delete',

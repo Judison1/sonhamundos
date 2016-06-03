@@ -8,21 +8,19 @@
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
+    <?php $indicator = 0; ?>
     @foreach($newArticles2 as $art)
-      <a href="{{ route('articles.view', ['title' => str_slug($art->title), 'id' => $art->id ]) }}">
-
-        @include('articles_inner')
-
-      </a>
+        @include('articles._inner')
+        <?php $indicator++; ?>
     @endforeach
   </div>
 
   <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+  <a class="left carousel-control" href="#carousel{{$name}}" role="button" data-slide="prev">
     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+  <a class="right carousel-control" href="#carousel{{$name}}" role="button" data-slide="next">
     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>

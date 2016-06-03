@@ -8,6 +8,7 @@ use App\Article;
 use App\Category;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Controllers\FileController;
 
 class ArticleController extends Controller
 {
@@ -24,12 +25,43 @@ class ArticleController extends Controller
         'content' 	=> 'required'
     	]);
 
+
     	$article = new Article;
     	$article->title 		= $request->input('title');
     	$article->synthesis 	= $request->input('synthesis');
     	$article->content 	= $request->input('content');
-    	$article->path 	= 'default';
-    	$article->filename 	= '1.jpg';
-    	echo $article->save();
+    	
+    	if($article->save()){
+            if(!($request->hasFile('filename')))
+                return back()->with('errors', 'filename não está na requisição');
+
+            $fileRequest = $request->file('filename');
+            $name = $article->id . '-' . str_slug($article->title);
+            $path = public_path('img/articles');
+
+            $File = new FileController($name, $path, $fileRequest);
+            
+            $File->validation(['jpeg','jpg','png','gif']);
+
+            if($File->save(720)) {
+               $article->path       =  'articles';
+               $article->filename   =  $File->getFilename();
+               $article->save();
+
+               return redirect()->route('article.editImg',['id'=> $article->id]);
+            } else 
+               return back()->with('errors',"Não foi possível salvar o arquivo!"); 
+        }
 	}
+
+   public function getEditarImagem($id)
+   {
+      $article = Article::find($id);
+      return view('article.editImg', ['article' => $article]);
+   }
+
+   public function postEditarImagem(Request $request, $id)
+   {
+      echo $request->input('img');
+   }
 }

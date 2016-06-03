@@ -6,15 +6,20 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/component.css') }}">
 	@yield('css')
-	<script src="{{ asset('js/jquery-1.12.3.min.js') }}"></script>
-	<script src="{{ asset('js/bootstrap.min.js') }}"></script>
-	<script src="{{ asset('js/modernizr.custom.js') }}"></script>
+	
 
 </head>
 <body>
 	<div class="container-fluid">
 		<header class="row">
-			<h1>Sonha Mundos</h1>
+			<h1 class="col-md-12">
+				<span class="glyphicon glyphicon-cloud col-md-1"> </span>
+				<span class="col-md-11">Sonha Mundos <small>Alpha</small>
+				</span>
+			</h1>
+			<div class="background row"></div>
+			
+
 		</header>
 
 		<nav class="cbp-hsmenu-wrapper row" id="cbp-hsmenu-wrapper">
@@ -62,6 +67,9 @@
 	</div>
 	
 </body>
+	<script src="{{ asset('js/jquery-1.12.3.min.js') }}"></script>
+	<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+	<script src="{{ asset('js/modernizr.custom.js') }}"></script>
 	<script src="{{ asset('js/cbpHorizontalSlideOutMenu.min.js') }}"></script>
 	@yield('js')
 	<script type="text/javascript">

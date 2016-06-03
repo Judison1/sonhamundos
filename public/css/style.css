@@ -1,6 +1,29 @@
 header{
-	padding: 40px;
-	background: url(/img/weather.png);
+	/*padding: 40px;*/
+	height: 200px;
+	overflow: hidden;
+}
+header .background{
+	/*position: fixed;*/
+	top: 0;
+	height: 400px;
+	/*overflow: hidden;*/
+	background: url(/img/capa.jpeg);
+	background-size: 100% auto;
+	-webkit-filter: blur(3px);
+	-moz-filter: blur(3px);
+	-o-filter: blur(3px);
+	-ms-filter: blur(3px);
+	filter: blur(3px);
+	z-index: 0;
+}
+header h1{
+	position: absolute !important;
+	top: 0;
+	color: #fff;
+	font-size: 5rem;
+	z-index: 1;
+	padding: 50px;
 }
 footer{
 	background: #444;
@@ -12,4 +35,10 @@ footer{
 	padding-top: 40px;
 	padding-bottom: 40px;
 
+}
+.carousel{
+	margin-bottom: 17px;
+}
+.most-viewed{
+	margin-top: 20px;
 }

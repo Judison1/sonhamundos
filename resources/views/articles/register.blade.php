@@ -14,6 +14,10 @@
 					<input class="form-control" type="text" name="title" placeholder="Nome do Artigo" required />
 			</div>
 			<div class="form-group col-md-12">
+					<label class="control-label">Capa:</label>
+					<input type="file" name="filename" accept="image/*" required>
+			</div>
+			<div class="form-group col-md-12">
 					<label class="control-label">Sintese:</label>
 					<textarea name="synthesis" class="form-control" maxlength="255" cols="4"></textarea>
 			</div>
@@ -25,7 +29,7 @@
 
 			<input type="hidden" name="_token" value="{{ csrf_token() }}" />
 			<div class="form-group col-md-12 text-center">
-				<input type="submit" value="Cadastrar" class="btn btn-primary center-block">
+				<input type="submit" value="Salvar e Avançar" class="btn btn-success center-block">
 			</div>
 		</form>		
 	</div>
