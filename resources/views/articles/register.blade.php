@@ -14,8 +14,8 @@
 					<input class="form-control" type="text" name="title" placeholder="Nome do Artigo" required />
 			</div>
 			<div class="form-group col-md-6 col-xs-12">
-					<label class="control-label">Categoria:</label>
-					<select name="categories" class="form-control">
+					<label class="control-label">Categoria: <small class="text-info">(Permitido selecionar mais de uma)</small></label>
+					<select name="categories[]" class="categories" multiple="multiple">
 						<option>Selecione as Categorias</option>
 						@foreach ($cats as $cat)
 							<option value="{{ $cat->id }}">{{ $cat->name }}</option>
@@ -23,12 +23,16 @@
 					</select>
 			</div>
 			<div class="form-group col-md-6 col-xs-12">
-					<label class="control-label">Tags:</label>
-					<input class="form-control" type="text" name="title" placeholder="Insira as tags" required />
+					<label class="control-label">Tags: </label>
+					<select name="tags[]" class="tags" multiple="multiple">
+						<option value="1">tettsts</option>
+						<option value="2">tetts</option>
+						<option value="3">tevcssts</option>
+					</select>
 			</div>
 			<div class="form-group col-md-6 col-xs-12">
-					<label class="control-label">Capa:</label>
-					<input type="file" name="filename" accept="image/*" required>
+					<label class="control-label">Capa: <!-- <small class="text-danger">(Apenas imagens com extensões: .jpeg, .jpg, .png, .gif e .webp)</small> --></label>
+					<input type="file" name="filename" accept=".jpeg, .jpg, .gif, .png" required>
 			</div>
 			
 			<div class="form-group col-md-12">
@@ -50,12 +54,42 @@
 @endsection
 @section('css')
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/summernote.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/selectize.css') }}">
 @stop
 @section('js')
+	<script src="{{ asset('js/standalone/selectize.min.js') }}"></script>
 	<script src="{{ asset('js/summernote.min.js') }}"></script>
 	<script src="{{ asset('js/summernote-pt-BR.js') }}"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
+			$(".categories").selectize({
+				plugins: ['remove_button'],
+				maxItems: "none",
+				hideSelected: 'true',
+				render: {
+			      item: function(data, escape) {
+			         return '<div>"' + escape(data.text) + '"</div>';
+			      }
+
+			   },
+			   onDelete: function(values) {
+			       return true;
+		    	}
+			});
+			$(".tags").selectize({
+				plugins: ['remove_button'],
+				maxItems: "none",
+			   create: true,
+			   hideSelected: 'true',
+			   render: {
+			      item: function(data, escape) {
+			         return '<div>"' + escape(data.text) + '"</div>';
+			      }
+			   },
+			   onDelete: function(values) {
+			       return true;
+		    	}
+			});
 			$('.summernote').summernote({
 				minHeight: 400,             // set minimum height of editor
   				maxHeight: 1000,

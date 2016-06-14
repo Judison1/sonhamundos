@@ -24,7 +24,7 @@ class CreateCategoryArticleTable extends Migration
                 ->on('category');
             $table->foreign('article_id')
                 ->references('id')
-                ->on('category');
+                ->on('articles');
         });
     }
 

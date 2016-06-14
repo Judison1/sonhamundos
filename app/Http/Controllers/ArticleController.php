@@ -4,6 +4,7 @@
 * 
 */
 namespace App\Http\Controllers;
+use DB;
 use App\Article;
 use App\Category;
 use App\Http\Controllers\Controller;
@@ -21,7 +22,9 @@ class ArticleController extends Controller
 	{
 		$this->validate($request, [
         'title' 		=> 'required|max:255',
-        'synthesis' 	=> 'required|max:255',
+        'synthesis'  => 'required|max:255',
+        'categories' 	=> 'required',
+        'filename'   => 'required',
         'content' 	=> 'required'
     	]);
 
@@ -30,8 +33,19 @@ class ArticleController extends Controller
     	$article->title 		= $request->input('title');
     	$article->synthesis 	= $request->input('synthesis');
     	$article->content 	= $request->input('content');
-    	
+
     	if($article->save()){
+         // categories
+         $categories = array();
+         foreach ($request->input('categories') as $category) {
+           $categories[] = array(
+               'article_id'   => $article->id,
+               'category_id'  => $category
+            );
+         }
+         DB::table('category_article')->insert($categories);
+
+         // upload and save photo 
             if(!($request->hasFile('filename')))
                 return back()->with('errors', 'filename não está na requisição');
 
