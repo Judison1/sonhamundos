@@ -14,6 +14,18 @@
 Route::get('/', [
     'as' => 'public.index', 'uses' => 'PublicController@index'
 ]);
+Route::get('/artigo/{title}/{id}', [
+    'as' => 'public.view', 'uses' => 'PublicController@view'
+]);
+Route::get('/categoria/{title}/{id}', [
+    'as' => 'public.category', 'uses' => 'PublicController@category'
+]);
+Route::get('/autor/{name}/{id}', [
+    'as' => 'public.author', 'uses' => 'PublicController@author'
+]);
+Route::get('/teste', [
+    'as' => 'admin.teste', 'uses' => 'AdminController@teste'
+]);
 Route::get('/admin/login', [
     'as' => 'admin.login', 'uses' => 'UserController@getAuthenticate'
 ]);
@@ -30,7 +42,7 @@ Route::controller('/admin/categoria', 'CategoryController', [
 Route::controller('/admin/artigo', 'ArticleController', [
 	'getCadastro' 	=> 'article.register',
 	'getEditarImagem' 	=> 'article.editImg',
-	// 'getIndex' 		=> 'article.list',
+	'getIndex' 		=> 'article.list',
 	// 'getAlterar' 	=> 'article.update',
 	// 'deleteDeletar' => 'article.delete',
 ]);

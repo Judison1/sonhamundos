@@ -13,6 +13,15 @@ use App\Http\Controllers\FileController;
 
 class ArticleController extends Controller
 {
+
+   public function getIndex()
+   {
+      $articles = Article::select('articles.id','articles.title','articles.headline', 'articles.status','users.name')
+         ->leftJoin('users', 'users.id', '=', 'articles.user_id')
+         ->paginate(15);
+      return view('articles.list', ['articles' => $articles]);
+   }
+
 	public function getCadastro()
 	{
 		$cats = Category::all();
@@ -21,13 +30,14 @@ class ArticleController extends Controller
 	public function postCadastro(Request $request)
 	{
 		$this->validate($request, [
-        'title' 		=> 'required|max:255',
-        'synthesis'  => 'required|max:255',
+        'title' 	    => 'required|max:255',
+        'synthesis'     => 'required|max:255',
         'categories' 	=> 'required',
-        'filename'   => 'required',
-        'content' 	=> 'required'
+        'filename'      => 'required',
+        'content' 	    => 'required'
     	]);
-
+        
+        
 
     	$article = new Article;
     	$article->title 		= $request->input('title');
@@ -57,8 +67,10 @@ class ArticleController extends Controller
             
             $File->validation(['jpeg','jpg','png','gif']);
 
-            if($File->save(720)) {
-               $article->path       =  'articles';
+            if($File->save(920)) {
+            
+            $File->validation(['jpeg','jpg','png','gif']);
+              $article->path       =  'articles';
                $article->filename   =  $File->getFilename();
                $article->save();
 
@@ -78,7 +90,10 @@ class ArticleController extends Controller
    {
       $img = $request->input('img');
       $article = Article::find($id);
-      $file = FileController::saveImageBase64($img, public_path("img/$article->path/$article->filename"));
-      var_dump($file);
+      $directory = public_path("img/$article->path/$article->filename");
+      $files = new FileController($directory);
+      $files->saveImageBase64($img);
+      $files->save(320, true);
+      return redirect()->route('article.list');
    }
 }

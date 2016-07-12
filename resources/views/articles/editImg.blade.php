@@ -26,10 +26,10 @@
 		
 		var basic = $('.teste').croppie({
 		    viewport: {
-		        width: 720,
-		        height: 480
+		        width: 750,
+		        height: 475
 		    },
-		    boundary: { width: 720, height: 480 },
+		    boundary: { width: 750, height: 475 },
 		});
 		basic.croppie('bind', {
 		    url: '{{ asset("img/$article->path/$article->filename") }}',

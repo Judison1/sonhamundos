@@ -23,50 +23,75 @@ class FileController extends Controller
 	protected $extension;
 	protected $directory;
 
+	function __construct(){
+		$a = func_get_args();
+        $i = func_num_args();
+        if (method_exists($this,$f='__construct'.$i)) {
+            call_user_func_array(array($this,$f),$a);
+        } 
+	}
 	function __construct1($directory)
 	{
-		// $this->filename = $filename;
-		// $this->path = $path;
+		if(file_exists($directory)){
+			$this->directory = $directory;
+			$path_parts = pathinfo($this->directory);
+			$this->name = $path_parts['filename'];
+			$this->path = $path_parts['dirname'];
+			$this->filename = $path_parts['basename'];
+			$this->extension = $path_parts['extension'];
+		} else {
+			echo "Diretório não existe!";
+		}
 	}
-	function __construct2($filename, $path)
+	function __construct2($directory, $path)
 	{
-		$this->filename = $filename;
-		$this->path = $path;
+		if(file_exists($directory)){
+			$this->directory = $directory;
+			$path_parts = pathinfo($this->directory);
+			$this->name = $path_parts['filename'];
+			$this->path = $path;
+			$this->filename = $path_parts['basename'];
+			$this->extension = $path_parts['extension'];
+		}
 	}
-	function __construct($name, $path, $file)
+	function __construct3($name, $path, $file)
 	{
 		$this->name = $name;
 		$this->path = $path;
 		$this->file = $file;
-		var_dump($this->file);
+		$this->extension = $this->file->getClientOriginalExtension();
+		$this->filename = $this->name . '.' . $this->extension;
 	}
 
-	public function save($new_width = false)
+	public function save($new_width = false, $thumbnail = false)
 	{
-		if($this->validation()){
-			$this->filename = $this->name . '.' . $this->extension;
-			$this->directory = $this->path . '/' . $this->filename;
-
+		
+		if(is_null($this->file)){
+			$img = Image::make($this->directory);
+		} else {
 			$img = Image::make($this->file->getRealPath());
+		}
+		if($thumbnail) {
+			$this->directory = $this->path . '/thumbnail/' . $this->filename;
+		} else {
+			$this->directory = $this->path . '/' . $this->filename;
+		}
+		if($new_width){
 			$width = $img->width();
 			$height = $img->height();
-			if($new_width){
-				if($width > $new_width){
-					$prop_width = $width / $new_width;
-					$width = $new_width;
-					$height = $height / $prop_width;
-	       	}
-        	}
-			$img->resize($width,$height);
+			if($width > $new_width){
+				$prop_width = $width / $new_width;
+				$width = $new_width;
+				$height = $height / $prop_width;
+       	}
+       	$img->resize($width,$height);
+     	}
+		
+		if($img->save($this->directory)){
 
-			if($img->save($this->directory)){
-
-				$response = true;
-				
-			} else {
-				$response = false;
-			}
-		} else{
+			$response = true;
+			
+		} else {
 			$response = false;
 		}
 		return $response;
@@ -80,15 +105,12 @@ class FileController extends Controller
 		} else {
 			if(!($this->file->isValid())){
 				$response = false;
-				echo "tets";
+				// echo "tets";
 			}
 			if(!is_dir($this->path)){
 				$response = false;
-				echo $this->path;
+				// echo $this->path;
 			}
-		
-
-			$this->extension = $this->file->getClientOriginalExtension();
 			
 			if($extensions){
 				if(is_array($extensions)){
@@ -97,7 +119,6 @@ class FileController extends Controller
 							$response = true;
 						else{
 							$response = false;
-							echo "ac";
 						}
 					}
 				}
@@ -106,15 +127,14 @@ class FileController extends Controller
 		return $response;
 	}
 
-	public static function saveImageBase64($base64_string, $directory)
+	public function saveImageBase64($base64_string)
 	{
-		$ifp = fopen( $directory, "wb" ); 
+		$ifp = fopen($this->directory, "wb" ); 
     	$data = explode(',', $base64_string);
 		fwrite($ifp, base64_decode($data[1])); 
     	fclose( $ifp ); 
-    	return( $directory ); 
+    	return( $this->directory ); 
 	}
-
 	public function getName()
 	{
 		return $this->name();
@@ -130,5 +150,9 @@ class FileController extends Controller
 	public function getFile()
 	{
 		return $this->file;
+	}
+	public function getDirectory()
+	{
+		return $this->directory;
 	}
 }

@@ -1,49 +1,87 @@
 <?php
 namespace App\Http\Controllers;
 use App\Article;
+use App\Category;
 use App\Http\Controllers\Controller;
 
 class PublicController extends Controller
 {
 	public function index()
 	{
-		$headlines = Article::where('headline', '=', 0)
+		$headlines = Article::select('id','title','synthesis','filename','path')
+			->where('headline', '=', 1)
 			->where('status', '=', 1)
 			->take(3)
 			->get();
-		$articles1 = Article::where('headline', '=',0)
+		$articles1 = Article::select('id','title','filename','path')
+			->where('headline', '=',0)
 			->where('status', '=', 1)
 			->take(2)
 			->get();
-		$articles2 = Article::where('headline', '=',0)
+		$articles2 = Article::select('id','title','filename','path')
+			->where('headline', '=',0)
 			->where('status', '=', 1)
 			->skip(2)
 			->take(3)
 			->get();
 
-		$articles = Article::where('headline', '=', 0)
+		$articles = Article::select('id','title','synthesis','filename','path', 'views')
 			->where('status', '=', 1)
+			->orderBy('updated_at','DESC')
 			->paginate(15);
 
-		$most = $this->mostViewed();
+		
 		$var = array(
 			'newHeadlines' => $headlines,
 			'newArticles1'	=> $articles1,
 			'newArticles2'	=> $articles2,
 			'articles'	=> $articles,
-			'mostViewed'	=> $most
+
+			'mostViewed'	=> $this->mostViewed(),
+			'categories'	=> $this->categories()
 		);
 
 		return view('index', $var);
 
 	}
 
+	public function view($title, $id){
+		$article = Article::find($id);
+		$author = $article->user;
+		$categories = $article->categories();
+
+		$var = array(
+			'article' => $article , 
+			'author' => $author, 
+			'categories' => $categories,
+			'mostViewed' => $this->mostViewed(),
+			'categories'	=> $this->categories()
+		);	
+		return view('articles.view', $var);
+	}
+	public function category($name, $id)
+	{
+		# code...
+	}
+	public function author($name, $id)
+	{
+		# code...
+	}
+
 	public function mostViewed()
 	{
 		$articles = Article::where('status', '=', 1)
 			->orderBy('views', 'desc')
-			->take(6)
+			->take(8)
 			->get();
 		return $articles;
 	}
+
+	public function categories()
+	{
+		$categories = Category::select('id','name','filename')
+			->get();
+		return $categories;
+	}
+	
 }

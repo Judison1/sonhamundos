@@ -110,6 +110,7 @@
 	z-index: 0;
 	text-align: center; /* for aligning the sub items */
 	visibility: hidden;
+	background: rgba(0,0,0, 0.7);
 }
 
 .cbp-hssubmenu:before, 
@@ -131,6 +132,7 @@
 	-webkit-transition: opacity 0.1s 0s;
 	-moz-transition: opacity 0.1s 0s;
 	transition: opacity 0.1s 0s;
+	padding: 1.5rem;
 }
 
 /* First 6 items don't have upper box shadow */
@@ -151,7 +153,7 @@
 .cbp-hssubmenu > li a {
 	display: block;
 	text-align: center;
-	color: #a2a2a2;
+	color: #47a3da;
 	outline: none;
 	padding: 2em 1em 1em 1em;
 }
