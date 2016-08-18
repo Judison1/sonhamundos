@@ -18,6 +18,7 @@ class ArticleController extends Controller
    {
       $articles = Article::select('articles.id','articles.title','articles.headline', 'articles.status','users.name')
          ->leftJoin('users', 'users.id', '=', 'articles.user_id')
+         ->orderBy('articles.updated_at', 'DESC')
          ->paginate(15);
       return view('articles.list', ['articles' => $articles]);
    }
@@ -31,18 +32,16 @@ class ArticleController extends Controller
 	{
 		$this->validate($request, [
         'title' 	    => 'required|max:255',
-        'synthesis'     => 'required|max:255',
         'categories' 	=> 'required',
         'filename'      => 'required',
-        'content' 	    => 'required'
     	]);
         
         
 
     	$article = new Article;
     	$article->title 		= $request->input('title');
-    	$article->synthesis 	= $request->input('synthesis');
-    	$article->content 	= $request->input('content');
+    	$article->synthesis = "";
+    	$article->content 	= "";
 
     	if($article->save()){
          // categories
@@ -74,26 +73,101 @@ class ArticleController extends Controller
                $article->filename   =  $File->getFilename();
                $article->save();
 
-               return redirect()->route('article.editImg',['id'=> $article->id]);
+               return redirect()->route('article.edit',['id'=> $article->id]);
             } else 
                return back()->with('errors',"Não foi possível salvar o arquivo!"); 
         }
 	}
 
-   public function getEditarImagem($id)
+   public function getEditar($id)
    {
       $article = Article::find($id);
-      return view('articles.editImg', ['article' => $article]);
+      $categories = Category::all();
+      $cats = $article->categories;
+      $newCats = array();
+      foreach ($categories as $cat) {
+        $check = false;
+        foreach ($cats as $c) {
+          if($cat->id == $c->id){
+            $check = true;
+          }
+        }
+        if($check) {
+          $newCats[] = array(
+            'id'  =>  $cat->id,
+            'name' => $cat->name,
+            'status' => 'selected="selected"'
+          );
+        } else {
+          $newCats[] = array(
+            'id'  =>  $cat->id,
+            'name' => $cat->name,
+            'status' => ''
+          );
+        }
+      }
+      
+      return view('articles.edit', ['article' => $article, 'categories' => $newCats]);
    }
 
-   public function postEditarImagem(Request $request, $id)
+   public function postEditar(Request $request, $id)
    {
-      $img = $request->input('img');
+      $this->validate($request, [
+        'title'       => 'required|max:255',
+        'categories'  => 'required',
+      ]);
+        
       $article = Article::find($id);
+      $article->title  = $request->input('title');
+
+      if($article->save()){
+         // categories
+         $categories = array();
+         foreach ($request->input('categories') as $category) {
+           $categories[] = array(
+               'article_id'   => $article->id,
+               'category_id'  => $category
+            );
+         }
+         $catArt = DB::table('category_article');
+         $catArt->where('article_id', '==', $article->id)->delete();
+         $catArt->insert($categories);
+
+      $img = $request->input('img');
+      
       $directory = public_path("img/$article->path/$article->filename");
       $files = new FileController($directory);
       $files->saveImageBase64($img);
       $files->save(320, true);
-      return redirect()->route('article.list');
+      return redirect()->route('article.edit.content', ['id' => $id]);
    }
+ }
+
+  public function getEditarConteudo($id)
+  {
+      $article = Article::find($id);
+      
+      return view('articles.edit_content', ['article' => $article]);
+  }
+
+  public function postEditarConteudo(Request $request, $id)
+  {
+      $article = Article::find($id);
+
+      $this->validate($request, [
+        'synthesis' => 'required|max:255',
+        'content'   => 'required'
+      ]);
+
+      $article->synthesis = $request->input('synthesis');
+      $article->content   = $request->input('content');
+      if($request->input('publish') == 1) {
+        $article->status = true;
+      }
+      if($article->save()) {
+        return redirect()->route('article.list')->with('success',"Artigo $article->title foi salvo com sucesso!");
+      } else {
+        return back()->with('errors', "Erro ao salvar artigo!");
+      }
+  }
 }

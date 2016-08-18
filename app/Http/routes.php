@@ -41,8 +41,13 @@ Route::controller('/admin/categoria', 'CategoryController', [
 ]);
 Route::controller('/admin/artigo', 'ArticleController', [
 	'getCadastro' 	=> 'article.register',
-	'getEditarImagem' 	=> 'article.editImg',
+	'getEditar' 	=> 'article.edit',
+	'getEditarConteudo' 	=> 'article.edit.content',
 	'getIndex' 		=> 'article.list',
 	// 'getAlterar' 	=> 'article.update',
 	// 'deleteDeletar' => 'article.delete',
 ]);
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');

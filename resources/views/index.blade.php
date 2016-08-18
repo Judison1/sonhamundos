@@ -9,11 +9,12 @@
 
 		{{-- Manchetes --}}
 		<div class="col-xs-12 col-md-8">
+
 			<div id="carousel_news_headlines" class="carousel slide" data-ride="carousel">
 				<?php $name = "_news_headlines"?>
 				@include('articles._news_headlines')
-			<!-- </div> -->
 			</div>
+			
 		</div>
 
 		{{-- Mais Recentes --}}
@@ -43,12 +44,12 @@
 	
 	<!-- Todos os artigos -->
 
-	<section class="row ">
+	<section class="row">
 		{{-- Mais visualizados --}}
 		<div class="col-xs-12 most-viewed">
+			<h2 class="text-center section-title">Mais visualizados</h2>
 			<div class="row">
 				
-				<h2 class="text-center section-title">Mais visualizados</h2>
 				@foreach($mostViewed as $art)
 					<div class="col-xs-12 col-sm-4 col-md-3 box-art">
 						@include('articles._article')
@@ -57,6 +58,7 @@
 
 			</div>
 		</div>
+
 		{{-- Todos os Artigos --}}
 		<div class="col-md-12 articles-all">
 			<div class="row">
@@ -69,10 +71,10 @@
 				@endforeach
 
 			</div>
+			{{-- Paginação --}}
 			{{ $articles->links() }}
 		</div>
 
-		
 	</section>
 @endsection
 

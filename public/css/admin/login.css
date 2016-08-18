@@ -1,3 +1,6 @@
+body {
+	background: #555 !important;
+}
 .login{
 	border-radius: 10px;
 	background: #fff;
@@ -6,7 +9,6 @@
 	padding-left: 30px !important;
 	padding-right: 30px !important;
 	padding-bottom: 20px !important;
-
 }
 .header-login{
 	background: #428bca;
@@ -17,7 +19,7 @@
 	padding: 20px;
 	color:#fff;
 }
-.login input[type="text"],.login input[type="password"]{
+.login input[type="email"],.login input[type="password"]{
 	padding: 20px;
 	margin-bottom: 20px;
 }

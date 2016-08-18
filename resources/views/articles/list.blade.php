@@ -23,7 +23,11 @@
 					<tr data-id="{{$article->id}}"  class="danger">
 					@endif
 						<td>{{ $article->id }}</td>
-						<td>{{ $article->title }}</td>
+						<td>
+							<a href="{{ route('public.view', ['title' => str_slug($article->title), 'id' => $article->id ]) }}" target="_blank">
+								{{ $article->title }}
+							</a>
+						</td>
 						<td>
 							@if($article->status == true)
 								<input type="checkbox" name="status" checked="checked">
@@ -43,7 +47,7 @@
 						<td>
 							<div class="btn-group btn-group-justified" role="group" aria-label="...">
 								<div class="btn-group" role="group">
-								  <button href="#{{-- route('article.update', ['id' => $article->id]) --}}" type="button" class="btn btn-success btn-xs">Alterar</button>
+								  <button href="{{ route('article.edit', ['id' => $article->id]) }}" type="button" class="btn btn-success btn-xs">Alterar</button>
 								</div>
 								<div class="btn-group" role="group">
 								  <button type="button" class="btn btn-danger btn-xs btn-remove">Apagar</button>

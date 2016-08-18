@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Admin - @yield('title')</title>
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
+	{{-- <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}"> --}}
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/admin/style.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}">
 	@yield('css')
@@ -12,17 +12,17 @@
 </head>
 <body>
 	<div class="container-fluid">
-		<div class="row header">
+		<header class="row">
 			<div class="col-xs-8 col-sm-9 col-md-11">
 				<h3>Sonha Mundos</h3>
 			</div>
 			<div class="col-xs-4 col-sm-3 col-md-1 logout">
-				<a href="#">
+				<a href="{{ url('/logout') }}">
 				<i class="glyphicon glyphicon-off"></i>
 				<span>Sair</span>
 				</a>
 			</div>
-		</div>
+		</header>
 		<div class="row">
 			<nav class="col-xs-12 col-sm-4 col-md-3" id="menu">
 				<ul class="row">
@@ -59,7 +59,7 @@
 				@yield('container')
 			</div>
 		</div>
-		<footer class="row">
+		<footer class="row footer">
 			<p class="text-center">
 				Desenvolvido por Judison Godinho de Sousa
 			</p>
