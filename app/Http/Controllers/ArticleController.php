@@ -40,7 +40,9 @@ class ArticleController extends Controller
 
     	$article = new Article;
     	$article->title 		= $request->input('title');
+
       $article->user_id = Auth::user()->id;
+
     	$article->synthesis = "";
     	$article->content 	= "";
 
@@ -89,6 +91,7 @@ class ArticleController extends Controller
       $categories = Category::all();
       $cats = $article->categories;
 
+
       $newCats = array();
       foreach ($categories as $cat) {
 
@@ -115,6 +118,7 @@ class ArticleController extends Controller
                'status' => ''
             );
          }
+
       }
       
       return view('articles.edit', ['article' => $article, 'categories' => $newCats]);
@@ -123,6 +127,7 @@ class ArticleController extends Controller
    public function postEditar(Request $request, $id)
    {
       $this->validate($request, [
+
          'title'       => 'required|max:255',
          'categories'  => 'required',
       ]);
@@ -165,6 +170,7 @@ class ArticleController extends Controller
 
    public function postEditarConteudo(Request $request, $id)
    {
+
       $article = Article::find($id);
 
       $this->validate($request, [
