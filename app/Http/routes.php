@@ -26,23 +26,32 @@ Route::get('/autor/{name}/{id}', [
 Route::get('/teste', [
     'as' => 'admin.teste', 'uses' => 'AdminController@teste'
 ]);
-Route::get('/admin/login', [
+Route::get('/admin', [
     'as' => 'admin.login', 'uses' => 'UserController@getAuthenticate'
 ]);
-Route::post('/admin/login', [
+Route::post('/admin', [
     'as' => 'admin.postLogin', 'uses' => 'UserController@authenticate'
 ]);
 
-Route::controller('/admin/categoria', 'CategoryController', [
-	'getCadastro' 	=> 'category.register',
-	'getIndex' 		=> 'category.list',
-	'getAlterar' 	=> 'category.update',
-	'deleteDeletar' => 'category.delete',
-]);
-Route::controller('/admin/artigo', 'ArticleController', [
-	'getCadastro' 	=> 'article.register',
-	'getEditarImagem' 	=> 'article.editImg',
-	'getIndex' 		=> 'article.list',
-	// 'getAlterar' 	=> 'article.update',
-	// 'deleteDeletar' => 'article.delete',
-]);
+Route::group(['middleware' => ['auth']], function () {
+
+	Route::controller('/admin/categoria', 'CategoryController', [
+		'getCadastro' 	=> 'category.register',
+		'getIndex' 		=> 'category.list',
+		'getAlterar' 	=> 'category.edit',
+		'deleteDeletar' => 'category.delete',
+	]);
+	Route::controller('/admin/artigo', 'ArticleController', [
+		'getCadastro' 	=> 'article.register',
+		'getEditar' 	=> 'article.edit',
+		'getEditarConteudo' 	=> 'article.edit.content',
+		'getIndex' 		=> 'article.list',
+		// 'getAlterar' 	=> 'article.update',
+		// 'deleteDeletar' => 'article.delete',
+	]);
+
+});
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');

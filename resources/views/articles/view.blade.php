@@ -24,8 +24,10 @@
 						<time pubdate="pubdate"> {{ date_format($article->updated_at, 'd/m/Y H:i') }}</time>
 					</div>
 				</div>
-
-				<img src="{{ asset('img/' . $article->path . '/' . $article->filename) }}" alt="{{ $article->title }} " class="img-responsive">
+				<div class="row">
+					<img src="{{ asset('img/' . $article->path . '/' . $article->filename) }}" alt="{{ $article->title }} " class="col-md-12">
+				</div>
+				
 			</header>
 			{{-- Conteudo do Artigo --}}
 			<div class="article-content">

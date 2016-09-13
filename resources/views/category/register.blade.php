@@ -8,6 +8,7 @@
 
 @section('container')
 	<div class="row">
+		@include('_errors')
 		<form method="POST" enctype="multipart/form-data" class="form-horizontal" >
 			<div class="form-group col-md-6">
 				<div class="col-md-12">

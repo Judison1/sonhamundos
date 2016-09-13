@@ -23,7 +23,7 @@
 
 /* 100% width bar for menu */
 .cbp-hsinner {
-	background: #47a3da;
+	background: #568bce;
 	position: relative;
 	z-index: 100;
 }
@@ -59,7 +59,7 @@
 .no-touch .cbp-hsmenu > li > a:hover,
 .no-touch .cbp-hsmenu > li > a:focus,
 .cbp-hsmenu > li.cbp-hsitem-open > a {
-	color: #02639d;
+	color: #ccc;
 	text-decoration: none;
 }
 
@@ -110,7 +110,7 @@
 	z-index: 0;
 	text-align: center; /* for aligning the sub items */
 	visibility: hidden;
-	background: rgba(0,0,0, 0.7);
+	background: rgba(45,45,45, 0.95);
 }
 
 .cbp-hssubmenu:before, 
@@ -167,7 +167,7 @@
 	border: none;
 	outline: none;
 	display: inline-block;
-	margin: 0;
+	margin: 0 0.75rem;
 	max-width: 100%;
 	-webkit-transition: opacity 0.2s;
 	-moz-transition: opacity 0.2s;
@@ -315,6 +315,6 @@
 
 	.cbp-hssubmenu > li a span {
 		min-height: 0;
-		margin: 0;
+		margin: 10;
 	}
 }

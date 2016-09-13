@@ -1,7 +1,7 @@
 .container-fluid{
 	background: #6B6B6B;
 }
-.header{
+header{
 	background: #31bc86;
 	color: #fff;
 	height: 65px;
@@ -54,4 +54,15 @@
 }
 .painel-top h3{
 	margin: 5px 0 0 0;
+}
+
+.crop-img{
+	background: #444;
+}
+
+.footer{
+	background: #444;
+	color: #fff;
+	padding-top: 40px;
+	padding-bottom: 40px;
 }

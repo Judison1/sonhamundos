@@ -23,6 +23,6 @@ class Article extends Model
    }
    public function categories()
    {
-   	return $this->belongsToMany('App\Article', 'category_article');
+   	return $this->belongsToMany('App\Category', 'category_article');
    }
 }

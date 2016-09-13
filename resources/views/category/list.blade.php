@@ -22,7 +22,7 @@
 						<td>{{ $cat->description }}</td>
 						<td>
 							<div class="col-sm-12 col-md-6">
-								<a href="{{ route('category.update', ['id' => $cat->id]) }}" class="btn btn-default">Alterar</a>
+								<a href="{{ route('category.edit', ['id' => $cat->id]) }}" class="btn btn-default">Alterar</a>
 							</div>
 							<div class="col-sm-12 col-md-6">
 								<a href="#remove" class="btn btn-danger btn-remove ">Remover</a>

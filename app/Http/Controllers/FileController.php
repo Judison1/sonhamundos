@@ -65,26 +65,45 @@ class FileController extends Controller
 
 	public function save($new_width = false, $thumbnail = false)
 	{
-		
+		// verifica se o arquivo já existe ou vai ser enviado
 		if(is_null($this->file)){
+
+			if (is_null($this->directory))
+				return false;
+
 			$img = Image::make($this->directory);
+
 		} else {
+
 			$img = Image::make($this->file->getRealPath());
+
 		}
+		// Verifica se tem miniatura
 		if($thumbnail) {
+
 			$this->directory = $this->path . '/thumbnail/' . $this->filename;
+
 		} else {
+
 			$this->directory = $this->path . '/' . $this->filename;
+
 		}
+
 		if($new_width){
+
 			$width = $img->width();
 			$height = $img->height();
+			// Calcula a proporção do tamanho
 			if($width > $new_width){
+
 				$prop_width = $width / $new_width;
 				$width = $new_width;
 				$height = $height / $prop_width;
+
        	}
+
        	$img->resize($width,$height);
+
      	}
 		
 		if($img->save($this->directory)){
@@ -92,34 +111,39 @@ class FileController extends Controller
 			$response = true;
 			
 		} else {
+
 			$response = false;
+
 		}
+
 		return $response;
 	}
 
 	public function validation($extensions = false)
 	{
 		$response = true;
+
 		if(is_null($this->file)){
+
 			$response = false;
+
 		} else {
-			if(!($this->file->isValid())){
+
+			if(!($this->file->isValid()))
+				$response = false;	
+
+			if(!is_dir($this->path))
 				$response = false;
-				// echo "tets";
-			}
-			if(!is_dir($this->path)){
-				$response = false;
-				// echo $this->path;
-			}
-			
+	
 			if($extensions){
 				if(is_array($extensions)){
+
+					$response = false;
 					foreach ($extensions as $extension) {
+
 						if($this->extension == $extension)
-							$response = true;
-						else{
-							$response = false;
-						}
+							$response = true;							
+
 					}
 				}
 			}
@@ -129,30 +153,60 @@ class FileController extends Controller
 
 	public function saveImageBase64($base64_string)
 	{
+
 		$ifp = fopen($this->directory, "wb" ); 
     	$data = explode(',', $base64_string);
 		fwrite($ifp, base64_decode($data[1])); 
-    	fclose( $ifp ); 
-    	return( $this->directory ); 
+    	fclose($ifp); 
+
+    	return($this->directory); 
+
+	}
+
+	/* Métodos de Acesso da Classe */
+	public function setName($name)
+	{
+		$this->name = $name;
 	}
 	public function getName()
 	{
 		return $this->name();
 	}
+
+	public function setFilename($filename)
+	{
+		$this->filename = $filename;
+	}
 	public function getFilename()
 	{
 		return $this->filename;
+	}
+
+	public function setPath($path)
+	{
+		$this->path = $path;
 	}
 	public function getPath()
 	{
 		return $this->path;
 	}
+
+	public function setFile($file)
+	{
+		$this->file = $file;
+	}
 	public function getFile()
 	{
 		return $this->file;
+	}
+
+	public function setDirectory($directory)
+	{
+		$this->directory = $directory;
 	}
 	public function getDirectory()
 	{
 		return $this->directory;
 	}
+
 }

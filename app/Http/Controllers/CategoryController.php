@@ -25,35 +25,40 @@ class CategoryController extends Controller
 		$name = $request->input('name');
 		$description = $request->input('description');
 
-		if($request->hasfile('filename')){
+		$cat = new Category;
+		$cat->name = $name;
+		$cat->description = $description;
 
-			$file = $request->file('filename');
-			$path = public_path('img/category');
-			$filename = $name . '.' .  $file->getClientOriginalExtension();
+		if($cat->save()){
 
-			if($file->isValid()){
+			if($request->hasfile('filename')){
 
-				$file->move($path, $filename);
-				
-				if(!file_exists($path . "/" . $filename)){
+				$fileRequest = $request->file('filename');
+				$path = public_path('img/category');
+				$filename = $cat->id . '-' . str_slug($cat->name);
 
-					return back()->with('errors','Arquivo não foi salvo!');
+				$file = new FileController($filename, $path, $fileRequest);
 
-				} else {
+				if($file->validation(['jpeg','jpg','png','gif'])) {
 
-					$cat = new Category;
-					$cat->name = $name;
-					$cat->description = $description;
-					$cat->filename = $filename;
-					$cat->save();
+					if($file->save(920)) {
 
-					return redirect()->route('category.list')->with('success', "Categoria $name cadastrada com sucesso!");
-				}
-			} else{
-				return back()->with('errors','Arquivo não é válido!');
-			}
-		} else {
-			return back()->with('errors', 'Erro ao enviar o arquivo.');
+						$cat->filename = $file->getFilename();
+
+						if($cat->save())
+							return redirect()->route('category.edit',['id'=> $cat->id]);
+						else
+							return back()->with('errors', 'Erro ao guardar imagem.');
+
+					} else
+						return back()->with('errors','Não foi possivel salvar a imagem');
+
+				} else
+					return back()->with('errors','Formato inválido ou o arquivo não existe.');
+
+			} else
+				return back()->with('errors', 'Erro ao enviar o arquivo.');
+			
 		}
 	}
 
@@ -70,32 +75,79 @@ class CategoryController extends Controller
 	}
 	public function postAlterar(Request $request){
 		$id = $request->input('id');
-		$cat = Category::find($id);
 		$name = $request->input('name');
 		$description = $request->input('description');
+		$imgBase64 = $request->input('img');
+
+		$cat = Category::find($id);
 		$cat->description = $description;
-		if($cat->name == $name){
-			if($request->hasfile('filename')){
-				$file = $request->file('filename');
-				if($this->saveFile($file, $name)){
-					$cat->filename = $name . '.' .  $file->getClientOriginalExtension();
-				} 
-			}
-		} else {
+
+		
+		if($cat->name != $name) {
+
 			$this->validate($request, [
 	        'name' => 'required|unique:category|max:255'
 	    	]);
-	    	$cat->name = $name;
-	    	if($request->hasfile('filename')){
-				$file = $request->file('filename');
-				if($this->saveFile($file, $name)){
-					unlink(public_path('img/category') . '/' . $cat->filename);
-					$cat->filename = $name . '.' .  $file->getClientOriginalExtension();
-				} 
-			}
+	    	$directory = public_path("img/category/$cat->filename");
+	    	$temp = pathinfo($directory);
+	    	$extension =  $path_parts['extension'];
+
+	    	$filename = $cat->id . '-' . str_slug($name) . '.' .  $extension;
+
+			rename($directory, public_path('img/category/' . $newfilename));
+
+			$cat->name = $name;
+	    	$cat->filename = $newfilename;
+
 		}
-		$cat->save();
-		return redirect()->route('category.list')->with('success', "Categoria $name alterada com sucesso!");
+
+		if($cat->save()) {
+
+			if($request->hasfile('filename')){
+
+				$fileRequest = $request->file('filename');
+				$path = public_path('img/category');
+				$filename = $cat->id . '-' . str_slug($cat->name);
+
+				$file = new FileController($filename, $path, $fileRequest);
+
+				if($file->validation(['jpeg','jpg','png','gif'])) {
+
+					unlink($path . '/' . $cat->filename);
+
+					if($file->save(920)) {
+
+						$cat->filename = $file->getFilename();
+
+						if($cat->save())
+							return redirect()
+								->route('category.edit',['id'=> $cat->id])
+								->with('success', "Escolha a área de recorte da imagem.");
+						else
+							return back()->with('errors', 'Erro ao guardar imagem.');
+
+					} else
+						return back()->with('errors','Não foi possivel salvar a imagem');
+
+				} else
+					return back()->with('errors','Formato inválido ou o arquivo não existe.');
+
+			} else {
+				
+				$directory = public_path("img/category/$cat->filename");
+         	$file = new FileController($directory);
+         	$file->saveImageBase64($imgBase64);
+
+         	if($file->save(320, true))
+         		return redirect()->route('category.list')->with('success', "Categoria $name alterada com sucesso!");
+         	else
+         		return back()->with('errors', 'Erro ao salvar o arquivo.');
+         	
+			}
+
+		} else
+			return back()->with('errors', 'Não foi possivel alterar a categoria.');
+
 	}
 
 	public function deleteDeletar(Request $request)

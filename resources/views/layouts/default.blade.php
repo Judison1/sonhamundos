@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="icon" type="image/x-icon" href="{{ asset('img/layout/logo.ico') }}" />
 	<title>@yield('title') | Sonha Mundos</title>
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}">
@@ -13,15 +14,8 @@
 	<div class="container-fluid">
 		<header class="row header">
 			<div class="container">
-				<h1 class="col-md-12">
-					<span class="glyphicon glyphicon-cloud col-md-1"> </span>
-					<span class="col-md-11">Sonha Mundos <small>Alpha</small>
-					</span>
-				</h1>
+				<img src="{{ asset('img/layout/topo.png') }}" class="img-responsive">
 			</div>
-			<div class="background row"></div>
-			
-
 		</header>
 
 		<nav class="cbp-hsmenu-wrapper row" id="cbp-hsmenu-wrapper">

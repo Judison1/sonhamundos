@@ -4,16 +4,92 @@
 		"selected_items":
 		[
 			[
-				"rg",
-				"rgba()"
+				"p",
+				"placeholder	Attr"
+			],
+			[
+				"ac",
+				"action	Attr"
+			],
+			[
+				"sat",
+				"status"
+			],
+			[
+				"sa",
+				"salvarepublicar"
+			],
+			[
+				"su",
+				"submit	.submit()"
+			],
+			[
+				"ari",
+				"article"
+			],
+			[
+				"art",
+				"article"
+			],
+			[
+				"article",
+				"article_id"
+			],
+			[
+				"ba",
+				"background"
 			],
 			[
 				"ca",
-				"category"
+				"categories"
 			],
 			[
 				"for",
-				"foreach	blade-foreach"
+				"for	blade-for"
+			],
+			[
+				"array_m",
+				"array_merge"
+			],
+			[
+				"ne",
+				"newCats"
+			],
+			[
+				"new",
+				"newCats"
+			],
+			[
+				"arr",
+				"array"
+			],
+			[
+				"fo",
+				"foreach	foreach …"
+			],
+			[
+				"cat",
+				"categories"
+			],
+			[
+				"if",
+				"if?	$… = ( … ) ? … : …"
+			],
+			[
+				"a",
+				"a	Tag"
+			],
+			[
+				"la",
+				"layout"
+			],
+			[
+				"im",
+				"img	Tag"
+			],
+			[
+				"rg",
+				"rgba()"
 			],
 			[
 				"fun",
@@ -36,20 +112,8 @@
 				"fun	function …"
 			],
 			[
-				"a",
-				"author"
-			],
-			[
 				"VA",
 				"var_dump"
-			],
-			[
-				"art",
-				"article"
-			],
-			[
-				"p",
-				"p	Tag"
 			],
 			[
 				"he",
@@ -72,20 +136,12 @@
 				"border"
 			],
 			[
-				"fo",
-				"font-size"
-			],
-			[
 				"mos",
 				"mostViewed"
 			],
 			[
 				"ar",
 				"article"
-			],
-			[
-				"im",
-				"important"
 			],
 			[
 				"wi",
@@ -140,10 +196,6 @@
 				"producaoEfetiva"
 			],
 			[
-				"sa",
-				"safraHectares"
-			],
-			[
 				"to",
 				"ton"
 			],
@@ -156,20 +208,12 @@
 				"ready	$(document).ready"
 			],
 			[
-				"ba",
-				"background"
-			],
-			[
 				"AC",
 				"action	Attr"
 			],
 			[
 				"in",
 				"input	Tag"
-			],
-			[
-				"su",
-				"summernote"
 			],
 			[
 				"read",
@@ -194,10 +238,6 @@
 			[
 				"un",
 				"unlink"
-			],
-			[
-				"cat",
-				"cat"
 			],
 			[
 				"vi",
@@ -464,10 +504,6 @@
 				"echo	echo \"…\""
 			],
 			[
-				"ne",
-				"new"
-			],
-			[
 				"isA",
 				"is_array"
 			],
@@ -478,42 +514,6 @@
 			[
 				"DB",
 				"DB_USER"
-			],
-			[
-				"base",
-				"base64_encode"
-			],
-			[
-				"bas",
-				"base64_decode"
-			],
-			[
-				"vlog_",
-				"vlog_prim"
-			],
-			[
-				"o",
-				"opacity"
-			],
-			[
-				"sess",
-				"session_start"
-			],
-			[
-				"myi",
-				"mysql_insert_id"
-			],
-			[
-				"ur",
-				"url"
-			],
-			[
-				"cont",
-				"cont_artigo"
-			],
-			[
-				"post",
-				"post_noticia"
 			]
 		]
 	},
@@ -523,39 +523,7 @@
 			"file": "app/Http/routes.php",
 			"settings":
 			{
-				"buffer_size": 1566,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "resources/views/articles/_article.blade.php",
-			"settings":
-			{
-				"buffer_size": 402,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/Http/Controllers/PublicController.php",
-			"settings":
-			{
-				"buffer_size": 1849,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "resources/views/index.blade.php",
-			"settings":
-			{
-				"buffer_size": 2236,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/Article.php",
-			"settings":
-			{
-				"buffer_size": 517,
+				"buffer_size": 1669,
 				"line_ending": "Unix"
 			}
 		},
@@ -563,32 +531,24 @@
 			"file": "resources/views/articles/view.blade.php",
 			"settings":
 			{
-				"buffer_size": 1410,
+				"buffer_size": 1443,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "resources/views/layouts/default.blade.php",
+			"file": ".env",
 			"settings":
 			{
-				"buffer_size": 2686,
+				"buffer_size": 460,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Windows/System32/drivers/etc/hosts",
+			"settings":
+			{
+				"buffer_size": 1074,
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "public/css/component.css",
-			"settings":
-			{
-				"buffer_size": 6076,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/css/style.css",
-			"settings":
-			{
-				"buffer_size": 1983,
-				"line_ending": "Unix"
 			}
 		}
 	],
@@ -657,30 +617,42 @@
 		"/C/wamp/www/sonhamundos/app",
 		"/C/wamp/www/sonhamundos/app/Http",
 		"/C/wamp/www/sonhamundos/app/Http/Controllers",
-		"/C/wamp/www/sonhamundos/database",
-		"/C/wamp/www/sonhamundos/database/migrations",
-		"/C/wamp/www/sonhamundos/public",
-		"/C/wamp/www/sonhamundos/public/css",
 		"/C/wamp/www/sonhamundos/resources",
+		"/C/wamp/www/sonhamundos/resources/assets",
 		"/C/wamp/www/sonhamundos/resources/views",
 		"/C/wamp/www/sonhamundos/resources/views/articles",
-		"/C/wamp/www/sonhamundos/resources/views/layouts"
+		"/C/wamp/www/sonhamundos/resources/views/auth",
+		"/C/wamp/www/sonhamundos/resources/views/layouts",
+		"/C/wamp/www/sonhamundos/resources/views/users"
 	],
 	"file_history":
 	[
+		"/C/wamp/www/sonhamundos/resources/views/layouts/admin.blade.php",
+		"/C/wamp/www/sonhamundos/app/Http/Middleware/RedirectIfAuthenticated.php",
+		"/C/wamp/www/sonhamundos/resources/views/users/login.blade.php",
+		"/C/wamp/www/sonhamundos/app/Http/Controllers/Auth/AuthController.php",
+		"/C/wamp/www/sonhamundos/resources/views/articles/register.blade.php",
+		"/C/wamp/www/sonhamundos/app/Http/Controllers/ArticleController.php",
+		"/C/wamp/www/sonhamundos/resources/views/articles/list.blade.php",
+		"/C/wamp/www/sonhamundos/app/Article.php",
+		"/C/wamp/www/sonhamundos/resources/views/articles/edit.blade.php",
+		"/C/wamp/www/sonhamundos/public/css/admin/style.css",
+		"/C/wamp/www/sonhamundos/public/css/admin/login.css",
+		"/C/wamp/www/sonhamundos/app/Http/Controllers/UserController.php",
+		"/C/wamp/www/sonhamundos/app/Http/Controllers/PublicController.php",
+		"/C/wamp/www/sonhamundos/resources/views/articles/edit_content.blade.php",
+		"/C/wamp/www/sonhamundos/resources/views/layouts/default.blade.php",
+		"/C/wamp/www/sonhamundos/resources/views/articles/_article.blade.php",
+		"/C/wamp/www/sonhamundos/resources/views/index.blade.php",
+		"/C/wamp/www/sonhamundos/resources/views/articles/view.blade.php",
+		"/C/wamp/www/sonhamundos/public/css/component.css",
+		"/C/Games/Call_Of_Duty 4/Call_Of_Duty 4/cod4 keys.txt",
+		"/C/wamp/www/sonhamundos/public/css/style.css",
 		"/C/wamp/www/sonhamundos/resources/views/articles/_inner.blade.php",
 		"/C/Windows/System32/drivers/etc/hosts",
 		"/C/Users/judis/Downloads/Compressed/adobe illustrator cc 2015 19 0 0 64 bit crack/adobe illustrator cc 2015 19 0 0 64 bit crack/ReadMe.txt",
 		"/C/wamp/www/sonhamundos/app/Http/Controllers/FileController.php",
-		"/C/wamp/www/sonhamundos/public/css/style.css",
-		"/C/wamp/www/sonhamundos/app/Http/Controllers/ArticleController.php",
-		"/C/wamp/www/sonhamundos/resources/views/articles/view.blade.php",
-		"/C/wamp/www/sonhamundos/app/Http/Controllers/PublicController.php",
-		"/C/wamp/www/sonhamundos/resources/views/index.blade.php",
-		"/C/wamp/www/sonhamundos/resources/views/articles/_article.blade.php",
 		"/C/wamp/www/sonhamundos/app/Http/Controllers/AdminController.php",
-		"/C/wamp/www/sonhamundos/app/Http/Controllers/UserController.php",
-		"/C/wamp/www/sonhamundos/resources/views/articles/list.blade.php",
 		"/C/wamp/www/sonhamundos/resources/views/articles/editImg.blade.php",
 		"/C/wamp/www/sonhamundos/resources/views/articles/_news_articles_2.blade.php",
 		"/C/wamp/www/sonhamundos/resources/views/articles/_news_articles_1.blade.php",
@@ -694,7 +666,6 @@
 		"/C/wamp/www/sonhamundos/resources/views/articles/_indicators.blade.php",
 		"/C/wamp/www/sonhamundos/app/Http/Controllers/CategoryController.php",
 		"/C/wamp/www/sonhamundos/public/js/remove.js",
-		"/C/wamp/www/sonhamundos/public/css/admin/style.css",
 		"/C/wamp/www/sonhamundos/public/css/table.css",
 		"/C/wamp/www/Ambiente-Teste/table/index.html",
 		"/C/wamp/www/Ambiente-Teste/table/card.html",
@@ -783,19 +754,7 @@
 		"/F/Onedrive/BCC/4º Semestre/Programação/Programacao - Bruno/Programacao - Bruno/aula 04/exemplo_tratamento.cpp",
 		"/F/Onedrive/BCC/4º Semestre/Programação/Programacao - Bruno/Programacao - Bruno/aula 04/exemplo.h",
 		"/C/wamp/www/acadformat - Copia/Form.h",
-		"/C/Users/judis/Downloads/Compressed/cgicc-3.2.9/demo/cookie.cpp",
-		"/F/Onedrive/BCC/4º Semestre/Estrutura de dados I/javacollection.java",
-		"/C/Users/judis/Downloads/Compressed/cgicc-3.2.16/win/example.dsp",
-		"/C/Users/judis/Downloads/Compressed/cgicc-3.2.16/demo/test.cpp",
-		"/C/Users/judis/Downloads/Compressed/cgicc-3.2.16/demo/cookie.cpp",
-		"/C/Users/judis/Downloads/Compressed/cgicc-3.2.16/demo/cardgame.cpp",
-		"/C/Users/judis/Downloads/Compressed/cgicc-3.2.16/cgicc/FormFile.cpp",
-		"/F/Onedrive/BCC/4º Semestre/Estrutura de dados I/di",
-		"/C/Users/judis/.ssh/id_rsa.pub",
-		"/C/wamp/bin/apache/apache2.4.17/conf/httpd.conf",
-		"/C/wamp/www/acadformat/Form.cpp",
-		"/C/wamp/www/acadformat/Head.cpp",
-		"/C/wamp/www/acadformat/Extends.h"
+		"/C/Users/judis/Downloads/Compressed/cgicc-3.2.9/demo/cookie.cpp"
 	],
 	"find":
 	{
@@ -813,6 +772,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"bac",
 			"hssubmenu",
 			"<div class=\"row\">\n	  								<div class=\"col-md-4\">\n	  									CVERDE \n	  									<small class=\"text-info\">(Metros Cúbicos por Hectares)</small>\n	  								</div>\n	  								<div class=\"col-md-4\">\n	  									<span class=\"form-control cverde\"></span>\n	  								</div>\n	  							</div>\n	  							",
 			"car",
@@ -939,8 +899,7 @@
 			"gal",
 			"item",
 			"outras",
-			"item",
-			"noticia"
+			"item"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -958,7 +917,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -967,15 +926,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1566,
+						"buffer_size": 1669,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								649,
-								649
+								906,
+								906
 							]
 						],
 						"settings":
@@ -983,241 +942,95 @@
 							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1152.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "resources/views/articles/_article.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 402,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								13,
-								13
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/Http/Controllers/PublicController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1849,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1681,
-								1681
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 3456.0,
+						"translation.y": 1102.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "resources/views/index.blade.php",
+					"buffer": 1,
+					"file": "resources/views/articles/view.blade.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2236,
+						"buffer_size": 1443,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								195,
-								195
+								994,
+								994
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 107.0,
+						"translation.y": 609.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "app/Article.php",
+					"buffer": 2,
+					"file": ".env",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 517,
+						"buffer_size": 460,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								397,
-								397
+								213,
+								213
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 3,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 720.0,
+						"translation.y": 435.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "resources/views/articles/view.blade.php",
+					"buffer": 3,
+					"file": "/C/Windows/System32/drivers/etc/hosts",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1410,
+						"buffer_size": 1074,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								323,
-								323
+								1073,
+								1073
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax"
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 288.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "resources/views/layouts/default.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2686,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1168,
-								1168
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1584.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "public/css/component.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6076,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2741,
-								2741
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 6085.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "public/css/style.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1983,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								212,
-								212
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 432.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -1396,7 +1209,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 270.0,
+	"side_bar_width": 306.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
