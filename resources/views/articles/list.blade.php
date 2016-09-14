@@ -10,9 +10,9 @@
 		<table class="table table-responsive">
 			<thead>
 				<th width="10%">cod</th>
-				<th width="50%">Título</th>
-				<th width="10%">Status</th>
-				<th width="10%">Manchete</th>
+				<th width="40%">Título</th>
+				<th width="15%">Status</th>
+				<th width="15%">Manchete</th>
 				<th width="20%">Ações</th>
 			</thead>
 			<tbody>
@@ -29,31 +29,53 @@
 							</a>
 						</td>
 						<td>
-							@if($article->status == true)
-								<input type="checkbox" name="status" checked="checked">
-							@else
-								<input type="checkbox" name="status">
-							@endif
-								Ativo
+							<div class="btn-group btn-group-justified" role="group" aria-label="...">
+								@if($article->status == true)
+								<div class="btn-group selected" role="group">
+								  	<button type="button" class="btn btn-success btn-xs btn-status" data-value="1">Ativo</button>
+								</div>
+								<div class="btn-group" role="group">
+								  	<button type="button" class="btn btn-default btn-xs btn-status" data-value="0">Inativo</button>
+								</div>
+								@else
+								<div class="btn-group" role="group">
+								  	<button type="button" class="btn btn-default btn-xs btn-status" data-value="1">Ativo</button>
+								</div>
+								<div class="btn-group selected" role="group">
+								  <button type="button" class="btn btn-success btn-xs btn-status" data-value="0">Inativo</button>
+								</div>
+								@endif
+							</div>
 						</td>
 						<td>
-							@if($article->headline == true)
-								<input type="checkbox" name="status" checked="checked">
-							@else
-								<input type="checkbox" name="status">
-							@endif
-								Sim
+							<div class="btn-group btn-group-justified" role="group" aria-label="...">
+								@if($article->headline == true)
+								<div class="btn-group selected" role="group">
+								  	<button type="button" class="btn btn-success btn-xs btn-headline" data-value="1">Sim</button>
+								</div>
+								<div class="btn-group" role="group">
+								  	<button type="button" class="btn btn-default btn-xs btn-headline" data-value="0">Não</button>
+								</div>
+								@else
+								<div class="btn-group" role="group">
+								  	<button type="button" class="btn btn-default btn-xs btn-headline" data-value="1">Sim</button>
+								</div>
+								<div class="btn-group selected" role="group">
+								  <button type="button" class="btn btn-success btn-xs btn-headline" data-value="0">Não</button>
+								</div>
+								@endif
+							</div>							
+
 						</td>
 						<td>
 							<div class="btn-group btn-group-justified" role="group" aria-label="...">
 								<div class="btn-group" role="group">
-								  <button href="{{ route('article.edit', ['id' => $article->id]) }}" type="button" class="btn btn-success btn-xs">Alterar</button>
+								  <a href="{{ route('article.edit', ['id' => $article->id]) }}" type="button" class="btn btn-success btn-xs">Alterar</a>
 								</div>
 								<div class="btn-group" role="group">
 								  <button type="button" class="btn btn-danger btn-xs btn-remove">Apagar</button>
 								</div>
-								</div>
-							
+							</div>
 						</td>
 					</tr>
 				@endforeach
@@ -74,6 +96,28 @@
 <script>
   	$(document).ready(function(){
   		$('.table-responsive').cardtable();
+
+  		$('.btn-status').click(function() {
+  			var selected = $(this).parents('.btn-group-justified').children('.selected');
+  			var btn = selected.children('.btn-success'); 
+  			btn.removeClass('btn-success').addClass('btn-default');
+  			selected.removeClass('selected');
+
+  			$(this).parent('.btn-group').addClass('selected');
+  			$(this).addClass('btn-success')
+  			var status = $(this).data('value');
+  		});
+
+  		$('.btn-headline').click(function() {
+  			var selected = $(this).parents('.btn-group-justified').children('.selected');
+  			var btn = selected.children('.btn-success'); 
+  			btn.removeClass('btn-success').addClass('btn-default');
+  			selected.removeClass('selected');
+
+  			$(this).parent('.btn-group').addClass('selected');
+  			$(this).addClass('btn-success')
+  			var status = $(this).data('value');
+  		});
 
   		$('.btn-remove').click(function() {
   			res = confirm("Deseja realmente deletar esse artigo?");
