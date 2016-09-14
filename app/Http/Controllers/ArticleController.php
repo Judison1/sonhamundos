@@ -5,6 +5,7 @@
 */
 namespace App\Http\Controllers;
 use DB;
+use Auth;
 use App\Article;
 use App\Category;
 use App\Http\Controllers\Controller;
