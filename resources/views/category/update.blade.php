@@ -31,7 +31,7 @@
 					<textarea name="description" class="form-control">{{ $cat->description }}</textarea>
 				</div>
 			</div>
-			@if(file_exists(public_path('img\category') . '\\' . $cat->filename))
+			@if(file_exists(public_path('img/category') . '/' . $cat->filename))
 				<div class="form-group col-md-12">
 					<label class="control-label"> Recortar Imagem: 
 						<small class="text-danger">
