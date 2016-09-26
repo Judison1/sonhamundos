@@ -129,7 +129,6 @@ class ArticleController extends Controller
    public function postEditar(Request $request, $id)
    {
       $this->validate($request, [
-
          'title'       => 'required|max:255',
          'categories'  => 'required',
       ]);
