@@ -41,7 +41,7 @@ class ArticleController extends Controller
         
 
     	$article = new Article;
-    	$article->title 		= $request->input('title');
+    	$article->title 	= $request->input('title');
 
       $article->user_id = Auth::user()->id;
 

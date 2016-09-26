@@ -82,13 +82,13 @@
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$('#carousel_news_headlines').carousel({
-			  	interval: 4000
+			  	interval: 5000
 			});
 			$('#carousel_news_articles_1').carousel({
-			  	interval: 3000
+			  	interval: 4000
 			});
 			$('#carousel_news_articles_2').carousel({
-			  	interval: 2000
+			  	interval: 2500
 			});
 		});
 	</script>
