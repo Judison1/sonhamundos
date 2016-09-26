@@ -29,6 +29,7 @@ class ArticleController extends Controller
 		$cats = Category::all();
 		return view('articles.register', ['cats' => $cats]);
 	}
+
 	public function postCadastro(Request $request)
 	{
 		$this->validate($request, [
@@ -189,5 +190,29 @@ class ArticleController extends Controller
       } else {
         return back()->with('errors', "Erro ao salvar artigo!");
       }
-  }
+   }
+
+   public function getAlterarStatus($id, $status)
+   {
+      $article = Article::find($id);
+      $article->status = $status;
+     
+      if($article->save()) {
+         return "success";
+      } else {
+         return "error";
+      }
+   }
+
+   public function getAlterarManchete($id, $manchete)
+   {
+      $article = Article::find($id);
+      $article->headline = $manchete;
+     
+      if($article->save()) {
+         return "success";
+      } else {
+         return "error";
+      }
+   }
 }
