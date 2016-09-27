@@ -49,7 +49,7 @@ Route::group(['middleware' => ['auth']], function () {
 		'getAlterarStatus' 		=> 'article.edit.status',
 		'getAlterarManchete' 		=> 'article.edit.headline',
 		// 'getAlterar' 	=> 'article.update',
-		// 'deleteDeletar' => 'article.delete',
+		'deleteRemover' => 'article.delete',
 	]);
 
 });

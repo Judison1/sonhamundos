@@ -25,7 +25,7 @@
 			</div>
 		</header>
 		<div class="row">
-			<nav class="col-xs-12 col-sm-4 col-md-3" id="menu">
+			<nav class="col-xs-12 col-sm-4 col-md-2" id="menu">
 				<ul class="row">
 					<li>
 						<a href="#">
@@ -47,7 +47,7 @@
 					</li>
 				</ul>
 			</nav>
-			<div class="col-xs-12 col-sm-8 col-md-9" id="container">
+			<div class="col-xs-12 col-sm-8 col-md-10" id="container">
 				<div class="col-xs-12 painel-top">
 					<div class="col-md-8">
 						<h3>@yield('title')</h3>

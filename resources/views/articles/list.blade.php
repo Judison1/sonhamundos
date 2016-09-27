@@ -11,8 +11,8 @@
 		<table class="table table-responsive">
 
 			<thead>
-				<th width="10%">cod</th>
-				<th width="40%">Título</th>
+				<th width="5%">cod</th>
+				<th width="45%">Título</th>
 				<th width="15%">Status</th>
 				<th width="15%">Manchete</th>
 				<th width="20%">Ações</th>
@@ -96,6 +96,8 @@
 @endsection
 @section('js')
 <script src="{{ asset('js/stacktable.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('js/btnToggle.js') }}" type="text/javascript"></script>
+<script src="{{ asset('js/remove.js') }}" type="text/javascript"></script>
 <script>
   	$(document).ready(function(){
   		$('.table-responsive').cardtable();
@@ -116,74 +118,13 @@
   		});
 
   		$('.btn-remove').click(function() {
-  			res = confirm("Deseja realmente deletar esse artigo?");
-  			if(res == true) {
-
-	  			var tr = $(this).parents('tr');
-	  			var id = tr.data('id');
-	  			var token = "{{ csrf_token() }}";
-
-	  			$.ajax({
-					url: "{{-- route('article.delete') --}}",
-					type: 'DELETE',
-					dataType: 'json',
-					data: {id: id, _token: token },
-				})
-				.done(function(msg) {
-					tr.remove();
-					alert(msg);
-				})
-				.fail(function() {
-					console.log("error");
-				})
-				.always(function() {
-					console.log("complete");
-				});
-			}
+  			var token = "{{ csrf_token() }}";
+  			var route = "{{ route('article.delete') }}"
+  			removeElement($(this), token, route);
   		});
   	});
 
-  	function btnToggle(btn_status , url, edit_tr) {
-
-		var btn_group = btn_status.parents('.btn-group-justified');
-		var selected = btn_group.children('.selected');
-
-		var tr = btn_group.parents("tr");
-		var id = tr.data('id');
-		var status = btn_status.data('value');
-
-		
-		url = url + "/" + id + "/" + status;
-		
-		$.get(url, function(msg) {
-
-			if(msg == "success") {
-
-				var btn = selected.children('.btn-success'); 
-	  			btn.removeClass('btn-success').addClass('btn-default');
-	  			selected.removeClass('selected');
-
-	  			btn_status.parent('.btn-group').addClass('selected');
-	  			btn_status.addClass('btn-success');
-
-	  			if(edit_tr) {
-
-	  				if(status == 1) {
-	  					tr.removeClass('danger').addClass('success');
-		  			} else {
-		  				tr.removeClass('success').addClass('danger');
-		  			}
-		  			
-	  			}
-	  			
-  			
-			} else {
-
-				alert("Não foi possível alterar o status do artigo");
-
-			}
-
-		});
-  	}
+  	
+  
 </script>
 @endsection

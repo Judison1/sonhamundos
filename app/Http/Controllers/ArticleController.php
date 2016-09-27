@@ -214,4 +214,26 @@ class ArticleController extends Controller
          return "error";
       }
    }
+
+   public function deleteRemover(Request $request)
+   {
+      
+      $id = $request->input('id');
+
+      $article = Article::find($id);
+      $title = $article->title;
+      
+      if($article->delete()) {
+         $response = array(
+            'result' => true,
+            'mensage' => "O artigo $title foi removido com sucesso!"
+         );
+      } else {
+         $response = array(
+            'result' => false,
+            'mensage' => "Não foi possível remover o artigo: $title"
+         );
+      }
+      return response()->json($response);
+   }
 }
