@@ -7,14 +7,17 @@
 
 @section('container')
 	<div>
+
 		<table class="table table-responsive">
+
 			<thead>
-				<th width="10%">cod</th>
-				<th width="40%">Título</th>
+				<th width="5%">cod</th>
+				<th width="45%">Título</th>
 				<th width="15%">Status</th>
 				<th width="15%">Manchete</th>
 				<th width="20%">Ações</th>
 			</thead>
+
 			<tbody>
 				@foreach($articles as $article)
 					@if($article->status == true)
@@ -93,58 +96,35 @@
 @endsection
 @section('js')
 <script src="{{ asset('js/stacktable.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('js/btnToggle.js') }}" type="text/javascript"></script>
+<script src="{{ asset('js/remove.js') }}" type="text/javascript"></script>
 <script>
   	$(document).ready(function(){
   		$('.table-responsive').cardtable();
 
   		$('.btn-status').click(function() {
-  			var selected = $(this).parents('.btn-group-justified').children('.selected');
-  			var btn = selected.children('.btn-success'); 
-  			btn.removeClass('btn-success').addClass('btn-default');
-  			selected.removeClass('selected');
-
-  			$(this).parent('.btn-group').addClass('selected');
-  			$(this).addClass('btn-success')
-  			var status = $(this).data('value');
+  			var btn_status = $(this);
+  			var url = "{{ route('article.edit.status') }}";
+  			
+  			btnToggle(btn_status, url, true);
+  			
   		});
 
   		$('.btn-headline').click(function() {
-  			var selected = $(this).parents('.btn-group-justified').children('.selected');
-  			var btn = selected.children('.btn-success'); 
-  			btn.removeClass('btn-success').addClass('btn-default');
-  			selected.removeClass('selected');
-
-  			$(this).parent('.btn-group').addClass('selected');
-  			$(this).addClass('btn-success')
-  			var status = $(this).data('value');
+  			var btn_status = $(this);
+  			var url = "{{ route('article.edit.headline') }}";
+  			
+  			btnToggle(btn_status, url, false);
   		});
 
   		$('.btn-remove').click(function() {
-  			res = confirm("Deseja realmente deletar esse artigo?");
-  			if(res == true) {
-
-	  			var tr = $(this).parents('tr');
-	  			var id = tr.data('id');
-	  			var token = "{{ csrf_token() }}";
-
-	  			$.ajax({
-					url: "{{-- route('article.delete') --}}",
-					type: 'DELETE',
-					dataType: 'json',
-					data: {id: id, _token: token },
-				})
-				.done(function(msg) {
-					tr.remove();
-					alert(msg);
-				})
-				.fail(function() {
-					console.log("error");
-				})
-				.always(function() {
-					console.log("complete");
-				});
-			}
+  			var token = "{{ csrf_token() }}";
+  			var route = "{{ route('article.delete') }}"
+  			removeElement($(this), token, route);
   		});
   	});
+
+  	
+  
 </script>
 @endsection

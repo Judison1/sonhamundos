@@ -29,6 +29,7 @@ class ArticleController extends Controller
 		$cats = Category::all();
 		return view('articles.register', ['cats' => $cats]);
 	}
+
 	public function postCadastro(Request $request)
 	{
 		$this->validate($request, [
@@ -40,7 +41,7 @@ class ArticleController extends Controller
         
 
     	$article = new Article;
-    	$article->title 		= $request->input('title');
+    	$article->title 	= $request->input('title');
 
       $article->user_id = Auth::user()->id;
 
@@ -128,7 +129,6 @@ class ArticleController extends Controller
    public function postEditar(Request $request, $id)
    {
       $this->validate($request, [
-
          'title'       => 'required|max:255',
          'categories'  => 'required',
       ]);
@@ -189,5 +189,51 @@ class ArticleController extends Controller
       } else {
         return back()->with('errors', "Erro ao salvar artigo!");
       }
-  }
+   }
+
+   public function getAlterarStatus($id, $status)
+   {
+      $article = Article::find($id);
+      $article->status = $status;
+     
+      if($article->save()) {
+         return "success";
+      } else {
+         return "error";
+      }
+   }
+
+   public function getAlterarManchete($id, $manchete)
+   {
+      $article = Article::find($id);
+      $article->headline = $manchete;
+     
+      if($article->save()) {
+         return "success";
+      } else {
+         return "error";
+      }
+   }
+
+   public function deleteRemover(Request $request)
+   {
+      
+      $id = $request->input('id');
+
+      $article = Article::find($id);
+      $title = $article->title;
+      
+      if($article->delete()) {
+         $response = array(
+            'result' => true,
+            'mensage' => "O artigo $title foi removido com sucesso!"
+         );
+      } else {
+         $response = array(
+            'result' => false,
+            'mensage' => "Não foi possível remover o artigo: $title"
+         );
+      }
+      return response()->json($response);
+   }
 }

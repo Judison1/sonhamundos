@@ -46,8 +46,10 @@ Route::group(['middleware' => ['auth']], function () {
 		'getEditar' 	=> 'article.edit',
 		'getEditarConteudo' 	=> 'article.edit.content',
 		'getIndex' 		=> 'article.list',
+		'getAlterarStatus' 		=> 'article.edit.status',
+		'getAlterarManchete' 		=> 'article.edit.headline',
 		// 'getAlterar' 	=> 'article.update',
-		// 'deleteDeletar' => 'article.delete',
+		'deleteRemover' => 'article.delete',
 	]);
 
 });
