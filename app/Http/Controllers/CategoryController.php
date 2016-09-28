@@ -115,7 +115,7 @@ class CategoryController extends Controller
 
 					unlink($path . '/' . $cat->filename);
 
-					if($file->save(920)) {
+					if($file->save(500)) {
 
 						$cat->filename = $file->getFilename();
 
@@ -138,7 +138,7 @@ class CategoryController extends Controller
          	$file = new FileController($directory);
          	$file->saveImageBase64($imgBase64);
 
-         	if($file->save(320, true))
+         	if($file->save(200, true))
          		return redirect()->route('category.list')->with('success', "Categoria $name alterada com sucesso!");
          	else
          		return back()->with('errors', 'Erro ao salvar o arquivo.');

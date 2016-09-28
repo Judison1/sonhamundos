@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"ti",
+				"title"
+			],
+			[
+				"toke",
+				"token"
+			],
+			[
+				"dele",
+				"deleteRow"
+			],
+			[
+				"btn_",
+				"btn_remove"
+			],
+			[
+				"token",
+				"_token"
+			],
+			[
 				"ed",
 				"edit_tr"
 			],
@@ -420,10 +440,6 @@
 				"subtitulo"
 			],
 			[
-				"ti",
-				"titulo"
-			],
-			[
 				"IN",
 				"include"
 			],
@@ -498,22 +514,6 @@
 			[
 				"qtd",
 				"qtdCss"
-			],
-			[
-				"q",
-				"qtdCss"
-			],
-			[
-				"prin",
-				"printCss"
-			],
-			[
-				"pri",
-				"print"
-			],
-			[
-				"sr",
-				"string"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "app/Http/routes.php",
 			"settings":
 			{
-				"buffer_size": 1832,
+				"buffer_size": 1829,
 				"line_ending": "Windows"
 			}
 		},
@@ -531,7 +531,7 @@
 			"file": "app/Http/Controllers/ArticleController.php",
 			"settings":
 			{
-				"buffer_size": 5733,
+				"buffer_size": 6289,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -546,27 +546,62 @@
 			}
 		},
 		{
+			"file": "resources/views/layouts/default.blade.php",
+			"settings":
+			{
+				"buffer_size": 2676,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "resources/views/layouts/admin.blade.php",
+			"settings":
+			{
+				"buffer_size": 1966,
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": ".gitignore",
 			"settings":
 			{
 				"buffer_size": 115,
 				"encoding": "UTF-8",
-				"line_ending": "Unix"
+				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "resources/views/articles/list.blade.php",
 			"settings":
 			{
-				"buffer_size": 5561,
+				"buffer_size": 4390,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
+			"file": ".env",
 			"settings":
 			{
-				"buffer_size": 0,
+				"buffer_size": 460,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/js/btnToggle.js",
+			"settings":
+			{
+				"buffer_size": 921,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "public/js/remove.js",
+			"settings":
+			{
+				"buffer_size": 641,
 				"line_ending": "Windows"
 			}
 		}
@@ -636,11 +671,13 @@
 		"/C/wamp/www/sonhamundos/app",
 		"/C/wamp/www/sonhamundos/app/Http",
 		"/C/wamp/www/sonhamundos/app/Http/Controllers",
-		"/C/wamp/www/sonhamundos/public",
 		"/C/wamp/www/sonhamundos/public/img",
+		"/C/wamp/www/sonhamundos/public/img/category",
+		"/C/wamp/www/sonhamundos/public/img/category/thumbnail",
+		"/C/wamp/www/sonhamundos/public/js",
 		"/C/wamp/www/sonhamundos/resources",
 		"/C/wamp/www/sonhamundos/resources/views",
-		"/C/wamp/www/sonhamundos/resources/views/articles"
+		"/C/wamp/www/sonhamundos/resources/views/layouts"
 	],
 	"file_history":
 	[
@@ -934,7 +971,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -943,15 +980,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1832,
+						"buffer_size": 1829,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1646,
-								1646
+								1727,
+								1721
 							]
 						],
 						"settings":
@@ -959,10 +996,10 @@
 							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1218.0,
+						"translation.y": 1450.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
@@ -971,15 +1008,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5733,
+						"buffer_size": 6289,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1019,
-								1019
+								5241,
+								5241
 							]
 						],
 						"settings":
@@ -989,10 +1026,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 824.0,
+						"translation.y": 5684.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
@@ -1018,14 +1055,72 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2339.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "resources/views/layouts/default.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2676,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1072,
+								1072
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1305.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 4,
+					"file": "resources/views/layouts/admin.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1966,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1494,
+								1494
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1305.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
 					"file": ".gitignore",
 					"semi_transient": false,
 					"settings":
@@ -1037,8 +1132,65 @@
 						"selection":
 						[
 							[
-								79,
-								79
+								58,
+								58
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "resources/views/articles/list.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4390,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3682,
+								3682
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3741.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": ".env",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 460,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1053,53 +1205,54 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "resources/views/articles/list.blade.php",
+					"buffer": 8,
+					"file": "public/js/btnToggle.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5561,
+						"buffer_size": 921,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5539,
-								4619
+								921,
+								921
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 4495.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 9,
+					"file": "public/js/remove.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 641,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								22,
+								22
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
