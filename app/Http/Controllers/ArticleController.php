@@ -150,14 +150,40 @@ class ArticleController extends Controller
          $catArt->insert($categories);
 
          // Salvar imagem
-         $img = $request->input('img');
-         
-         $directory = public_path("img/$article->path/$article->filename");
+         if($request->hasfile('filename')) {
 
-         $files = new FileController($directory);
-         $files->saveImageBase64($img);
-         $files->save(320, true);
+            $fileRequest = $request->file('filename');
+            $name = $article->id . '-' . str_slug($article->title);
+            $path = public_path('img/articles');
 
+            $File = new FileController($name, $path, $fileRequest);
+            
+            if($File->validation(['jpeg','jpg','png','gif'])) {
+
+               if($File->save(920)) {
+                     
+                  $article->path       =  'articles';
+                  $article->filename   =  $File->getFilename();
+                  $article->save();
+
+                  return redirect()->route('article.edit',['id'=> $article->id]);
+
+               } else 
+                  return back()->with('errors',"Não foi possível salvar o arquivo!");
+            } else 
+               return back()->with('errors',"Formato invalido ou o arquivo não existe!");
+            
+         } else {
+
+            $img = $request->input('img');
+            
+            $directory = public_path("img/$article->path/$article->filename");
+
+            $files = new FileController($directory);
+            $files->saveImageBase64($img);
+            $files->save(320, true);
+
+         }
          return redirect()->route('article.edit.content', ['id' => $id]);
       }
    }

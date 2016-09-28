@@ -21,8 +21,19 @@
 			
 			<div class="form-group col-md-6">
 				<div class="col-md-12">
-					<label class="control-label">Selecionar nova Capa:</label>
-					<input class="file-input" type="file" name="filename" placeholder="Imagem da Categoria" />
+					<label class="control-label">Selecionar nova Capa: <small class="text-danger">(Substituirá a imagem de capa atual)</small></label>
+
+					<div class="col-md-12 form-control">
+						<div class="row">
+							<div class="col-xs-9">
+								<input type="file" name="filename" class="filename" accept=".jpeg, .jpg, .gif, .png">
+							</div>
+							<div class="col-xs-3">
+								<a href="#file" class="btn-file btn btn-xs btn-primary">Enviar Imagem</a>
+							</div>
+						</div>
+					</div>
+					
 				</div>
 			</div>
 			<div class="form-group col-md-12">
@@ -71,6 +82,16 @@
 		    	url: '{{ asset("img/category/$cat->filename") }}',
 		    	// points: [77,469,280,739]
 			});
+
+			$('.btn-file').click(function() {
+				if($('.filename').val() != "") {
+					$('.input-img').val("");
+	         	$('#form').submit();
+				} else {
+					alert('Selecione uma imagem antes de enviar')
+				}
+			});
+
 			$('.result').click(function() {
 				console.log(basic.get());
 				basic.croppie('result', {

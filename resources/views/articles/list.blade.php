@@ -12,10 +12,10 @@
 
 			<thead>
 				<th width="5%">cod</th>
-				<th width="45%">Título</th>
+				<th width="35%">Título</th>
 				<th width="15%">Status</th>
 				<th width="15%">Manchete</th>
-				<th width="20%">Ações</th>
+				<th width="30%">Ações</th>
 			</thead>
 
 			<tbody>
@@ -73,10 +73,13 @@
 						<td>
 							<div class="btn-group btn-group-justified" role="group" aria-label="...">
 								<div class="btn-group" role="group">
-								  <a href="{{ route('article.edit', ['id' => $article->id]) }}" type="button" class="btn btn-success btn-xs">Alterar</a>
+								  <a href="{{ route('article.edit', ['id' => $article->id]) }}" type="button" class="btn btn-info btn-xs"><i class="glyphicon glyphicon-pencil"></i> Info</a>
 								</div>
 								<div class="btn-group" role="group">
-								  <button type="button" class="btn btn-danger btn-xs btn-remove">Apagar</button>
+								  <a href="{{ route('article.edit.content', ['id' => $article->id]) }}" type="button" class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-pencil"></i> Conteúdo</a>
+								</div>
+								<div class="btn-group" role="group">
+								  <button type="button" class="btn btn-danger btn-xs btn-remove"><i class="glyphicon glyphicon-trash"></i> Remover</button>
 								</div>
 							</div>
 						</td>

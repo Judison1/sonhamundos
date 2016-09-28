@@ -33,8 +33,17 @@
 					</select>
 			</div>
 			<div class="form-group col-md-6 col-xs-12">
-					<label class="control-label">Capa: <!-- <small class="text-danger">(Apenas imagens com extensões: .jpeg, .jpg, .png, .gif e .webp)</small> --></label>
-					<input type="file" name="filename" accept=".jpeg, .jpg, .gif, .png" required>
+				<label class="control-label">Capa: <small class="text-danger">(Substituirá a imagem de capa atual)</small></label>
+				<div class="col-md-12 form-control">
+					<div class="row">
+						<div class="col-xs-9">
+							<input type="file" name="filename" class="filename" accept=".jpeg, .jpg, .gif, .png">
+						</div>
+						<div class="col-xs-3">
+							<a href="#file" class="btn-file btn btn-xs btn-primary">Enviar Imagem</a>
+						</div>
+					</div>
+				</div>
 			</div>
 		<div class="form-group col-xs-12">
 			<label class="text-center"> Recortar Imagem: 
@@ -47,7 +56,7 @@
 			<input class="input-img" type="hidden" name="img">
 		</div>
 		<div class="form-group col-xs-12 text-center">
-			<a href="#form" class="result btn btn-success">Salvar e Avançar</a href="#form">
+			<a href="#form" class="result btn btn-success">Salvar e Avançar</a>
 		</div>
 	</form>
 @endsection
@@ -100,6 +109,14 @@
 		basic.croppie('bind', {
 		    url: '{{ asset("img/$article->path/$article->filename") }}',
 		    // points: [77,469,280,739]
+		});
+		$('.btn-file').click(function() {
+			if($('.filename').val() != "") {
+				$('.input-img').val("");
+         	$('#form').submit();
+			} else {
+				alert('Selecione uma imagem antes de enviar')
+			}
 		});
 		$('.result').click(function() {
 			console.log(basic.get());
