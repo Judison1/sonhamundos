@@ -33,17 +33,17 @@
 					</select>
 			</div>
 			<div class="form-group col-md-6 col-xs-12">
-					<label class="control-label">Capa: <small class="text-danger">(Substituirá a imagem de capa atual)</small></label>
-					<div class="col-md-12 form-control">
-						<div class="row">
-							<div class="col-xs-9">
-								<input type="file" name="filename" class="filename" accept=".jpeg, .jpg, .gif, .png">
-							</div>
-							<div class="col-xs-3">
-								<a href="#file" class="btn-file btn btn-xs btn-primary">Enviar Imagem</a>
-							</div>
+				<label class="control-label">Capa: <small class="text-danger">(Substituirá a imagem de capa atual)</small></label>
+				<div class="col-md-12 form-control">
+					<div class="row">
+						<div class="col-xs-9">
+							<input type="file" name="filename" class="filename" accept=".jpeg, .jpg, .gif, .png">
+						</div>
+						<div class="col-xs-3">
+							<a href="#file" class="btn-file btn btn-xs btn-primary">Enviar Imagem</a>
 						</div>
 					</div>
+				</div>
 			</div>
 		<div class="form-group col-xs-12">
 			<label class="text-center"> Recortar Imagem: 

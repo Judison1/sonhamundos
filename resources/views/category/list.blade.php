@@ -10,9 +10,9 @@
 		<table class="table-responsive">
 			<thead>
 				<th width="10%">cod</th>
-				<th width="25%">Nome</th>
+				<th width="30%">Nome</th>
 				<th width="40%">Descrição</th>
-				<th width="25%">Ações</th>
+				<th width="20%">Ações</th>
 			</thead>
 			<tbody>
 				@foreach($cats as $cat)
@@ -21,12 +21,15 @@
 						<td>{{ $cat->name }}</td>
 						<td>{{ $cat->description }}</td>
 						<td>
-							<div class="col-sm-12 col-md-6">
-								<a href="{{ route('category.edit', ['id' => $cat->id]) }}" class="btn btn-default">Alterar</a>
+							<div class="btn-group btn-group-justified" role="group" aria-label="...">
+								<div class="btn-group" role="group">
+								  	<a href="{{ route('category.edit', ['id' => $cat->id]) }}" type="button" class="btn btn-success btn-xs">Alterar</a>
+								</div>
+								<div class="btn-group" role="group">
+								  	<a href="#remove" class="btn btn-danger btn-xs btn-remove">Remover</a>
+								</div>
 							</div>
-							<div class="col-sm-12 col-md-6">
-								<a href="#remove" class="btn btn-danger btn-remove ">Remover</a>
-							</div>
+							
 						</td>
 					</tr>
 				@endforeach
