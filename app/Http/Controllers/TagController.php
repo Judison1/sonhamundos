@@ -16,7 +16,9 @@ class TagController extends Controller
     protected $oldTags;
     protected $allArticleTags;
     protected $removedTags;
+    protected $addTags;
     protected $articleId;
+    protected $idTags;
 
     function __construct (array  $tags)
     {
@@ -25,19 +27,21 @@ class TagController extends Controller
         $this->oldTags = array();
         $this->allArticleTags = array();
         $this->removedTags = array();
+        $this->addTags = array();
+        $this->idTags = array();
+
     }
 
-    public function cadastro()
+    public function insert()
     {
-        $this->separa();
 
         if(!empty($this->newTags)) {
-            $ids = Tag::insertGetId($this->newTags);
+            $this->idTags = Tag::insertGetId($this->newTags);
         }
 
     }
 
-    public function separa()
+    public function separate()
     {
         foreach ( $this->tags as $tag) {
 
@@ -64,7 +68,25 @@ class TagController extends Controller
         return $result;
     }
 
-    public function setRemovedTags()
+    public function insertArticleTag()
+    {
+        $addArticleTag = array();
+        foreach ($this->addTags as $tag) {
+            $addArticleTag[] = array(
+                'article_id' => $this->articleId,
+                'tag_id' => $tag['tag_id']
+            );
+        }
+        foreach ($this->idTags as $tag) {
+             $addArticleTag[] = array(
+                'article_id' => $this->articleId,
+                'tag_id' => $tag
+            );
+        }
+        return DB::table('article_tag')->insert($addArticleTag);
+    }
+
+    public function setAddRemoved()
     {
         $tempTags = array();
 
@@ -72,6 +94,8 @@ class TagController extends Controller
             array_add($tempTags, 'tag_id', $art->tag_id);
 
         $this->removedTags = array_diff($tempTags, $this->oldTags);
+
+        $this->addTags = array_diff($this->oldTags, $tempTags);
     }
 
     /**
@@ -142,5 +166,13 @@ class TagController extends Controller
     public function getArticleId()
     {
         return $this->articleId;
+    }
+
+    /**
+     * @return array
+     */
+    public function getIdTags()
+    {
+        return $this->idTags;
     }
 }

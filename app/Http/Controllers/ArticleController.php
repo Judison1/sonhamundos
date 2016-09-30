@@ -43,7 +43,7 @@ class ArticleController extends Controller
     	$article = new Article;
     	$article->title 	= $request->input('title');
 
-      $article->user_id = Auth::user()->id;
+        $article->user_id = Auth::user()->id;
 
     	$article->synthesis = "";
     	$article->content 	= "";
@@ -52,14 +52,21 @@ class ArticleController extends Controller
          // categories
          $categories = array();
          foreach ($request->input('categories') as $category) {
-           $categories[] = array(
-               'article_id'   => $article->id,
-               'category_id'  => $category
-            );
+               $categories[] = array(
+                    'article_id'   => $article->id,
+                    'category_id'  => $category
+                );
          }
 
          DB::table('category_article')->insert($categories);
-
+        // tags
+        $tags = new TagController($request->input('tags'));
+            $tags->separate();
+            $tags->insert();
+            $tags->setArticleId($article->id);
+            $tags->setAllArticleTags();
+            $tags->setAddRemoved();
+            $tags->insertArticleTag();
          // upload and save photo 
          if(!($request->hasFile('filename')))
             return back()->with('errors', 'filename não está na requisição');
