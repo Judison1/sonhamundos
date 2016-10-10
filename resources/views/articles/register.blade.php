@@ -25,9 +25,9 @@
 			<div class="form-group col-md-6 col-xs-12">
 					<label class="control-label">Tags: </label>
 					<select name="tags[]" class="tags" multiple="multiple">
-						<option value="1">tettsts</option>
-						<option value="2">tetts</option>
-						<option value="3">tevcssts</option>
+						@foreach ($tags as $tag)
+							<option value="{{ $tag->id }}">{{ $tag->name }}</option>
+						@endforeach
 					</select>
 			</div>
 			<div class="form-group col-md-6 col-xs-12">

@@ -29,14 +29,16 @@ class TagController extends Controller
         $this->removedTags = array();
         $this->addTags = array();
         $this->idTags = array();
-
     }
 
     public function insert()
     {
 
         if(!empty($this->newTags)) {
-            $this->idTags = Tag::insertGetId($this->newTags);
+            foreach ($this->newTags as $tag) {
+                $this->idTags[] = Tag::insertGetId($tag);
+            }
+            
         }
 
     }
@@ -46,9 +48,9 @@ class TagController extends Controller
         foreach ( $this->tags as $tag) {
 
             if(!is_numeric($tag))
-                array_add($this->newTags, 'name', $tag);
+                $this->newTags[] = array('name' => $tag);
             else
-                array_add($this->oldTags, 'tag_id', $tag);
+                $this->oldTags[] = array('tag_id' => $tag);
         }
     }
 
@@ -68,15 +70,18 @@ class TagController extends Controller
         return $result;
     }
 
-    public function insertArticleTag()
+    public function insertArticleTag($update = false)
     {
         $addArticleTag = array();
-        foreach ($this->addTags as $tag) {
-            $addArticleTag[] = array(
-                'article_id' => $this->articleId,
-                'tag_id' => $tag['tag_id']
-            );
+        if(!$update) {
+            foreach ($this->addTags as $tag) {
+                $addArticleTag[] = array(
+                    'article_id' => $this->articleId,
+                    'tag_id' => $tag['tag_id']
+                );
+            }
         }
+        var_dump($this->idTags);
         foreach ($this->idTags as $tag) {
              $addArticleTag[] = array(
                 'article_id' => $this->articleId,
@@ -91,7 +96,7 @@ class TagController extends Controller
         $tempTags = array();
 
         foreach ($this->allArticleTags as $art)
-            array_add($tempTags, 'tag_id', $art->tag_id);
+            $tempTags[] = array('tag_id' => $art->tag_id);
 
         $this->removedTags = array_diff($tempTags, $this->oldTags);
 
@@ -151,7 +156,17 @@ class TagController extends Controller
     {
         return $this->oldTags;
     }
-
+    public function setAddTags()
+    {
+        $this->addTags = $this->oldTags;
+    } 
+    /**
+     * @return array
+     */
+    public function getAddTags()
+    {
+        return $this->addTags;
+    }
     /**
      * @param mixed $articleId
      */
