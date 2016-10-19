@@ -70,18 +70,25 @@ class TagController extends Controller
         return $result;
     }
 
-    public function insertArticleTag($update = false)
+    public static function removeAllTagsArticle($articleId)
+    {
+         return DB::table('article_tag')
+                ->where('article_id','=', $articleId)
+                ->delete();
+    }
+
+    public function insertArticleTag()
     {
         $addArticleTag = array();
-        if(!$update) {
-            foreach ($this->addTags as $tag) {
-                $addArticleTag[] = array(
-                    'article_id' => $this->articleId,
-                    'tag_id' => $tag['tag_id']
-                );
-            }
+        
+        foreach ($this->addTags as $tag) {
+            $addArticleTag[] = array(
+                'article_id' => $this->articleId,
+                'tag_id' => $tag['tag_id']
+            );
         }
-        var_dump($this->idTags);
+        
+        // var_dump($this->idTags);
         foreach ($this->idTags as $tag) {
              $addArticleTag[] = array(
                 'article_id' => $this->articleId,
@@ -91,16 +98,23 @@ class TagController extends Controller
         return DB::table('article_tag')->insert($addArticleTag);
     }
 
+    
+
     public function setAddRemoved()
     {
+        $comparaTags = function ($a,$b)
+        {
+            return ($a['tag_id'] - $b['tag_id']);
+        };
+
         $tempTags = array();
 
         foreach ($this->allArticleTags as $art)
             $tempTags[] = array('tag_id' => $art->tag_id);
+        // var_dump($tempTags);
+        $this->removedTags = array_udiff($tempTags, $this->oldTags, $comparaTags);
 
-        $this->removedTags = array_diff($tempTags, $this->oldTags);
-
-        $this->addTags = array_diff($this->oldTags, $tempTags);
+        $this->addTags = array_udiff($this->oldTags, $tempTags, $comparaTags);
     }
 
     /**

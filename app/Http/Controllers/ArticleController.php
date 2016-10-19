@@ -100,7 +100,8 @@ class ArticleController extends Controller
       $article = Article::find($id);
       $categories = Category::all();
       $cats = $article->categories;
-
+      $tags = Tag::all();
+      $articleTags = $article->tags;
 
       $newCats = array();
       foreach ($categories as $cat) {
@@ -114,11 +115,11 @@ class ArticleController extends Controller
 
          if($check) {
 
-         $newCats[] = array(
-            'id'  =>  $cat->id,
-            'name' => $cat->name,
-            'status' => 'selected="selected"'
-         );
+            $newCats[] = array(
+               'id'  =>  $cat->id,
+               'name' => $cat->name,
+               'status' => 'selected="selected"'
+            );
 
          } else {
 
@@ -130,8 +131,41 @@ class ArticleController extends Controller
          }
 
       }
+
+      $newTags = array();
+      foreach ($tags as $tag) {
+
+         $check = false;
+         foreach ($articleTags as $at) {
+            if($tag->id == $at->id){
+               $check = true;
+            }
+         }
+
+         if($check) {
+
+            $newTags[] = array(
+               'id'  =>  $tag->id,
+               'name' => $tag->name,
+               'status' => 'selected="selected"'
+            );
+
+         } else {
+
+            $newTags[] = array(
+               'id'  =>  $tag->id,
+               'name' => $tag->name,
+               'status' => ''
+            );
+         }
+
+      }
       
-      return view('articles.edit', ['article' => $article, 'categories' => $newCats]);
+      return view('articles.edit', [
+         'article' => $article, 
+         'categories' => $newCats, 
+         'tags' => $newTags
+      ]);
    }
 
    public function postEditar(Request $request, $id)
@@ -153,9 +187,27 @@ class ArticleController extends Controller
                'category_id'  => $category
             );
          }
+
          $catArt = DB::table('category_article');
          $catArt->where('article_id', '==', $article->id)->delete();
          $catArt->insert($categories);
+
+         if(is_array($request->input('tags'))){
+
+            $tags = new TagController($request->input('tags'));
+            $tags->separate();
+            $tags->insert();
+            $tags->setArticleId($article->id);
+            $tags->setAllArticleTags();
+            $tags->setAddRemoved();
+            $tags->remove();
+            $tags->insertArticleTag();
+
+         } else {
+
+            TagController::removeAllTagsArticle($article->id);
+
+         }
 
          // Salvar imagem
          if($request->hasfile('filename')) {
