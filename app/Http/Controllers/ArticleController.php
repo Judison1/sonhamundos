@@ -42,7 +42,7 @@ class ArticleController extends Controller
         
     	$article = new Article;
     	$article->title 	= $request->input('title');
-      $article->user_id = Auth::user()->id;
+        $article->user_id = Auth::user()->id;
     	$article->synthesis   = "";
     	$article->content     = "";
 
@@ -182,7 +182,7 @@ class ArticleController extends Controller
          // categories
          $categories = array();
          foreach ($request->input('categories') as $category) {
-           $categories[] = array(
+            $categories[] = array(
                'article_id'   => $article->id,
                'category_id'  => $category
             );

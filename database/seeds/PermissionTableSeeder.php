@@ -11,6 +11,7 @@ class PermissionTableSeeder extends Seeder
      */
     public function run()
     {
+
         Permission::insert([
         	['name' => 'Desenvolvedor', 'description' => "O carinha do TI"],
         	['name' => 'Administrador', 'description' => "O carinha que manda"],
