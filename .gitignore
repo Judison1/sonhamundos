@@ -1,9 +1,1 @@
-/vendor
-/node_modules
-/public/storage
-/public/img/articles
-/public/img/category
-Homestead.yaml
-Homestead.json
-.env
-sonhamundos.sublime-workspace
+

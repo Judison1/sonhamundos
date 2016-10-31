@@ -48,22 +48,23 @@ class PublicController extends Controller
 	public function view($title, $id){
 		$article = Article::find($id);
 		$author = $article->user;
-		$categories = $article->categories();
-
+		$categories = $article->categories;
+		$tags = $article->tags;
 		$var = array(
 			'article' => $article , 
 			'author' => $author, 
-			'categories' => $categories,
+			'articleCategories' => $categories,
 			'mostViewed' => $this->mostViewed(),
 			'categories'	=> $this->categories()
 		);	
 		return view('articles.view', $var);
 	}
-	public function category($name, $id)
+
+	public function category($title, $id)
 	{
 		# code...
 	}
-	public function author($name, $id)
+	public function author($title, $id)
 	{
 		# code...
 	}

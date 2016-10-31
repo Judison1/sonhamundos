@@ -27,7 +27,13 @@
 				<div class="row">
 					<img src="{{ asset('img/' . $article->path . '/' . $article->filename) }}" alt="{{ $article->title }} " class="col-md-12">
 				</div>
-				
+				<div class="row">
+					@foreach($articleCategories as $artcat)
+					<a href="{{ route('public.category', ['title' => str_slug($artcat->name), 'id' => $artcat->id ]) }}">
+						{{ $artcat->name }}
+					</a>
+					@endforeach
+				</div>
 			</header>
 			{{-- Conteudo do Artigo --}}
 			<div class="article-content">
