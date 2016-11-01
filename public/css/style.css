@@ -2,13 +2,24 @@ body{
 	background: #fff !important;
 }
 .header{
-	padding-top: 40px;
+	padding-top: 20px;
 	padding-bottom: 40px;
 	/*height: 200px;*/
 	overflow: hidden;
 	background: #333;
 }
 
+.header input {
+	transition: 0.6s;
+	background: none !important;
+}
+.header input:focus {
+	transition: 0.6s;
+	background: #fff !important;
+	-webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	box-shadow: none !important;
+}
 
 .footer{
 	background: #444;
@@ -75,7 +86,7 @@ body{
 	font-size: 1.1rem;
 }
 .most-viewed .box-art-title{
-	min-height: 50px;
+	min-height: 100px;
 	font-size: 1.4rem;
 }
 .article-view article{

@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'ArticleTableSeeder' => $baseDir . '/database/seeds/ArticleTableSeeder.php',
     'CategoryTableSeeder' => $baseDir . '/database/seeds/CategoryTableSeeder.php',
     'CreateArticleTagTable' => $baseDir . '/database/migrations/2016_09_29_134351_create_article_tag_table.php',
     'CreateArticlesTable' => $baseDir . '/database/migrations/2016_05_10_130050_create_articles_table.php',
@@ -520,6 +521,7 @@ return array(
     'SebastianBergmann\\RecursionContext\\Exception' => $vendorDir . '/sebastian/recursion-context/src/Exception.php',
     'SebastianBergmann\\RecursionContext\\InvalidArgumentException' => $vendorDir . '/sebastian/recursion-context/src/InvalidArgumentException.php',
     'SebastianBergmann\\Version' => $vendorDir . '/sebastian/version/src/Version.php',
+    'TagTableSeeder' => $baseDir . '/database/seeds/TagTableSeeder.php',
     'TestCase' => $baseDir . '/tests/TestCase.php',
     'Text_Template' => $vendorDir . '/phpunit/php-text-template/src/Template.php',
     'UpdateUserTable' => $baseDir . '/database/migrations/2016_05_09_204106_update_user_table.php',

@@ -13,12 +13,14 @@ class CreateArticleTagTable extends Migration
     public function up()
     {
         Schema::create('article_tag', function ($table){
-            $table->increments('id');
+//            $table->increments('id');
             $table->integer('article_id')
                 ->unsigned();
             $table->integer('tag_id')
                 ->unsigned();
+            $table->timestamps();
 
+            $table->primary(['tag_id', 'article_id']);
 
             $table->foreign('article_id')
                 ->references('id')

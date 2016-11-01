@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 use App\Article;
 use App\Category;
 use App\Http\Controllers\Controller;
+use App\User;
 
 class PublicController extends Controller
 {
@@ -38,7 +39,8 @@ class PublicController extends Controller
 			'articles'	=> $articles,
 
 			'mostViewed'	=> $this->mostViewed(),
-			'categories'	=> $this->categories()
+			'categories'	=> $this->categories(),
+			'authors'	    => $this->authors()
 		);
 
 		return view('index', $var);
@@ -55,7 +57,8 @@ class PublicController extends Controller
 			'author' => $author, 
 			'articleCategories' => $categories,
 			'mostViewed' => $this->mostViewed(),
-			'categories'	=> $this->categories()
+			'categories'	=> $this->categories(),
+            'authors'	    => $this->authors()
 		);	
 		return view('articles.view', $var);
 	}
@@ -84,5 +87,11 @@ class PublicController extends Controller
 			->get();
 		return $categories;
 	}
-	
+
+	public function authors()
+    {
+        return User::select('id','name','avatar')
+            ->get();
+    }
+
 }
