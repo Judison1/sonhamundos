@@ -6,6 +6,8 @@
 namespace App\Http\Controllers;
 use DB;
 use Auth;
+use App\CategoryArticle;
+
 use App\Article;
 use App\Category;
 use App\Tag;
@@ -188,9 +190,9 @@ class ArticleController extends Controller
             );
          }
 
-         $catArt = DB::table('category_article');
-         $catArt->where('article_id', '==', $article->id)->delete();
-         $catArt->insert($categories);
+         DB::table('category_article')->where('article_id','==', $article->id)->delete();
+         
+         DB::table('category_article')->insert($categories);
 
          if(is_array($request->input('tags'))){
 

@@ -34,7 +34,7 @@
 
 							@foreach ($categories as $category)
 							<li>
-								<a href="{{ route('public.view', ['title' => str_slug($category->name), 'id' => $category->id ]) }}">
+								<a href="{{ route('public.category', ['title' => str_slug($category->name), 'id' => $category->id ]) }}">
 									<img src='{{ asset("img/category/thumbnail/$category->filename") }}' alt="{{ $category->name }}" class="img-responsive img-circle" />
 
 									<span>{{ $category->name }}</span>

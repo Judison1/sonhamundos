@@ -112,3 +112,7 @@ body{
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
+.category-img{
+	width: 100%;
+	border: 1px solid #fff;
+}

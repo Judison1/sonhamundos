@@ -90,14 +90,14 @@ class CategoryController extends Controller
 	    	]);
 	    	$directory = public_path("img/category/$cat->filename");
 	    	$temp = pathinfo($directory);
-	    	$extension =  $path_parts['extension'];
+	    	$extension =  $temp['extension'];
 
 	    	$filename = $cat->id . '-' . str_slug($name) . '.' .  $extension;
 
-			rename($directory, public_path('img/category/' . $newfilename));
+			rename($directory, public_path('img/category/' . $filename));
 
 			$cat->name = $name;
-	    	$cat->filename = $newfilename;
+	    	$cat->filename = $filename;
 
 		}
 
@@ -113,7 +113,8 @@ class CategoryController extends Controller
 
 				if($file->validation(['jpeg','jpg','png','gif'])) {
 
-					unlink($path . '/' . $cat->filename);
+					if(file_exists($path . '/' . $cat->filename))
+						unlink($path . '/' . $cat->filename);
 
 					if($file->save(500)) {
 
@@ -162,25 +163,5 @@ class CategoryController extends Controller
 		if(!empty($cat->deleted_at))
 			return response()->json("Categoria $cat->name deletada com sucesso!");
 	}
-	public function saveFile($file, $name)
-	{
-		$path = public_path('img/category');
-		$filename = $name . '.' .  $file->getClientOriginalExtension();
-
-		if($file->isValid()){
-
-			$file->move($path, $filename);
-			
-			if(!file_exists($path . "/" . $filename)){
-
-				$res = false;
-
-			} else {
-				$res = true;
-			}
-		} else{
-			$res = false;
-		}
-		return $res;
-	}
+	
 }
