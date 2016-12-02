@@ -73,15 +73,15 @@
 			],
 			[
 				"fu",
-				"fun\tFunction"
+				"fun	Function"
 			],
 			[
 				"remo",
-				"removeClass\t.removeClass()"
+				"removeClass	.removeClass()"
 			],
 			[
 				"get",
-				"get\t$.get()"
+				"get	$.get()"
 			],
 			[
 				"lo",
@@ -105,11 +105,11 @@
 			],
 			[
 				"ge",
-				"get\t$.get()"
+				"get	$.get()"
 			],
 			[
 				"pare",
-				"parent\t.parent()"
+				"parent	.parent()"
 			],
 			[
 				"sele",
@@ -121,19 +121,19 @@
 			],
 			[
 				"ch",
-				"children\t.children()"
+				"children	.children()"
 			],
 			[
 				"add",
-				"addClass\t.addClass()"
+				"addClass	.addClass()"
 			],
 			[
 				"rem",
-				"removeClass\t.removeClass()"
+				"removeClass	.removeClass()"
 			],
 			[
 				"pa",
-				"parents\t.parents()"
+				"parents	.parents()"
 			],
 			[
 				"pos",
@@ -173,11 +173,11 @@
 			],
 			[
 				"if",
-				"if\tif …"
+				"if	if …"
 			],
 			[
 				"ac",
-				"action\tAttr"
+				"action	Attr"
 			],
 			[
 				"sat",
@@ -189,7 +189,7 @@
 			],
 			[
 				"su",
-				"submit\t.submit()"
+				"submit	.submit()"
 			],
 			[
 				"ari",
@@ -209,7 +209,7 @@
 			],
 			[
 				"for",
-				"for\tblade-for"
+				"for	blade-for"
 			],
 			[
 				"array_m",
@@ -225,11 +225,11 @@
 			],
 			[
 				"fo",
-				"foreach\tforeach …"
+				"foreach	foreach …"
 			],
 			[
 				"a",
-				"a\tTag"
+				"a	Tag"
 			],
 			[
 				"la",
@@ -237,7 +237,7 @@
 			],
 			[
 				"im",
-				"img\tTag"
+				"img	Tag"
 			],
 			[
 				"rg",
@@ -245,7 +245,7 @@
 			],
 			[
 				"fun",
-				"fun\tfunction …"
+				"fun	function …"
 			],
 			[
 				"or",
@@ -265,7 +265,7 @@
 			],
 			[
 				"he",
-				"header\tTag"
+				"header	Tag"
 			],
 			[
 				"te",
@@ -289,7 +289,7 @@
 			],
 			[
 				"h",
-				"h3\tTag"
+				"h3	Tag"
 			],
 			[
 				"text",
@@ -337,23 +337,23 @@
 			],
 			[
 				"op",
-				"option\tTag"
+				"option	Tag"
 			],
 			[
 				"AC",
-				"action\tAttr"
+				"action	Attr"
 			],
 			[
 				"in",
-				"input\tTag"
+				"input	Tag"
 			],
 			[
 				"read",
-				"ready\t$(document).ready"
+				"ready	$(document).ready"
 			],
 			[
 				"di",
-				"div\tTag"
+				"div	Tag"
 			],
 			[
 				"cate",
@@ -389,11 +389,11 @@
 			],
 			[
 				"l",
-				"li\tTag"
+				"li	Tag"
 			],
 			[
 				"u",
-				"ul\tTag"
+				"ul	Tag"
 			],
 			[
 				"js",
@@ -401,7 +401,7 @@
 			],
 			[
 				"at",
-				"attr\t.attr() - single"
+				"attr	.attr() - single"
 			],
 			[
 				"w",
@@ -413,7 +413,7 @@
 			],
 			[
 				"Route",
-				"Route::controller\tRoute a controller to a URI with wildcard routing."
+				"Route::controller	Route a controller to a URI with wildcard routing."
 			],
 			[
 				"C",
@@ -429,7 +429,7 @@
 			],
 			[
 				"S",
-				"Schema::drop\tDrop an existing database table"
+				"Schema::drop	Drop an existing database table"
 			],
 			[
 				"inc",
@@ -465,7 +465,7 @@
 			],
 			[
 				"de",
-				"def\t#ifndef … #define … #endif"
+				"def	#ifndef … #define … #endif"
 			],
 			[
 				"pi",
@@ -481,7 +481,7 @@
 			],
 			[
 				"f",
-				"fore\tfor (each)"
+				"fore	for (each)"
 			],
 			[
 				"d",
@@ -536,47 +536,43 @@
 			}
 		},
 		{
+			"file": "app/Http/Controllers/ArticleController.php",
+			"settings":
+			{
+				"buffer_size": 8771,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "app/Http/Controllers/PublicController.php",
 			"settings":
 			{
-				"buffer_size": 1882,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
+				"buffer_size": 2091,
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": ".env",
 			"settings":
 			{
-				"buffer_size": 460,
+				"buffer_size": 453,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/C/wamp/www/pegadaHidrica/.gitignore",
+			"file": "database/seeds/PermissionTableSeeder.php",
 			"settings":
 			{
-				"buffer_size": 96,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "composer.json",
-			"settings":
-			{
-				"buffer_size": 1310,
+				"buffer_size": 571,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/C/wamp/www/pegadaHidrica/.gitignore.txt",
+			"file": "database/seeds/ArticleTableSeeder.php",
 			"settings":
 			{
-				"buffer_size": 0,
-				"encoding": "UTF-8",
-				"line_ending": "Windows",
-				"name": "/node_modules"
+				"buffer_size": 542,
+				"line_ending": "Unix"
 			}
 		},
 		{
@@ -584,8 +580,23 @@
 			"settings":
 			{
 				"buffer_size": 1676,
-				"encoding": "UTF-8",
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "resources/views/articles/list.blade.php",
+			"settings":
+			{
+				"buffer_size": 4711,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/js/remove.js",
+			"settings":
+			{
+				"buffer_size": 641,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -650,16 +661,18 @@
 	},
 	"expanded_folders":
 	[
-		"/C/wamp/www/sonhamundos",
-		"/C/wamp/www/sonhamundos/app",
-		"/C/wamp/www/sonhamundos/config",
-		"/C/wamp/www/sonhamundos/database",
-		"/C/wamp/www/sonhamundos/database/factories",
-		"/C/wamp/www/sonhamundos/database/migrations",
-		"/C/wamp/www/sonhamundos/database/seeds"
+		"/var/www/html/sonhamundos",
+		"/var/www/html/sonhamundos/app",
+		"/var/www/html/sonhamundos/app/Http",
+		"/var/www/html/sonhamundos/app/Http/Controllers",
+		"/var/www/html/sonhamundos/public/js",
+		"/var/www/html/sonhamundos/resources/views",
+		"/var/www/html/sonhamundos/resources/views/articles"
 	],
 	"file_history":
 	[
+		"/C/wamp/www/pegadaHidrica/.gitignore.txt",
+		"/C/wamp/www/pegadaHidrica/.gitignore",
 		"/C/wamp/www/sonhamundos/resources/views/articles/register.blade.php",
 		"/C/wamp/www/sonhamundos/app/Article.php",
 		"/C/wamp/www/sonhamundos/resources/views/articles/edit.blade.php",
@@ -785,9 +798,7 @@
 		"/C/wamp/www/sonhamundo/database/migrations/2014_10_12_100000_create_password_resets_table.php",
 		"/C/Users/judis/AppData/Local/Temp/Temp1_www.zip/www/dinflux/resources/views/layouts/template.blade.php",
 		"/C/wamp/www/sonhamundo/app/Http/Controllers/Auth/AuthController.php",
-		"/C/wamp/www/sonhamundo/public/js/modernizr.custom.js",
-		"/C/wamp/www/sonhamundo/database/migrations/2016_05_09_190139_create_permission_user_table.php",
-		"/C/wamp/www/sonhamundo/database/migrations/2016_05_09_185121_create_permission.php"
+		"/C/wamp/www/sonhamundo/public/js/modernizr.custom.js"
 	],
 	"find":
 	{
@@ -814,7 +825,7 @@
 			"'",
 			"bac",
 			"hssubmenu",
-			"<div class=\"row\">\n\t  \t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t  \t\t\t\t\t\t\t\t\tCVERDE \n\t  \t\t\t\t\t\t\t\t\t<small class=\"text-info\">(Metros Cúbicos por Hectares)</small>\n\t  \t\t\t\t\t\t\t\t</div>\n\t  \t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t  \t\t\t\t\t\t\t\t\t<span class=\"form-control cverde\"></span>\n\t  \t\t\t\t\t\t\t\t</div>\n\t  \t\t\t\t\t\t\t</div>\n\t  \t\t\t\t\t\t\t",
+			"<div class=\"row\">\n	  								<div class=\"col-md-4\">\n	  									CVERDE \n	  									<small class=\"text-info\">(Metros Cúbicos por Hectares)</small>\n	  								</div>\n	  								<div class=\"col-md-4\">\n	  									<span class=\"form-control cverde\"></span>\n	  								</div>\n	  							</div>\n	  							",
 			"car",
 			"provi",
 			"image",
@@ -830,7 +841,7 @@
 			"loga",
 			"sess",
 			"utf",
-			"<?php\n\tinclude 'include/topo.php';\n?>",
+			"<?php\n	include 'include/topo.php';\n?>",
 			"topo",
 			"rodape",
 			"button",
@@ -950,7 +961,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -978,7 +989,7 @@
 						"translation.y": 384.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
@@ -1005,27 +1016,57 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 480.0,
+						"translation.y": 336.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "app/Http/Controllers/PublicController.php",
+					"file": "app/Http/Controllers/ArticleController.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1882,
+						"buffer_size": 8771,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1064,
-								1069
+								5054,
+								5054
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 6588.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/Http/Controllers/PublicController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2091,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								977,
+								977
 							]
 						],
 						"settings":
@@ -1034,19 +1075,19 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1056.0,
+						"translation.y": 480.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 4,
 					"file": ".env",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 460,
+						"buffer_size": 453,
 						"regions":
 						{
 						},
@@ -1065,44 +1106,16 @@
 						"translation.y": 96.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "/C/wamp/www/pegadaHidrica/.gitignore",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 96,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								90,
-								90
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
 					"buffer": 5,
-					"file": "composer.json",
-					"semi_transient": true,
+					"file": "database/seeds/PermissionTableSeeder.php",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1310,
+						"buffer_size": 571,
 						"regions":
 						{
 						},
@@ -1115,44 +1128,45 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 192.0,
+						"translation.y": 108.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
 					"buffer": 6,
-					"file": "/C/wamp/www/pegadaHidrica/.gitignore.txt",
+					"file": "database/seeds/ArticleTableSeeder.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 542,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								476,
+								476
 							]
 						],
 						"settings":
 						{
-							"auto_name": "/node_modules",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 324.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -1168,8 +1182,8 @@
 						"selection":
 						[
 							[
-								1220,
-								1220
+								233,
+								233
 							]
 						],
 						"settings":
@@ -1178,10 +1192,67 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 672.0,
+						"translation.y": 432.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "resources/views/articles/list.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4711,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4644,
+								4644
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 4752.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "public/js/remove.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 641,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								519,
+								519
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 432.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -1368,7 +1439,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 487.0,
+	"side_bar_width": 219.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

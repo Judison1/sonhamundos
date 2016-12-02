@@ -189,7 +189,7 @@ class ArticleController extends Controller
          }
 
          $catArt = DB::table('category_article');
-         $catArt->where('article_id', '==', $article->id)->delete();
+         $catArt->where('article_id', '=', $article->id)->delete();
          $catArt->insert($categories);
 
          if(is_array($request->input('tags'))){
