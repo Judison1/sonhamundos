@@ -17,7 +17,14 @@ class ArticleTableSeeder extends Seeder
         DB::table('articles')->delete();
 
         factory(\App\Article::class, 100)->create();
-//        factory(\App\ArticleTag::class, 1000)->create();
+        for ($i=1; $i <= 10; $i++) { 
+
+            for ($e=$i*10 - 9; $e <= $i*10; $e++) { 
+                DB::table('category_article')->insert([
+                    ['category_id' => $i, 'article_id' => $e]
+                ]);
+            }
+        }
 //        factory(\App\CategoryArticle::class, 200)->create();
 
     }
