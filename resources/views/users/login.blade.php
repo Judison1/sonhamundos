@@ -8,7 +8,7 @@
 </head>
 <body class="body-login">
 		<div class="container-fluid">
-			<form class="login col-md-4 col-md-offset-4" method="post" action="{{ url('/login') }}">
+			<form class="login col-md-4 col-md-offset-4" method="post">
 				{!! csrf_field() !!}
 				<div class="header-login text-center">
 					<h1>Login</h1>

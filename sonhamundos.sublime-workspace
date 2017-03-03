@@ -4,38 +4,6 @@
 		"selected_items":
 		[
 			[
-				"art",
-				"article_id"
-			],
-			[
-				"Ca",
-				"CategoryArticle"
-			],
-			[
-				"bo",
-				"border"
-			],
-			[
-				"h",
-				"hidden"
-			],
-			[
-				"min",
-				"min-height"
-			],
-			[
-				"col",
-				"col-md-8"
-			],
-			[
-				"col-m",
-				"col-md-4"
-			],
-			[
-				"categ",
-				"category"
-			],
-			[
 				"tg",
 				"tags"
 			],
@@ -66,6 +34,10 @@
 			[
 				"th",
 				"this"
+			],
+			[
+				"col",
+				"col-xs-9"
 			],
 			[
 				"file",
@@ -224,6 +196,10 @@
 				"article"
 			],
 			[
+				"art",
+				"article"
+			],
+			[
 				"article",
 				"article_id"
 			],
@@ -312,19 +288,20 @@
 				"width"
 			],
 			[
-<<<<<<< HEAD
 				"h",
 				"h3	Tag"
 			],
 			[
-=======
->>>>>>> 7d5d015781a4d2ad6c18e60a05c4df6100aef196
 				"text",
 				"text-indent"
 			],
 			[
 				"mar",
 				"margin-bottom"
+			],
+			[
+				"bo",
+				"border-top"
 			],
 			[
 				"font-",
@@ -521,139 +498,32 @@
 			[
 				"v",
 				"void"
+			],
+			[
+				"en",
+				"endl"
+			],
+			[
+				"i",
+				"include"
+			],
+			[
+				"FORM",
+				"form"
+			],
+			[
+				"fO",
+				"FORM_H"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "app/Http/routes.php",
+			"file": "/home/judison1/Documentos/BCC/Autômatos/ambiguidade glc.txt",
 			"settings":
 			{
-				"buffer_size": 0,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/Http/Controllers/PublicController.php",
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Windows"
-			}
-		},
-		{
-<<<<<<< HEAD
-			"file": "app/Http/Controllers/ArticleController.php",
-			"settings":
-			{
-				"buffer_size": 8771,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/Http/Controllers/PublicController.php",
-			"settings":
-			{
-				"buffer_size": 2091,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": ".env",
-			"settings":
-			{
-				"buffer_size": 453,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "database/seeds/PermissionTableSeeder.php",
-			"settings":
-			{
-				"buffer_size": 571,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "database/seeds/ArticleTableSeeder.php",
-			"settings":
-			{
-				"buffer_size": 542,
-				"line_ending": "Unix"
-=======
-			"file": "database/migrations/2016_05_10_133903_create_category_article_table.php",
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "resources/views/articles/view.blade.php",
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/Http/Controllers/FileController.php",
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "resources/views/category/register.blade.php",
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/Http/Controllers/CategoryController.php",
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/Http/Controllers/ArticleController.php",
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Windows"
->>>>>>> 7d5d015781a4d2ad6c18e60a05c4df6100aef196
-			}
-		},
-		{
-			"settings":
-			{
-<<<<<<< HEAD
-				"buffer_size": 1676,
-=======
-				"buffer_size": 0,
->>>>>>> 7d5d015781a4d2ad6c18e60a05c4df6100aef196
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "resources/views/articles/list.blade.php",
-			"settings":
-			{
-				"buffer_size": 4711,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/js/remove.js",
-			"settings":
-			{
-				"buffer_size": 641,
+				"buffer_size": 1367,
 				"line_ending": "Unix"
 			}
 		}
@@ -719,67 +589,54 @@
 	},
 	"expanded_folders":
 	[
-<<<<<<< HEAD
 		"/var/www/html/sonhamundos",
 		"/var/www/html/sonhamundos/app",
 		"/var/www/html/sonhamundos/app/Http",
 		"/var/www/html/sonhamundos/app/Http/Controllers",
-		"/var/www/html/sonhamundos/public/js",
+		"/var/www/html/sonhamundos/resources",
 		"/var/www/html/sonhamundos/resources/views",
-		"/var/www/html/sonhamundos/resources/views/articles"
+		"/var/www/html/sonhamundos/resources/views/articles",
+		"/var/www/html/sonhamundos/resources/views/users"
 	],
 	"file_history":
 	[
+		"/var/www/html/sonhamundos/app/Http/routes.php",
+		"/var/www/html/sonhamundos/app/Http/Controllers/UserController.php",
+		"/home/judison1/Documentos/examples/basic.html",
+		"/var/www/html/sonhamundos/resources/views/articles/edit_content.blade.php",
+		"/var/www/html/sonhamundos/resources/views/articles/edit.blade.php",
+		"/var/www/html/sonhamundos/app/Article.php",
+		"/var/www/html/sonhamundos/app/Http/Controllers/ArticleController.php",
+		"/var/www/html/sonhamundos/resources/views/category/register.blade.php",
+		"/var/www/html/sonhamundos/app/Http/Controllers/PublicController.php",
+		"/var/www/html/sonhamundos/.env",
+		"/var/www/html/sonhamundos/resources/views/users/login.blade.php",
+		"/var/www/html/sonhamundos/database/seeds/PermissionTableSeeder.php",
+		"/var/www/html/sonhamundos/database/seeds/ArticleTableSeeder.php",
+		"/var/www/html/sonhamundos/resources/views/articles/view.blade.php",
+		"/var/www/html/sonhamundos/resources/views/articles/list.blade.php",
+		"/var/www/html/sonhamundos/public/js/remove.js",
 		"/C/wamp/www/pegadaHidrica/.gitignore.txt",
 		"/C/wamp/www/pegadaHidrica/.gitignore",
 		"/C/wamp/www/sonhamundos/resources/views/articles/register.blade.php",
-=======
-		"/C/wamp/www/sonhamundos",
-		"/C/wamp/www/sonhamundos/app",
-		"/C/wamp/www/sonhamundos/app/Http",
-		"/C/wamp/www/sonhamundos/app/Http/Controllers",
-		"/C/wamp/www/sonhamundos/database",
-		"/C/wamp/www/sonhamundos/database/migrations",
-		"/C/wamp/www/sonhamundos/public",
-		"/C/wamp/www/sonhamundos/resources",
-		"/C/wamp/www/sonhamundos/resources/views"
-	],
-	"file_history":
-	[
-		"/D/PegadaHidrica - Protótipo/fazenda/cadastro.html",
-		"/C/wamp/www/sonhamundos/public/css/style.css",
-		"/C/Users/judis/Documents/jquery.adaptive-backgrounds.js-master/jquery.adaptive-backgrounds.js-master/demos/background.html",
-		"/C/Users/judis/Documents/jquery.adaptive-backgrounds.js-master/jquery.adaptive-backgrounds.js-master/demos/explicit-parent.html",
-		"/C/Users/judis/Documents/jquery.adaptive-backgrounds.js-master/jquery.adaptive-backgrounds.js-master/demos/adaptive-text.html",
-		"/C/wamp/www/sonhamundos/resources/views/layouts/default.blade.php",
-		"/C/wamp/www/sonhamundos/database/factories/ModelFactory.php",
-		"/C/wamp/www/sonhamundos/database/seeds/ArticleTableSeeder.php",
-		"/C/wamp/www/sonhamundos/database/seeds/CategoryTableSeeder.php",
-		"/C/wamp/www/sonhamundos/resources/views/category/articles.blade.php",
-		"/C/Users/judis/Documents/jquery.adaptive-backgrounds.js-master/jquery.adaptive-backgrounds.js-master/demos/cors.html",
-		"/C/Users/judis/Documents/jquery.adaptive-backgrounds.js-master/jquery.adaptive-backgrounds.js-master/demos/callback.html",
-		"/C/wamp/www/sonhamundos/app/Http/Controllers/CategoryController.php",
->>>>>>> 7d5d015781a4d2ad6c18e60a05c4df6100aef196
 		"/C/wamp/www/sonhamundos/app/Article.php",
-		"/C/wamp/www/sonhamundos/app/Http/Controllers/PublicController.php",
-		"/C/wamp/www/sonhamundos/.env",
-		"/C/wamp/www/pegadaHidrica/.gitignore",
-		"/C/wamp/www/sonhamundos/.gitignore",
-		"/C/wamp/www/pegadaHidrica/.gitignore.txt",
-		"/C/wamp/www/sonhamundos/resources/views/articles/view.blade.php",
-		"/C/wamp/www/sonhamundos/resources/views/articles/register.blade.php",
 		"/C/wamp/www/sonhamundos/resources/views/articles/edit.blade.php",
 		"/C/wamp/www/sonhamundos/app/Http/Controllers/ArticleController.php",
 		"/C/wamp/www/sonhamundos/app/Http/Controllers/TagController.php",
 		"/C/wamp/www/sonhamundos/app/Http/Controllers/AdminController.php",
 		"/C/wamp/www/sonhamundos/app/Http/Middleware/Authenticate.php",
+		"/C/wamp/www/sonhamundos/app/Http/Controllers/CategoryController.php",
+		"/C/wamp/www/sonhamundos/resources/views/articles/view.blade.php",
+		"/C/wamp/www/sonhamundos/.gitignore",
 		"/C/wamp/www/sonhamundos/resources/views/articles/list.blade.php",
 		"/C/wamp/www/sonhamundos/resources/views/category/update.blade.php",
+		"/C/wamp/www/sonhamundos/resources/views/layouts/default.blade.php",
 		"/C/wamp/www/sonhamundos/resources/views/category/list.blade.php",
 		"/C/wamp/www/sonhamundos/app/Http/routes.php",
 		"/C/wamp/www/sonhamundos/resources/views/index.blade.php",
 		"/C/wamp/www/sonhamundos/public/js/remove.js",
 		"/C/wamp/www/sonhamundos/public/js/btnToggle.js",
+		"/C/wamp/www/sonhamundos/.env",
 		"/C/wamp/www/sonhamundos/resources/views/layouts/admin.blade.php",
 		"/C/wamp/bin/apache/apache2.4.18/conf/httpd.conf",
 		"/C/wamp/bin/mysql/mysql5.7.11/my.ini",
@@ -811,10 +668,12 @@
 		"/C/wamp/www/sonhamundos/public/css/admin/style.css",
 		"/C/wamp/www/sonhamundos/public/css/admin/login.css",
 		"/C/wamp/www/sonhamundos/app/Http/Controllers/UserController.php",
+		"/C/wamp/www/sonhamundos/app/Http/Controllers/PublicController.php",
 		"/C/wamp/www/sonhamundos/resources/views/articles/edit_content.blade.php",
 		"/C/wamp/www/sonhamundos/resources/views/articles/_article.blade.php",
 		"/C/wamp/www/sonhamundos/public/css/component.css",
 		"/C/Games/Call_Of_Duty 4/Call_Of_Duty 4/cod4 keys.txt",
+		"/C/wamp/www/sonhamundos/public/css/style.css",
 		"/C/wamp/www/sonhamundos/resources/views/articles/_inner.blade.php",
 		"/C/Users/judis/Downloads/Compressed/adobe illustrator cc 2015 19 0 0 64 bit crack/adobe illustrator cc 2015 19 0 0 64 bit crack/ReadMe.txt",
 		"/C/wamp/www/sonhamundos/resources/views/articles/editImg.blade.php",
@@ -868,27 +727,7 @@
 		"/C/wamp/www/sonhamundo/app/Permission.php",
 		"/C/Users/judis/AppData/Roaming/Sublime Text 3/Packages/Colorsublime-Themes/bashling.tmTheme",
 		"/C/wamp/www/sonhamundo/resources/views/articles/_inner.blade.php",
-		"/C/wamp/www/sonhamundo/resources/views/articles/_indicators.blade.php",
-		"/C/wamp/www/Nimassa/css/estilo.css",
-		"/C/wamp/www/sonhamundo/resources/views/articles/_news_articles_2.php",
-		"/C/wamp/www/sonhamundo/database/migrations/2016_05_10_130050_create_articles_table.php",
-		"/C/wamp/www/sonhamundo/database/migrations/2016_05_10_133049_create_category_table.php",
-		"/C/wamp/www/sonhamundo/database/migrations/2016_05_10_133903_create_category_article_table.php",
-<<<<<<< HEAD
-		"/C/wamp/www/sonhamundo/public/css/component.css",
-		"/C/Users/judis/Downloads/Compressed/HorizontalSlideOutMenu/HorizontalSlideOutMenu/index.html",
-		"/C/wamp/www/sonhamundo/database/migrations/2014_10_12_000000_create_users_table.php",
-		"/C/wamp/www/sonhamundo/database/migrations/2016_05_09_204106_update_user_table.php",
-		"/C/wamp/www/sonhamundo/config/database.php",
-		"/C/wamp/www/sonhamundo/.env",
-		"/C/wamp/www/sonhamundo/database/migrations/2016_05_09_185548_create_permission_table.php",
-		"/C/wamp/www/sonhamundo/database/migrations/2014_10_12_100000_create_password_resets_table.php",
-		"/C/Users/judis/AppData/Local/Temp/Temp1_www.zip/www/dinflux/resources/views/layouts/template.blade.php",
-		"/C/wamp/www/sonhamundo/app/Http/Controllers/Auth/AuthController.php",
-		"/C/wamp/www/sonhamundo/public/js/modernizr.custom.js"
-=======
-		"/C/wamp/www/sonhamundo/public/css/component.css"
->>>>>>> 7d5d015781a4d2ad6c18e60a05c4df6100aef196
+		"/C/wamp/www/sonhamundo/resources/views/articles/_indicators.blade.php"
 	],
 	"find":
 	{
@@ -906,8 +745,6 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"<",
-			"saveF",
 			"diff",
 			"old",
 			"listen",
@@ -1033,7 +870,9 @@
 			"a{",
 			".outras_coisas a",
 			"outras_coi",
-			"tran"
+			"tran",
+			"paginaca",
+			"sintese"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1051,425 +890,35 @@
 	"groups":
 	[
 		{
-<<<<<<< HEAD
-			"selected": 2,
-=======
-			"selected": 8,
->>>>>>> 7d5d015781a4d2ad6c18e60a05c4df6100aef196
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/Http/routes.php",
+					"file": "/home/judison1/Documentos/BCC/Autômatos/ambiguidade glc.txt",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 1367,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1222,
+								1222
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-<<<<<<< HEAD
-					"stack_index": 9,
-=======
-					"stack_index": 8,
->>>>>>> 7d5d015781a4d2ad6c18e60a05c4df6100aef196
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/Http/Controllers/PublicController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-<<<<<<< HEAD
-						"translation.y": 336.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-=======
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
->>>>>>> 7d5d015781a4d2ad6c18e60a05c4df6100aef196
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-<<<<<<< HEAD
-					"file": "app/Http/Controllers/ArticleController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 8771,
-=======
-					"file": "database/migrations/2016_05_10_133903_create_category_article_table.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 0,
->>>>>>> 7d5d015781a4d2ad6c18e60a05c4df6100aef196
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-<<<<<<< HEAD
-								5054,
-								5054
-=======
-								0,
-								0
->>>>>>> 7d5d015781a4d2ad6c18e60a05c4df6100aef196
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-<<<<<<< HEAD
-							"tab_size": 3,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 6588.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-=======
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
->>>>>>> 7d5d015781a4d2ad6c18e60a05c4df6100aef196
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-<<<<<<< HEAD
-					"file": "app/Http/Controllers/PublicController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2091,
-=======
-					"file": "resources/views/articles/view.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 0,
->>>>>>> 7d5d015781a4d2ad6c18e60a05c4df6100aef196
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								977,
-								977
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-<<<<<<< HEAD
-						"translation.y": 480.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-=======
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
->>>>>>> 7d5d015781a4d2ad6c18e60a05c4df6100aef196
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-<<<<<<< HEAD
-					"file": ".env",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 453,
-=======
-					"file": "app/Http/Controllers/FileController.php",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 0,
->>>>>>> 7d5d015781a4d2ad6c18e60a05c4df6100aef196
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 96.0,
-						"zoom_level": 1.0
-					},
-<<<<<<< HEAD
-					"stack_index": 8,
-=======
-					"stack_index": 3,
->>>>>>> 7d5d015781a4d2ad6c18e60a05c4df6100aef196
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-<<<<<<< HEAD
-					"file": "database/seeds/PermissionTableSeeder.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 571,
-=======
-					"file": "resources/views/category/register.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 0,
->>>>>>> 7d5d015781a4d2ad6c18e60a05c4df6100aef196
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-<<<<<<< HEAD
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 108.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-=======
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
->>>>>>> 7d5d015781a4d2ad6c18e60a05c4df6100aef196
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-<<<<<<< HEAD
-					"file": "database/seeds/ArticleTableSeeder.php",
-=======
-					"file": "app/Http/Controllers/CategoryController.php",
->>>>>>> 7d5d015781a4d2ad6c18e60a05c4df6100aef196
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 542,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								476,
-								476
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-<<<<<<< HEAD
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-=======
-							"translate_tabs_to_spaces": false
->>>>>>> 7d5d015781a4d2ad6c18e60a05c4df6100aef196
-						},
-						"translation.x": 0.0,
-						"translation.y": 324.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "app/Http/Controllers/ArticleController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-<<<<<<< HEAD
-								233,
-								233
-=======
-								0,
-								0
->>>>>>> 7d5d015781a4d2ad6c18e60a05c4df6100aef196
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 3,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-<<<<<<< HEAD
-						"translation.y": 432.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-=======
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
->>>>>>> 7d5d015781a4d2ad6c18e60a05c4df6100aef196
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-<<<<<<< HEAD
-					"file": "resources/views/articles/list.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4711,
-=======
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 0,
->>>>>>> 7d5d015781a4d2ad6c18e60a05c4df6100aef196
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-<<<<<<< HEAD
-								4644,
-								4644
-=======
-								0,
-								0
->>>>>>> 7d5d015781a4d2ad6c18e60a05c4df6100aef196
-							]
-						],
-						"settings":
-						{
-<<<<<<< HEAD
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 4752.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "public/js/remove.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 641,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								519,
-								519
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 432.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-=======
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 699.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
->>>>>>> 7d5d015781a4d2ad6c18e60a05c4df6100aef196
 					"type": "text"
 				}
 			]
@@ -1477,7 +926,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 40.0
+		"height": 52.0
 	},
 	"input":
 	{
@@ -1656,11 +1105,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-<<<<<<< HEAD
-	"side_bar_width": 219.0,
-=======
-	"side_bar_width": 272.0,
->>>>>>> 7d5d015781a4d2ad6c18e60a05c4df6100aef196
+	"side_bar_width": 365.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

@@ -1,25 +1,33 @@
 @extends('layouts.default')
 
 @section('title', $category->name)
+@section('container-fluid')
+	<section class="category-info row">
 
-@section('container')
-	
-	<section class="category-info">
-		
 		<div class="jumbotron">
-			<div class="row">
-				<div class="col-md-4">
-					<img src='{{ asset("img/category/$category->filename") }}' class="category-img" data-adaptive-background data-ab-parent='.jumbotron'>
-				</div>
-				<div class="col-md-8">
-					<h1 class='text'>{{ $category->name }}</h1>
-		  			<p>{{ $category->description }}</p>
+			<div>
+				<div class="row">
+					<div class="col-md-4">
+						<img src='{{ asset("img/category/$category->filename") }}' class="category-img img-circle" data-adaptive-background data-ab-parent='.jumbotron'>
+					</div>
+					<div class="col-md-8">
+						<div class="row">
+							<h1 class='text'>{{ $category->name }}</h1>
+							<p>{{ $category->description }}</p>
+						</div>
+						<div class="row">
+							<span>Quantidade de artigos: {{ $qtd_articles }}</span>
+						</div>
+					</div>
 				</div>
 			</div>
-			
-		  	
+
+
 		</div>
 	</section>
+@endsection
+@section('container')
+
 	<section class="row articles-destaques">
 		{{-- Principais Artigos --}}
 		<h2 class="col-md-12 text-center section-title">Principais Artigos</h2>

@@ -66,7 +66,49 @@ class PublicController extends Controller
 
 	public function author($title, $id)
 	{
-		# code...
+        $author = User::find($id);
+        $qtd_articles = $author->articles()->count();
+        $headlines = $author->articles()
+            ->select('id','title','filename','path')
+            ->where('headline', '=', 1)
+            ->where('status', '=', 1)
+            ->take(3)
+            ->get();
+
+        $articles1 = $author->articles()
+            ->select('id','title','filename','path')
+            ->where('headline', '=',0)
+            ->where('status', '=', 1)
+            ->take(2)
+            ->get();
+        $articles2 = $author->articles()
+            ->select('id','title','filename','path')
+            ->where('headline', '=',0)
+            ->where('status', '=', 1)
+            ->skip(2)
+            ->take(3)
+            ->get();
+
+        $articles =$author->articles()
+            ->select('id','title','synthesis','filename','path', 'views')
+            ->where('status', '=', 1)
+            ->orderBy('updated_at','DESC')
+            ->paginate(15);
+
+
+        $var = array(
+            'author'	=>	$author,
+            'newHeadlines' => $headlines,
+            'newArticles1'	=> $articles1,
+            'newArticles2'	=> $articles2,
+            'articles'	=> $articles,
+            'qtd_articles' => $qtd_articles,
+            'mostViewed'	=> $this->mostViewed(),
+            'categories'	=> $this->categories(),
+            'authors'	   => $this->authors()
+        );
+
+        return view('users.articles', $var);
 	}
 
 	public function mostViewed()
@@ -93,7 +135,7 @@ class PublicController extends Controller
 	{
 
 		$category = Category::find($id);
-
+        $qtd_articles = $category->articles()->count();
 		$headlines = $category->articles()
 			->select('id','title','filename','path')
 			->where('headline', '=', 1)
@@ -128,7 +170,7 @@ class PublicController extends Controller
 			'newArticles1'	=> $articles1,
 			'newArticles2'	=> $articles2,
 			'articles'	=> $articles,
-
+            'qtd_articles' => $qtd_articles,
 			'mostViewed'	=> $this->mostViewed(),
 			'categories'	=> $this->categories(),
 			'authors'	   => $this->authors()

@@ -11,8 +11,8 @@
 
 </head>
 <body>
-	<div class="container-fluid">
-		<header class="row header">
+	<div class="container-fluid-1">
+		<header class="header">
 			<div class="container">
 				<form class="navbar-form navbar-right" role="search">
 					<div class="form-group">
@@ -24,7 +24,7 @@
 			</div>
 		</header>
 
-		<nav class="cbp-hsmenu-wrapper row" id="cbp-hsmenu-wrapper">
+		<nav class="cbp-hsmenu-wrapper " id="cbp-hsmenu-wrapper">
 			<div class="cbp-hsinner">
 				<ul class="cbp-hsmenu">
 					<li><a href="/">Início</a></li>
@@ -74,10 +74,14 @@
 			</div>
 		</nav>
 
+		<div class="container-fluid" id="container-fluid">
+			@yield('container-fluid')
+		</div>
+
 		<div class="container" id="container">
 			@yield('container')
 		</div>
-		<footer class="row footer">
+		<footer class=" footer">
 			<p class="text-center">
 				Desenvolvido por Judison Godinho de Sousa
 			</p>

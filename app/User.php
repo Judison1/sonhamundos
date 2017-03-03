@@ -37,5 +37,8 @@ class User extends Authenticatable
     {
         return $this->belongsTo("App\Permission");
     }
-
+    public function articles()
+    {
+        return $this->hasMany('App\Article');
+    }
 }
