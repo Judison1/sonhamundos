@@ -18,7 +18,7 @@
 					<div class="form-group">
 						<input class="form-control" placeholder="Pesquisar" type="text">
 					</div>
-					<button type="submit" class="btn btn-default">Buscar</button>
+					<button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
 				</form>
 				<img src="{{ asset('img/layout/topo.png') }}" class="img-responsive">
 			</div>

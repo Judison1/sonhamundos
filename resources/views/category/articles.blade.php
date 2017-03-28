@@ -30,7 +30,7 @@
 
 	<section class="row articles-destaques">
 		{{-- Principais Artigos --}}
-		<h2 class="col-md-12 text-center section-title">Principais Artigos</h2>
+		<h2 class="col-md-12 text-center section-title">Principais Artigos da Categoria {{ $category->name }} </h2>
 
 		{{-- Manchetes --}}
 		<div class="col-xs-12 col-md-8">
@@ -68,8 +68,10 @@
 	</section>
 	
 	<!-- Todos os artigos -->
-
-	<section class="row">
+</div>
+<div class="container-fluid background-diff">
+	<img src='{{ asset("img/category/$category->filename") }}' style="display:none" data-adaptive-background data-ab-parent='.background-diff'>
+    <section class="container articles-destaques ">
 		{{-- Mais visualizados --}}
 		<div class="col-xs-12 most-viewed">
 			<h2 class="text-center section-title">Mais visualizados</h2>
@@ -83,12 +85,13 @@
 
 			</div>
 		</div>
-
+</div>
+<div class="container">
 		{{-- Todos os Artigos --}}
 		<div class="col-md-12 articles-all">
 			<div class="row">
 
-				<h2 class="section-title text-center">Todos os Artigos</h2>
+				<h2 class="section-title text-center">Todos os Artigos da Categoria {{ $category->name }}</h2>
 				@foreach($articles as $art)
 					<div class="col-xs-12 col-sm-6 col-md-4 box-art">
 							@include('articles._article')
@@ -106,11 +109,12 @@
 @section('js')
 	<script src="{{ asset('js/jquery.adaptive-backgrounds.js') }}"></script>
 	<script type="text/javascript">
-		$(document).ready(function(){
-			$.adaptiveBackground.run({
+		$.adaptiveBackground.run({
 		   	normalizeTextColor: true,
 		   	exclude: [ 'rgb(0,0,0)' ]
 		   });
+		$(document).ready(function(){
+			
 			$('#carousel_news_headlines').carousel({
 			  	interval: 5000
 			});

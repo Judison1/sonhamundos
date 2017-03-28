@@ -3270,5 +3270,54 @@
             "thumbnail",
             "watermark"
         ]
+    },
+    {
+        "name": "roumen/disqus",
+        "version": "v1.2",
+        "version_normalized": "1.2.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/RoumenDamianoff/laravel-disqus.git",
+            "reference": "bb160b22f5ded911218ddcf395e8e0cb1c3ac0ba"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/RoumenDamianoff/laravel-disqus/zipball/bb160b22f5ded911218ddcf395e8e0cb1c3ac0ba",
+            "reference": "bb160b22f5ded911218ddcf395e8e0cb1c3ac0ba",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/support": "~4|~5",
+            "php": ">=5.4.0"
+        },
+        "time": "2015-05-16 16:31:33",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Roumen\\Disqus": "src/"
+            },
+            "files": [
+                "src/Roumen/Disqus/disqusapi/disqusapi.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache"
+        ],
+        "authors": [
+            {
+                "name": "Roumen Damianoff",
+                "email": "roumen@dawebs.com",
+                "homepage": "https://roumen.it",
+                "role": "Developer"
+            }
+        ],
+        "description": "Disqus API package for Laravel 5.",
+        "homepage": "http://roumen.it/projects/laravel-disqus",
+        "keywords": [
+            "disqus",
+            "laravel"
+        ]
     }
 ]
