@@ -5,10 +5,10 @@
     <section class="category-info row">
 
         <div class="jumbotron">
-            <div>
+            <div class="container">
                 <div class="row">
                     <div class="col-md-4">
-                        <img src='{{ asset("img/users/$author->avatar") }}' class="category-img img-circle" data-adaptive-background data-ab-parent='.jumbotron'>
+                        <img src='{{ asset("img/users/$author->avatar") }}' class="category-img img-circle" data-adaptive-background data-ab-parent='.category-info'>
                     </div>
                     <div class="col-md-8">
                         <div class="row">

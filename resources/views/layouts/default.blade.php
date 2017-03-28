@@ -20,7 +20,7 @@
 					</div>
 					<button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
 				</form>
-				<img src="{{ asset('img/layout/topo.png') }}" class="img-responsive">
+				<img src="{{ asset('img/layout/topo1.png') }}">
 			</div>
 		</header>
 

@@ -5,7 +5,7 @@
 	<section class="category-info row">
 
 		<div class="jumbotron">
-			<div>
+			<div class="container">
 				<div class="row">
 					<div class="col-md-4">
 						<img src='{{ asset("img/category/$category->filename") }}' class="category-img img-circle" data-adaptive-background data-ab-parent='.jumbotron'>

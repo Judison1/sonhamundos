@@ -16,7 +16,7 @@
     normalizeTextColor:   false,
     normalizedTextColors:  {
       light:      "#fff",
-      dark:       "#000"
+      dark:       "#222"
     },
     lumaClasses:  {
       light:      "ab-light",
