@@ -4,6 +4,46 @@
 		"selected_items":
 		[
 			[
+				"pa",
+				"padding-top"
+			],
+			[
+				"y",
+				"yi"
+			],
+			[
+				"tg",
+				"tags"
+			],
+			[
+				"Ta",
+				"TagController"
+			],
+			[
+				"ta",
+				"tag"
+			],
+			[
+				"ne",
+				"newTags"
+			],
+			[
+				"ar",
+				"articles"
+			],
+			[
+				"pu",
+				"public"
+			],
+			[
+				"is",
+				"is_array"
+			],
+			[
+				"th",
+				"this"
+			],
+			[
 				"col",
 				"col-xs-9"
 			],
@@ -41,15 +81,15 @@
 			],
 			[
 				"fu",
-				"fun\tFunction"
+				"fun	Function"
 			],
 			[
 				"remo",
-				"removeClass\t.removeClass()"
+				"removeClass	.removeClass()"
 			],
 			[
 				"get",
-				"get\t$.get()"
+				"get	$.get()"
 			],
 			[
 				"lo",
@@ -73,11 +113,11 @@
 			],
 			[
 				"ge",
-				"get\t$.get()"
+				"get	$.get()"
 			],
 			[
 				"pare",
-				"parent\t.parent()"
+				"parent	.parent()"
 			],
 			[
 				"sele",
@@ -89,19 +129,15 @@
 			],
 			[
 				"ch",
-				"children\t.children()"
+				"children	.children()"
 			],
 			[
 				"add",
-				"addClass\t.addClass()"
+				"addClass	.addClass()"
 			],
 			[
 				"rem",
-				"removeClass\t.removeClass()"
-			],
-			[
-				"pa",
-				"parents\t.parents()"
+				"removeClass	.removeClass()"
 			],
 			[
 				"pos",
@@ -141,11 +177,11 @@
 			],
 			[
 				"if",
-				"if\tif …"
+				"if	if …"
 			],
 			[
 				"ac",
-				"action\tAttr"
+				"action	Attr"
 			],
 			[
 				"sat",
@@ -157,7 +193,7 @@
 			],
 			[
 				"su",
-				"submit\t.submit()"
+				"submit	.submit()"
 			],
 			[
 				"ari",
@@ -177,15 +213,11 @@
 			],
 			[
 				"for",
-				"for\tblade-for"
+				"for	blade-for"
 			],
 			[
 				"array_m",
 				"array_merge"
-			],
-			[
-				"ne",
-				"newCats"
 			],
 			[
 				"new",
@@ -197,11 +229,11 @@
 			],
 			[
 				"fo",
-				"foreach\tforeach …"
+				"foreach	foreach …"
 			],
 			[
 				"a",
-				"a\tTag"
+				"a	Tag"
 			],
 			[
 				"la",
@@ -209,7 +241,7 @@
 			],
 			[
 				"im",
-				"img\tTag"
+				"img	Tag"
 			],
 			[
 				"rg",
@@ -217,7 +249,7 @@
 			],
 			[
 				"fun",
-				"fun\tfunction …"
+				"fun	function …"
 			],
 			[
 				"or",
@@ -237,7 +269,7 @@
 			],
 			[
 				"he",
-				"header\tTag"
+				"header	Tag"
 			],
 			[
 				"te",
@@ -256,20 +288,12 @@
 				"mostViewed"
 			],
 			[
-				"ar",
-				"article"
-			],
-			[
 				"wi",
 				"width"
 			],
 			[
 				"h",
-				"h3\tTag"
-			],
-			[
-				"is",
-				"isset"
+				"h3	Tag"
 			],
 			[
 				"text",
@@ -317,23 +341,23 @@
 			],
 			[
 				"op",
-				"option\tTag"
+				"option	Tag"
 			],
 			[
 				"AC",
-				"action\tAttr"
+				"action	Attr"
 			],
 			[
 				"in",
-				"input\tTag"
+				"input	Tag"
 			],
 			[
 				"read",
-				"ready\t$(document).ready"
+				"ready	$(document).ready"
 			],
 			[
 				"di",
-				"div\tTag"
+				"div	Tag"
 			],
 			[
 				"cate",
@@ -369,23 +393,19 @@
 			],
 			[
 				"l",
-				"li\tTag"
+				"li	Tag"
 			],
 			[
 				"u",
-				"ul\tTag"
+				"ul	Tag"
 			],
 			[
 				"js",
 				"json_encode"
 			],
 			[
-				"th",
-				"this\t$(this)"
-			],
-			[
 				"at",
-				"attr\t.attr() - single"
+				"attr	.attr() - single"
 			],
 			[
 				"w",
@@ -397,7 +417,7 @@
 			],
 			[
 				"Route",
-				"Route::controller\tRoute a controller to a URI with wildcard routing."
+				"Route::controller	Route a controller to a URI with wildcard routing."
 			],
 			[
 				"C",
@@ -413,7 +433,7 @@
 			],
 			[
 				"S",
-				"Schema::drop\tDrop an existing database table"
+				"Schema::drop	Drop an existing database table"
 			],
 			[
 				"inc",
@@ -449,7 +469,7 @@
 			],
 			[
 				"de",
-				"def\t#ifndef … #define … #endif"
+				"def	#ifndef … #define … #endif"
 			],
 			[
 				"pi",
@@ -465,7 +485,7 @@
 			],
 			[
 				"f",
-				"fore\tfor (each)"
+				"fore	for (each)"
 			],
 			[
 				"d",
@@ -494,109 +514,74 @@
 			[
 				"FORM",
 				"form"
-			],
-			[
-				"fO",
-				"FORM_H"
-			],
-			[
-				"e",
-				"enctype"
-			],
-			[
-				"style",
-				"stylesheet"
-			],
-			[
-				"c",
-				"cout"
-			],
-			[
-				"qtd",
-				"qtdCss"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "app/Http/routes.php",
+			"file": "resources/views/users/articles.blade.php",
 			"settings":
 			{
-				"buffer_size": 1829,
-				"line_ending": "Windows"
+				"buffer_size": 4081,
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/Http/Controllers/CategoryController.php",
+			"file": "/home/judison1/Área de Trabalho/programação relatório renan.txt",
 			"settings":
 			{
-				"buffer_size": 4481,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
+				"buffer_size": 451,
+				"line_ending": "Unix",
+				"name": "- Tentativa de criar a central multimidia com a ra"
 			}
 		},
 		{
-			"file": "app/Http/Controllers/ArticleController.php",
+			"file": "composer.json",
 			"settings":
 			{
-				"buffer_size": 7232,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
+				"buffer_size": 1310,
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "resources/views/articles/register.blade.php",
+			"file": "resources/views/category/articles.blade.php",
 			"settings":
 			{
-				"buffer_size": 2719,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
+				"buffer_size": 3243,
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "resources/views/articles/edit.blade.php",
+			"file": "app/Http/Controllers/UserController.php",
 			"settings":
 			{
-				"buffer_size": 4281,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "resources/views/articles/list.blade.php",
-			"settings":
-			{
-				"buffer_size": 4711,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "resources/views/category/update.blade.php",
-			"settings":
-			{
-				"buffer_size": 3332,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
+				"buffer_size": 1065,
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "resources/views/layouts/default.blade.php",
 			"settings":
 			{
-				"buffer_size": 2676,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
+				"buffer_size": 3054,
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "resources/views/category/list.blade.php",
+			"file": "public/css/style.css",
 			"settings":
 			{
-				"buffer_size": 2227,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
+				"buffer_size": 2465,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "resources/views/index.blade.php",
+			"settings":
+			{
+				"buffer_size": 2332,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -661,34 +646,65 @@
 	},
 	"expanded_folders":
 	[
-		"/C/wamp/www/sonhamundos",
-		"/C/wamp/www/sonhamundos/app",
-		"/C/wamp/www/sonhamundos/app/Http",
-		"/C/wamp/www/sonhamundos/app/Http/Controllers",
-		"/C/wamp/www/sonhamundos/resources",
-		"/C/wamp/www/sonhamundos/resources/views",
-		"/C/wamp/www/sonhamundos/resources/views/articles",
-		"/C/wamp/www/sonhamundos/resources/views/category",
-		"/C/wamp/www/sonhamundos/resources/views/layouts"
+		"/var/www/html/sonhamundos",
+		"/var/www/html/sonhamundos/app/Http/Controllers",
+		"/var/www/html/sonhamundos/bootstrap",
+		"/var/www/html/sonhamundos/public/css",
+		"/var/www/html/sonhamundos/resources/lang",
+		"/var/www/html/sonhamundos/resources/views",
+		"/var/www/html/sonhamundos/resources/views/layouts",
+		"/var/www/html/sonhamundos/vendor",
+		"/var/www/html/sonhamundos/vendor/composer"
 	],
 	"file_history":
 	[
+		"/home/judison1/Documentos/BCC/Autômatos/ambiguidade glc.txt",
+		"/home/judison1/Área de Trabalho/trapezio.cpp",
+		"/media/judison1/Jörmungandr/Helheim/BCC/Autômatos e Linguagens Formais/Trabalho.txt",
+		"/var/www/html/sonhamundos/app/Http/routes.php",
+		"/var/www/html/sonhamundos/app/Http/Controllers/UserController.php",
+		"/home/judison1/Documentos/examples/basic.html",
+		"/var/www/html/sonhamundos/resources/views/articles/edit_content.blade.php",
+		"/var/www/html/sonhamundos/resources/views/articles/edit.blade.php",
+		"/var/www/html/sonhamundos/app/Article.php",
+		"/var/www/html/sonhamundos/app/Http/Controllers/ArticleController.php",
+		"/var/www/html/sonhamundos/resources/views/category/register.blade.php",
+		"/var/www/html/sonhamundos/app/Http/Controllers/PublicController.php",
+		"/var/www/html/sonhamundos/.env",
+		"/var/www/html/sonhamundos/resources/views/users/login.blade.php",
+		"/var/www/html/sonhamundos/database/seeds/PermissionTableSeeder.php",
+		"/var/www/html/sonhamundos/database/seeds/ArticleTableSeeder.php",
+		"/var/www/html/sonhamundos/resources/views/articles/view.blade.php",
+		"/var/www/html/sonhamundos/resources/views/articles/list.blade.php",
+		"/var/www/html/sonhamundos/public/js/remove.js",
+		"/C/wamp/www/pegadaHidrica/.gitignore.txt",
+		"/C/wamp/www/pegadaHidrica/.gitignore",
+		"/C/wamp/www/sonhamundos/resources/views/articles/register.blade.php",
+		"/C/wamp/www/sonhamundos/app/Article.php",
+		"/C/wamp/www/sonhamundos/resources/views/articles/edit.blade.php",
+		"/C/wamp/www/sonhamundos/app/Http/Controllers/ArticleController.php",
+		"/C/wamp/www/sonhamundos/app/Http/Controllers/TagController.php",
+		"/C/wamp/www/sonhamundos/app/Http/Controllers/AdminController.php",
+		"/C/wamp/www/sonhamundos/app/Http/Middleware/Authenticate.php",
+		"/C/wamp/www/sonhamundos/app/Http/Controllers/CategoryController.php",
+		"/C/wamp/www/sonhamundos/resources/views/articles/view.blade.php",
+		"/C/wamp/www/sonhamundos/.gitignore",
+		"/C/wamp/www/sonhamundos/resources/views/articles/list.blade.php",
+		"/C/wamp/www/sonhamundos/resources/views/category/update.blade.php",
 		"/C/wamp/www/sonhamundos/resources/views/layouts/default.blade.php",
+		"/C/wamp/www/sonhamundos/resources/views/category/list.blade.php",
+		"/C/wamp/www/sonhamundos/app/Http/routes.php",
 		"/C/wamp/www/sonhamundos/resources/views/index.blade.php",
 		"/C/wamp/www/sonhamundos/public/js/remove.js",
 		"/C/wamp/www/sonhamundos/public/js/btnToggle.js",
 		"/C/wamp/www/sonhamundos/.env",
-		"/C/wamp/www/sonhamundos/resources/views/articles/list.blade.php",
-		"/C/wamp/www/sonhamundos/.gitignore",
 		"/C/wamp/www/sonhamundos/resources/views/layouts/admin.blade.php",
 		"/C/wamp/bin/apache/apache2.4.18/conf/httpd.conf",
 		"/C/wamp/bin/mysql/mysql5.7.11/my.ini",
 		"/C/Users/judis/Desktop/trabalho de banco de dados/tavernadobardo.sql",
-		"/C/wamp/www/sonhamundos/app/Http/routes.php",
 		"/C/Users/judis/Desktop/trabalho de banco de dados/insert.usuarios.sql",
 		"/C/Users/judis/Desktop/trabalho de banco de dados/insert.jogadores.sql",
 		"/C/Users/judis/Desktop/trabalho de banco de dados/insert.mestre.sql",
-		"/C/wamp/www/sonhamundos/app/Http/Controllers/ArticleController.php",
 		"/C/wamp/www/site/index.php",
 		"/C/Users/judis/Documents/IDM/Instructions.txt",
 		"/C/wamp/www/sonhamundos/app/Providers/AppServiceProvider.php",
@@ -701,23 +717,15 @@
 		"/C/wamp/www/sonhamundos/public/css/switchbutton.css",
 		"/C/wamp/www/sonhamundos/.env.example",
 		"/C/wamp/www/sonhamundos/app/Http/Middleware/EncryptCookies.php",
-		"/C/wamp/www/sonhamundos/app/Http/Middleware/Authenticate.php",
 		"/C/wamp/www/sonhamundos/app/Http/Controllers/Auth/AuthController.php",
 		"/C/wamp/www/sonhamundos/config/app.php",
 		"/C/wamp/bin/apache/apache2.4.18/conf/extra/httpd-vhosts.conf",
 		"/C/wamp/www/sonhamundos/app/Http/Controllers/FileController.php",
 		"/C/wamp/www/sonhamundos/resources/views/category/register.blade.php",
-		"/C/wamp/www/sonhamundos/app/Http/Controllers/CategoryController.php",
-		"/C/wamp/www/sonhamundos/resources/views/category/update.blade.php",
-		"/C/wamp/www/sonhamundos/resources/views/articles/edit.blade.php",
-		"/C/wamp/www/sonhamundos/resources/views/category/list.blade.php",
 		"/C/wamp/www/sonhamundos/vendor/symfony/console/Application.php",
 		"/C/Windows/System32/drivers/etc/hosts",
-		"/C/wamp/www/sonhamundos/resources/views/articles/view.blade.php",
 		"/C/wamp/www/sonhamundos/app/Http/Middleware/RedirectIfAuthenticated.php",
 		"/C/wamp/www/sonhamundos/resources/views/users/login.blade.php",
-		"/C/wamp/www/sonhamundos/resources/views/articles/register.blade.php",
-		"/C/wamp/www/sonhamundos/app/Article.php",
 		"/C/wamp/www/sonhamundos/public/css/admin/style.css",
 		"/C/wamp/www/sonhamundos/public/css/admin/login.css",
 		"/C/wamp/www/sonhamundos/app/Http/Controllers/UserController.php",
@@ -729,7 +737,6 @@
 		"/C/wamp/www/sonhamundos/public/css/style.css",
 		"/C/wamp/www/sonhamundos/resources/views/articles/_inner.blade.php",
 		"/C/Users/judis/Downloads/Compressed/adobe illustrator cc 2015 19 0 0 64 bit crack/adobe illustrator cc 2015 19 0 0 64 bit crack/ReadMe.txt",
-		"/C/wamp/www/sonhamundos/app/Http/Controllers/AdminController.php",
 		"/C/wamp/www/sonhamundos/resources/views/articles/editImg.blade.php",
 		"/C/wamp/www/sonhamundos/resources/views/articles/_news_articles_2.blade.php",
 		"/C/wamp/www/sonhamundos/resources/views/articles/_news_articles_1.blade.php",
@@ -778,33 +785,11 @@
 		"/C/wamp/www/sonhamundo/app/Category.php",
 		"/C/wamp/www/sonhamundo/resources/views/articles/_most_viewed.blade.php",
 		"/C/wamp/www/sonhamundo/app/User.php",
-		"/C/wamp/www/sonhamundo/app/Permission.php",
-		"/C/Users/judis/AppData/Roaming/Sublime Text 3/Packages/Colorsublime-Themes/bashling.tmTheme",
-		"/C/wamp/www/sonhamundo/resources/views/articles/_inner.blade.php",
-		"/C/wamp/www/sonhamundo/resources/views/articles/_indicators.blade.php",
-		"/C/wamp/www/Nimassa/css/estilo.css",
-		"/C/wamp/www/sonhamundo/resources/views/articles/_news_articles_2.php",
-		"/C/wamp/www/sonhamundo/database/migrations/2016_05_10_130050_create_articles_table.php",
-		"/C/wamp/www/sonhamundo/database/migrations/2016_05_10_133049_create_category_table.php",
-		"/C/wamp/www/sonhamundo/database/migrations/2016_05_10_133903_create_category_article_table.php",
-		"/C/wamp/www/sonhamundo/public/css/component.css",
-		"/C/Users/judis/Downloads/Compressed/HorizontalSlideOutMenu/HorizontalSlideOutMenu/index.html",
-		"/C/wamp/www/sonhamundo/database/migrations/2014_10_12_000000_create_users_table.php",
-		"/C/wamp/www/sonhamundo/database/migrations/2016_05_09_204106_update_user_table.php",
-		"/C/wamp/www/sonhamundo/config/database.php",
-		"/C/wamp/www/sonhamundo/.env",
-		"/C/wamp/www/sonhamundo/database/migrations/2016_05_09_185548_create_permission_table.php",
-		"/C/wamp/www/sonhamundo/database/migrations/2014_10_12_100000_create_password_resets_table.php",
-		"/C/Users/judis/AppData/Local/Temp/Temp1_www.zip/www/dinflux/resources/views/layouts/template.blade.php",
-		"/C/wamp/www/sonhamundo/app/Http/Controllers/Auth/AuthController.php",
-		"/C/wamp/www/sonhamundo/public/js/modernizr.custom.js",
-		"/C/wamp/www/sonhamundo/database/migrations/2016_05_09_190139_create_permission_user_table.php",
-		"/C/wamp/www/sonhamundo/database/migrations/2016_05_09_185121_create_permission.php",
-		"/C/wamp/www/sonhamundo/database/migrations/2016_05_09_183351_create_users_table.php"
+		"/C/wamp/www/sonhamundo/app/Permission.php"
 	],
 	"find":
 	{
-		"height": 45.0
+		"height": 48.0
 	},
 	"find_in_files":
 	{
@@ -818,6 +803,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"diff",
+			"old",
 			"listen",
 			"Directory",
 			"dire",
@@ -825,7 +812,7 @@
 			"'",
 			"bac",
 			"hssubmenu",
-			"<div class=\"row\">\n\t  \t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t  \t\t\t\t\t\t\t\t\tCVERDE \n\t  \t\t\t\t\t\t\t\t\t<small class=\"text-info\">(Metros Cúbicos por Hectares)</small>\n\t  \t\t\t\t\t\t\t\t</div>\n\t  \t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t  \t\t\t\t\t\t\t\t\t<span class=\"form-control cverde\"></span>\n\t  \t\t\t\t\t\t\t\t</div>\n\t  \t\t\t\t\t\t\t</div>\n\t  \t\t\t\t\t\t\t",
+			"<div class=\"row\">\n	  								<div class=\"col-md-4\">\n	  									CVERDE \n	  									<small class=\"text-info\">(Metros Cúbicos por Hectares)</small>\n	  								</div>\n	  								<div class=\"col-md-4\">\n	  									<span class=\"form-control cverde\"></span>\n	  								</div>\n	  							</div>\n	  							",
 			"car",
 			"provi",
 			"image",
@@ -841,7 +828,7 @@
 			"loga",
 			"sess",
 			"utf",
-			"<?php\n\tinclude 'include/topo.php';\n?>",
+			"<?php\n	include 'include/topo.php';\n?>",
 			"topo",
 			"rodape",
 			"button",
@@ -943,9 +930,7 @@
 			"outras_coi",
 			"tran",
 			"paginaca",
-			"sintese",
-			"item:hover",
-			"alte"
+			"sintese"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -963,103 +948,75 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/Http/routes.php",
+					"file": "resources/views/users/articles.blade.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1829,
+						"buffer_size": 4081,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1727,
-								1721
+								1523,
+								1523
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1305.0,
+						"translation.y": 256.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "app/Http/Controllers/CategoryController.php",
+					"file": "/home/judison1/Área de Trabalho/programação relatório renan.txt",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4481,
+						"buffer_size": 451,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2440,
-								2469
+								408,
+								408
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"auto_name": "- Tentativa de criar a central multimidia com a ra",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 2958.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "app/Http/Controllers/ArticleController.php",
-					"semi_transient": false,
+					"file": "composer.json",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 7232,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4435,
-								4435
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 3,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 4272.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "resources/views/articles/register.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2719,
+						"buffer_size": 1310,
 						"regions":
 						{
 						},
@@ -1072,11 +1029,41 @@
 						],
 						"settings":
 						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 229.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "resources/views/category/articles.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3243,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1668,
+								1668
+							]
+						],
+						"settings":
+						{
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 870.0,
+						"translation.y": 1984.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 5,
@@ -1084,48 +1071,19 @@
 				},
 				{
 					"buffer": 4,
-					"file": "resources/views/articles/edit.blade.php",
+					"file": "app/Http/Controllers/UserController.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4281,
+						"buffer_size": 1065,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3978,
-								3776
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1305.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "resources/views/articles/list.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4711,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3340,
-								3333
+								603,
+								603
 							]
 						],
 						"settings":
@@ -1133,56 +1091,27 @@
 							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 2658.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "resources/views/category/update.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3332,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2888,
-								2888
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2474.0,
+						"translation.y": 406.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 5,
 					"file": "resources/views/layouts/default.blade.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2676,
+						"buffer_size": 3054,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1072,
-								1072
+								786,
+								786
 							]
 						],
 						"settings":
@@ -1191,27 +1120,56 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 696.0,
+						"translation.y": 214.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
-					"file": "resources/views/category/list.blade.php",
+					"buffer": 6,
+					"file": "public/css/style.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2227,
+						"buffer_size": 2465,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								856,
-								856
+								2438,
+								2438
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3931.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "resources/views/index.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2332,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1176,
+								1176
 							]
 						],
 						"settings":
@@ -1220,10 +1178,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 464.0,
+						"translation.y": 1312.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 7,
 					"type": "text"
 				}
 			]
@@ -1231,7 +1189,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 64.0
+		"height": 52.0
 	},
 	"input":
 	{
@@ -1272,7 +1230,7 @@
 	"project": "sonhamundos.sublime-project",
 	"replace":
 	{
-		"height": 108.0
+		"height": 76.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1410,7 +1368,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 306.0,
+	"side_bar_width": 365.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

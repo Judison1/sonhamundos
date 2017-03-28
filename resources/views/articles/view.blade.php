@@ -33,6 +33,25 @@
 			<div class="article-content">
 				{!! $article->content !!}
 			</div>
+			<footer class="row">
+				<div class="col-md-12">
+				<strong>Categorias: </strong>
+					@foreach($articleCategories as $artcat)
+					<a href="{{ route('public.category', ['title' => str_slug($artcat->name), 'id' => $artcat->id ]) }}" class="btn btn-info">
+						{{ $artcat->name }}
+					</a>
+					@endforeach
+				</div>
+				<hr>
+				<div class="col-md-12">
+					<strong>Tags: </strong>
+					@foreach($tags as $tag)
+					<a href="#tag" class="btn btn-default">
+						{{ $tag->name }}
+					</a>
+					@endforeach
+				</div>
+			</footer>
 		</article>
 	</section>
 

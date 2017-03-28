@@ -41,10 +41,11 @@
 			</div>
 		</div>
 	</section>
-	
+</div>
+<div class="container-fluid background-inverse">	
 	<!-- Todos os artigos -->
 
-	<section class="row">
+	<section class="container">
 		{{-- Mais visualizados --}}
 		<div class="col-xs-12 most-viewed">
 			<h2 class="text-center section-title">Mais visualizados</h2>
@@ -58,7 +59,8 @@
 
 			</div>
 		</div>
-
+</div>
+<div class="container">
 		{{-- Todos os Artigos --}}
 		<div class="col-md-12 articles-all">
 			<div class="row">

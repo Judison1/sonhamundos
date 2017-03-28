@@ -1,5 +1,6 @@
 <?php
 use App\User;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Seeder;
 
 class UserTableSeeder extends Seeder
@@ -11,12 +12,15 @@ class UserTableSeeder extends Seeder
      */
     public function run()
     {
+        DB::table('users')->delete();
 
-        $user = new User;
-        $user->name = "Judison Godinho de Sousa";
-        $user->email = "judison@outlook.com";
-        $user->password = Crypt::encrypt("123456");
-        $user->avatar = "defaut.jpg";
-        $user->save();
+        User::insert([
+            'name' => 'Judison Godinho de Sousa',
+            'email' => 'judison@outlook.com',
+            'permission_id' => 1,
+            'password' => bcrypt('123456'),
+        ]);
+
+        factory(App\User::class, 10)->create();
     }
 }

@@ -14,7 +14,8 @@ class CreatePermissionTable extends Migration
     {
         Schema::create('permission', function ($table){
             $table->increments('id');
-            $table->string('name');
+            $table->string('name')
+                ->unique();
             $table->string('description')
                 ->nullable();
             $table->timestamps();
@@ -29,6 +30,9 @@ class CreatePermissionTable extends Migration
      */
     public function down()
     {
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropForeign('users_permission_id_foreign');
+        });
         Schema::dropIfExists('permission');
     }
 }

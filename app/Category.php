@@ -23,7 +23,7 @@ class Category extends Model
    }
    public function articles()
    {
-   	return $this->belongsToMany('App\Category', 'category_article');
+   	return $this->belongsToMany('App\Article', 'category_article');
    }
 
 }

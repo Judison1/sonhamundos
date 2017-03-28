@@ -6,8 +6,11 @@
 namespace App\Http\Controllers;
 use DB;
 use Auth;
+use App\CategoryArticle;
+
 use App\Article;
 use App\Category;
+use App\Tag;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Controllers\FileController;
@@ -27,7 +30,8 @@ class ArticleController extends Controller
 	public function getCadastro()
 	{
 		$cats = Category::all();
-		return view('articles.register', ['cats' => $cats]);
+      $tags = Tag::all();
+		return view('articles.register', ['cats' => $cats, 'tags' => $tags]);
 	}
 
 	public function postCadastro(Request $request)
@@ -38,29 +42,33 @@ class ArticleController extends Controller
         'filename'      => 'required',
     	]);
         
-        
-
     	$article = new Article;
     	$article->title 	= $request->input('title');
-
-      $article->user_id = Auth::user()->id;
-
-    	$article->synthesis = "";
-    	$article->content 	= "";
+        $article->user_id = Auth::user()->id;
+    	$article->synthesis   = "";
+    	$article->content     = "";
 
     	if($article->save()){
          // categories
          $categories = array();
          foreach ($request->input('categories') as $category) {
-           $categories[] = array(
+            $categories[] = array(
                'article_id'   => $article->id,
                'category_id'  => $category
             );
          }
 
          DB::table('category_article')->insert($categories);
-
-         // upload and save photo 
+         // tags
+         if(is_array($request->input('tags'))){
+            $tags = new TagController($request->input('tags'));
+            $tags->separate();
+            $tags->insert();
+            $tags->setArticleId($article->id);
+            $tags->setAddTags();
+            $tags->insertArticleTag();
+         }
+         // upload and save photo
          if(!($request->hasFile('filename')))
             return back()->with('errors', 'filename não está na requisição');
 
@@ -69,22 +77,24 @@ class ArticleController extends Controller
          $path = public_path('img/articles');
 
          $File = new FileController($name, $path, $fileRequest);
-         
+
          if($File->validation(['jpeg','jpg','png','gif'])) {
 
-            if($File->save(920)) {
-                  
+            if($File->save(720)) {
+
                $article->path       =  'articles';
                $article->filename   =  $File->getFilename();
                $article->save();
 
                return redirect()->route('article.edit',['id'=> $article->id]);
 
-            } else 
+            } else
                return back()->with('errors',"Não foi possível salvar o arquivo!");
-         } else 
+
+         } else
             return back()->with('errors',"Formato invalido ou o arquivo não existe!");
-      }
+
+        }
 	}
 
    public function getEditar($id)
@@ -92,7 +102,8 @@ class ArticleController extends Controller
       $article = Article::find($id);
       $categories = Category::all();
       $cats = $article->categories;
-
+      $tags = Tag::all();
+      $articleTags = $article->tags;
 
       $newCats = array();
       foreach ($categories as $cat) {
@@ -106,11 +117,11 @@ class ArticleController extends Controller
 
          if($check) {
 
-         $newCats[] = array(
-            'id'  =>  $cat->id,
-            'name' => $cat->name,
-            'status' => 'selected="selected"'
-         );
+            $newCats[] = array(
+               'id'  =>  $cat->id,
+               'name' => $cat->name,
+               'status' => 'selected="selected"'
+            );
 
          } else {
 
@@ -122,8 +133,41 @@ class ArticleController extends Controller
          }
 
       }
+
+      $newTags = array();
+      foreach ($tags as $tag) {
+
+         $check = false;
+         foreach ($articleTags as $at) {
+            if($tag->id == $at->id){
+               $check = true;
+            }
+         }
+
+         if($check) {
+
+            $newTags[] = array(
+               'id'  =>  $tag->id,
+               'name' => $tag->name,
+               'status' => 'selected="selected"'
+            );
+
+         } else {
+
+            $newTags[] = array(
+               'id'  =>  $tag->id,
+               'name' => $tag->name,
+               'status' => ''
+            );
+         }
+
+      }
       
-      return view('articles.edit', ['article' => $article, 'categories' => $newCats]);
+      return view('articles.edit', [
+         'article' => $article, 
+         'categories' => $newCats, 
+         'tags' => $newTags
+      ]);
    }
 
    public function postEditar(Request $request, $id)
@@ -140,14 +184,34 @@ class ArticleController extends Controller
          // categories
          $categories = array();
          foreach ($request->input('categories') as $category) {
-           $categories[] = array(
+            $categories[] = array(
                'article_id'   => $article->id,
                'category_id'  => $category
             );
          }
+
+
          $catArt = DB::table('category_article');
-         $catArt->where('article_id', '==', $article->id)->delete();
+         $catArt->where('article_id', '=', $article->id)->delete();
          $catArt->insert($categories);
+
+
+         if(is_array($request->input('tags'))){
+
+            $tags = new TagController($request->input('tags'));
+            $tags->separate();
+            $tags->insert();
+            $tags->setArticleId($article->id);
+            $tags->setAllArticleTags();
+            $tags->setAddRemoved();
+            $tags->remove();
+            $tags->insertArticleTag();
+
+         } else {
+
+            TagController::removeAllTagsArticle($article->id);
+
+         }
 
          // Salvar imagem
          if($request->hasfile('filename')) {
@@ -262,4 +326,5 @@ class ArticleController extends Controller
       }
       return response()->json($response);
    }
+
 }

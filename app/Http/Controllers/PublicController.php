@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 use App\Article;
 use App\Category;
 use App\Http\Controllers\Controller;
+use App\User;
 
 class PublicController extends Controller
 {
@@ -38,7 +39,8 @@ class PublicController extends Controller
 			'articles'	=> $articles,
 
 			'mostViewed'	=> $this->mostViewed(),
-			'categories'	=> $this->categories()
+			'categories'	=> $this->categories(),
+			'authors'	    => $this->authors()
 		);
 
 		return view('index', $var);
@@ -48,40 +50,133 @@ class PublicController extends Controller
 	public function view($title, $id){
 		$article = Article::find($id);
 		$author = $article->user;
-		$categories = $article->categories();
-
+		$categories = $article->categories;
+		$tags = $article->tags;
 		$var = array(
 			'article' => $article , 
 			'author' => $author, 
-			'categories' => $categories,
+			'articleCategories' => $categories,
+			'tags' => $tags,
 			'mostViewed' => $this->mostViewed(),
-			'categories'	=> $this->categories()
+			'categories'	=> $this->categories(),
+            'authors'	    => $this->authors()
 		);	
 		return view('articles.view', $var);
 	}
-	public function category($name, $id)
+
+	public function author($title, $id)
 	{
-		# code...
-	}
-	public function author($name, $id)
-	{
-		# code...
+        $author = User::find($id);
+        $qtd_articles = $author->articles()->count();
+        $headlines = $author->articles()
+            ->select('id','title','filename','path')
+            ->where('headline', '=', 1)
+            ->where('status', '=', 1)
+            ->take(3)
+            ->get();
+
+        $articles1 = $author->articles()
+            ->select('id','title','filename','path')
+            ->where('headline', '=',0)
+            ->where('status', '=', 1)
+            ->take(2)
+            ->get();
+        $articles2 = $author->articles()
+            ->select('id','title','filename','path')
+            ->where('headline', '=',0)
+            ->where('status', '=', 1)
+            ->skip(2)
+            ->take(3)
+            ->get();
+
+        $articles =$author->articles()
+            ->select('id','title','synthesis','filename','path', 'views')
+            ->where('status', '=', 1)
+            ->orderBy('updated_at','DESC')
+            ->paginate(15);
+
+
+        $var = array(
+            'author'	=>	$author,
+            'newHeadlines' => $headlines,
+            'newArticles1'	=> $articles1,
+            'newArticles2'	=> $articles2,
+            'articles'	=> $articles,
+            'qtd_articles' => $qtd_articles,
+            'mostViewed'	=> $this->mostViewed(),
+            'categories'	=> $this->categories(),
+            'authors'	   => $this->authors()
+        );
+
+        return view('users.articles', $var);
 	}
 
 	public function mostViewed()
 	{
-		$articles = Article::where('status', '=', 1)
+		return Article::where('status', '=', 1)
 			->orderBy('views', 'desc')
 			->take(8)
 			->get();
-		return $articles;
 	}
 
 	public function categories()
 	{
-		$categories = Category::select('id','name','filename')
+		return Category::select('id','name','filename')
 			->get();
-		return $categories;
 	}
-	
+
+	public function authors()
+	{
+	  return User::select('id','name','avatar')
+	      ->get();
+	}
+
+	public function category($title, $id)
+	{
+
+		$category = Category::find($id);
+        $qtd_articles = $category->articles()->count();
+		$headlines = $category->articles()
+			->select('id','title','filename','path')
+			->where('headline', '=', 1)
+			->where('status', '=', 1)
+			->take(3)
+			->get();
+
+		$articles1 = $category->articles()
+			->select('id','title','filename','path')
+			->where('headline', '=',0)
+			->where('status', '=', 1)
+			->take(2)
+			->get();
+		$articles2 = $category->articles()
+			->select('id','title','filename','path')
+			->where('headline', '=',0)
+			->where('status', '=', 1)
+			->skip(2)
+			->take(3)
+			->get();
+
+		$articles =$category->articles()
+			->select('id','title','synthesis','filename','path', 'views')
+			->where('status', '=', 1)
+			->orderBy('updated_at','DESC')
+			->paginate(15);
+
+		
+		$var = array(
+			'category'	=>	$category,
+			'newHeadlines' => $headlines,
+			'newArticles1'	=> $articles1,
+			'newArticles2'	=> $articles2,
+			'articles'	=> $articles,
+            'qtd_articles' => $qtd_articles,
+			'mostViewed'	=> $this->mostViewed(),
+			'categories'	=> $this->categories(),
+			'authors'	   => $this->authors()
+		);
+
+		return view('category.articles', $var);
+	}
+
 }

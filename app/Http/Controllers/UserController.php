@@ -22,11 +22,11 @@ class UserController extends Controller
 
       if (Auth::attempt(['email' => $email, 'password' => $password])) {
             // Authentication passed...
-         // return redirect()->intended()->route('admin.register');
-         echo 'pegou';
+         return redirect()->intended(route('article.list'));
+         // echo 'pegou';
       } else{
-      	echo 'merda';
-      	// return back()->withErrors('error');
+      	// echo 'merda';
+      	return back()->withErrors('error');
       }
    }
 	public function onList()

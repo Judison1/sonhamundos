@@ -27,9 +27,12 @@
 			<div class="form-group col-md-6 col-xs-12">
 					<label class="control-label">Tags: </label>
 					<select name="tags[]" class="tags" multiple="multiple">
-						<option value="1">tettsts</option>
-						<option value="2">tetts</option>
-						<option value="3">tevcssts</option>
+						@for ($i = 0; $i < count($tags) ; $i++)
+							<?php $tag = (object) $tags[$i]; ?>
+							<option value="{{ $tag->id }}" {{ $tag->status }}>
+								{{ $tag->name }}
+							</option>
+						@endfor
 					</select>
 			</div>
 			<div class="form-group col-md-6 col-xs-12">

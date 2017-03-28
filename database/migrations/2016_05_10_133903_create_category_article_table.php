@@ -13,11 +13,14 @@ class CreateCategoryArticleTable extends Migration
     public function up()
     {
         Schema::create('category_article', function($table) {
-            $table->increments('id');
+//            $table->increments('id');
             $table->integer('category_id')
                 ->unsigned();
             $table->integer('article_id')
                 ->unsigned();
+            // $table->timestamps();
+
+            // $table->primary(['category_id', 'article_id']);
 
             $table->foreign('category_id')
                 ->references('id')
