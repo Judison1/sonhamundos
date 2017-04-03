@@ -51,6 +51,9 @@
 					</a>
 					@endforeach
 				</div>
+				<div class="col-md-12">
+					<div id="disqus_thread"></div>
+				</div>
 			</footer>
 		</article>
 	</section>
@@ -65,4 +68,26 @@
 			@endforeach
 		</div>
 	</section>
+@endsection
+@section('js')
+<script id="dsq-count-scr" src="//sonhamundos.disqus.com/count.js" async></script>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+var disqus_config = function () {
+this.page.url = "{{ route('public.view', ['title' => str_slug($article->title), 'id' => $article->id ]) }}";  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "{{ $article->id }}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://sonhamundos.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 @endsection

@@ -14,7 +14,10 @@
 $app = new Illuminate\Foundation\Application(
     realpath(__DIR__.'/../')
 );
-
+/* -- add this new code -- */
+$app = new App\GoPublic(
+ 	realpath(__DIR__.'/../')
+);
 /*
 |--------------------------------------------------------------------------
 | Bind Important Interfaces

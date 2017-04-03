@@ -1,10 +1,10 @@
-APP_ENV=production
+APP_ENV=local
 APP_DEBUG=true
 APP_KEY=base64:tq//u5a6+yTMRUbCULPJip19TAhMf+olxqB2FIk1CMQ=
 APP_URL=http://localhost
 
 DB_CONNECTION=mysql
-DB_HOST=localhost
+DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=sonhamundos
 DB_USERNAME=root
