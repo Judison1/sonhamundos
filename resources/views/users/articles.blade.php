@@ -10,7 +10,7 @@
                     <div class="col-md-4">
                         <img src='{{ asset("img/users/$author->avatar") }}' class="category-img img-circle" data-adaptive-background data-ab-parent='.category-info'>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-7 col-md-offset-1">
                         <div class="row">
                             <h1 class='text'>{{ $author->name }}</h1>
                             <p>{{ $author->description }}</p>

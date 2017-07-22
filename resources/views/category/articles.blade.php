@@ -10,7 +10,7 @@
 					<div class="col-md-4">
 						<img src='{{ asset("img/category/$category->filename") }}' class="category-img img-circle" data-adaptive-background data-ab-parent='.jumbotron'>
 					</div>
-					<div class="col-md-8">
+					<div class="col-md-7 col-md-offset-1">
 						<div class="row">
 							<h1 class='text'>{{ $category->name }}</h1>
 							<p>{{ $category->description }}</p>
