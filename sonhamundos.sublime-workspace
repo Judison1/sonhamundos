@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"i",
+				"inline-block"
+			],
+			[
+				"n",
+				"transparent"
+			],
+			[
+				"re",
+				"request"
+			],
+			[
+				"us",
+				"user"
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"con",
+				"controller"
+			],
+			[
 				"pa",
 				"padding-top"
 			],
@@ -81,15 +105,15 @@
 			],
 			[
 				"fu",
-				"fun	Function"
+				"fun\tFunction"
 			],
 			[
 				"remo",
-				"removeClass	.removeClass()"
+				"removeClass\t.removeClass()"
 			],
 			[
 				"get",
-				"get	$.get()"
+				"get\t$.get()"
 			],
 			[
 				"lo",
@@ -113,11 +137,11 @@
 			],
 			[
 				"ge",
-				"get	$.get()"
+				"get\t$.get()"
 			],
 			[
 				"pare",
-				"parent	.parent()"
+				"parent\t.parent()"
 			],
 			[
 				"sele",
@@ -129,15 +153,15 @@
 			],
 			[
 				"ch",
-				"children	.children()"
+				"children\t.children()"
 			],
 			[
 				"add",
-				"addClass	.addClass()"
+				"addClass\t.addClass()"
 			],
 			[
 				"rem",
-				"removeClass	.removeClass()"
+				"removeClass\t.removeClass()"
 			],
 			[
 				"pos",
@@ -150,10 +174,6 @@
 			[
 				"p",
 				"path"
-			],
-			[
-				"re",
-				"redirect"
 			],
 			[
 				"ca",
@@ -177,11 +197,11 @@
 			],
 			[
 				"if",
-				"if	if …"
+				"if\tif …"
 			],
 			[
 				"ac",
-				"action	Attr"
+				"action\tAttr"
 			],
 			[
 				"sat",
@@ -193,7 +213,7 @@
 			],
 			[
 				"su",
-				"submit	.submit()"
+				"submit\t.submit()"
 			],
 			[
 				"ari",
@@ -213,7 +233,7 @@
 			],
 			[
 				"for",
-				"for	blade-for"
+				"for\tblade-for"
 			],
 			[
 				"array_m",
@@ -229,11 +249,11 @@
 			],
 			[
 				"fo",
-				"foreach	foreach …"
+				"foreach\tforeach …"
 			],
 			[
 				"a",
-				"a	Tag"
+				"a\tTag"
 			],
 			[
 				"la",
@@ -241,7 +261,7 @@
 			],
 			[
 				"im",
-				"img	Tag"
+				"img\tTag"
 			],
 			[
 				"rg",
@@ -249,7 +269,7 @@
 			],
 			[
 				"fun",
-				"fun	function …"
+				"fun\tfunction …"
 			],
 			[
 				"or",
@@ -269,7 +289,7 @@
 			],
 			[
 				"he",
-				"header	Tag"
+				"header\tTag"
 			],
 			[
 				"te",
@@ -293,7 +313,7 @@
 			],
 			[
 				"h",
-				"h3	Tag"
+				"h3\tTag"
 			],
 			[
 				"text",
@@ -341,23 +361,23 @@
 			],
 			[
 				"op",
-				"option	Tag"
+				"option\tTag"
 			],
 			[
 				"AC",
-				"action	Attr"
+				"action\tAttr"
 			],
 			[
 				"in",
-				"input	Tag"
+				"input\tTag"
 			],
 			[
 				"read",
-				"ready	$(document).ready"
+				"ready\t$(document).ready"
 			],
 			[
 				"di",
-				"div	Tag"
+				"div\tTag"
 			],
 			[
 				"cate",
@@ -366,10 +386,6 @@
 			[
 				"ro",
 				"route"
-			],
-			[
-				"n",
-				"name"
 			],
 			[
 				"un",
@@ -393,11 +409,11 @@
 			],
 			[
 				"l",
-				"li	Tag"
+				"li\tTag"
 			],
 			[
 				"u",
-				"ul	Tag"
+				"ul\tTag"
 			],
 			[
 				"js",
@@ -405,7 +421,7 @@
 			],
 			[
 				"at",
-				"attr	.attr() - single"
+				"attr\t.attr() - single"
 			],
 			[
 				"w",
@@ -417,7 +433,7 @@
 			],
 			[
 				"Route",
-				"Route::controller	Route a controller to a URI with wildcard routing."
+				"Route::controller\tRoute a controller to a URI with wildcard routing."
 			],
 			[
 				"C",
@@ -433,7 +449,7 @@
 			],
 			[
 				"S",
-				"Schema::drop	Drop an existing database table"
+				"Schema::drop\tDrop an existing database table"
 			],
 			[
 				"inc",
@@ -469,7 +485,7 @@
 			],
 			[
 				"de",
-				"def	#ifndef … #define … #endif"
+				"def\t#ifndef … #define … #endif"
 			],
 			[
 				"pi",
@@ -485,7 +501,7 @@
 			],
 			[
 				"f",
-				"fore	for (each)"
+				"fore\tfor (each)"
 			],
 			[
 				"d",
@@ -498,90 +514,72 @@
 			[
 				"F",
 				"Form"
-			],
-			[
-				"v",
-				"void"
-			],
-			[
-				"en",
-				"endl"
-			],
-			[
-				"i",
-				"include"
-			],
-			[
-				"FORM",
-				"form"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "resources/views/users/articles.blade.php",
+			"file": "app/Http/routes.php",
 			"settings":
 			{
-				"buffer_size": 4081,
-				"line_ending": "Unix"
+				"buffer_size": 1959,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/home/judison1/Área de Trabalho/programação relatório renan.txt",
+			"file": "resources/views/users/register.blade.php",
 			"settings":
 			{
-				"buffer_size": 451,
-				"line_ending": "Unix",
-				"name": "- Tentativa de criar a central multimidia com a ra"
-			}
-		},
-		{
-			"file": "composer.json",
-			"settings":
-			{
-				"buffer_size": 1310,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "resources/views/category/articles.blade.php",
-			"settings":
-			{
-				"buffer_size": 3243,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/Http/Controllers/UserController.php",
-			"settings":
-			{
-				"buffer_size": 1065,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "resources/views/layouts/default.blade.php",
-			"settings":
-			{
-				"buffer_size": 3054,
-				"line_ending": "Unix"
+				"buffer_size": 3675,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "public/css/style.css",
 			"settings":
 			{
-				"buffer_size": 2465,
+				"buffer_size": 2819,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "public/css/component.css",
+			"settings":
+			{
+				"buffer_size": 6104,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "resources/views/category/articles.blade.php",
+			"settings":
+			{
+				"buffer_size": 3576,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/Http/Controllers/UserController.php",
+			"settings":
+			{
+				"buffer_size": 2963,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "resources/views/index.blade.php",
+			"file": "app/Http/Controllers/CategoryController.php",
 			"settings":
 			{
-				"buffer_size": 2332,
-				"line_ending": "Unix"
+				"buffer_size": 4162,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -646,18 +644,26 @@
 	},
 	"expanded_folders":
 	[
-		"/var/www/html/sonhamundos",
-		"/var/www/html/sonhamundos/app/Http/Controllers",
-		"/var/www/html/sonhamundos/bootstrap",
-		"/var/www/html/sonhamundos/public/css",
-		"/var/www/html/sonhamundos/resources/lang",
-		"/var/www/html/sonhamundos/resources/views",
-		"/var/www/html/sonhamundos/resources/views/layouts",
-		"/var/www/html/sonhamundos/vendor",
-		"/var/www/html/sonhamundos/vendor/composer"
+		"/C/wamp64/www/sonhamundos",
+		"/C/wamp64/www/sonhamundos/app",
+		"/C/wamp64/www/sonhamundos/app/Http/Controllers",
+		"/C/wamp64/www/sonhamundos/database/seeds",
+		"/C/wamp64/www/sonhamundos/public",
+		"/C/wamp64/www/sonhamundos/public/css",
+		"/C/wamp64/www/sonhamundos/resources",
+		"/C/wamp64/www/sonhamundos/resources/views",
+		"/C/wamp64/www/sonhamundos/resources/views/layouts"
 	],
 	"file_history":
 	[
+		"/C/wamp64/www/sonhamundos/resources/views/users/articles.blade.php",
+		"/C/wamp64/www/sonhamundos/resources/views/category/articles.blade.php",
+		"/C/wamp64/www/sonhamundos/resources/views/index.blade.php",
+		"/C/wamp64/www/sonhamundos/public/css/style.css",
+		"/C/wamp64/www/sonhamundos/resources/views/layouts/default.blade.php",
+		"/C/wamp64/www/sonhamundos/composer.json",
+		"/C/wamp64/www/sonhamundos/.env",
+		"/home/judison1/Área de Trabalho/programação relatório renan.txt",
 		"/home/judison1/Documentos/BCC/Autômatos/ambiguidade glc.txt",
 		"/home/judison1/Área de Trabalho/trapezio.cpp",
 		"/media/judison1/Jörmungandr/Helheim/BCC/Autômatos e Linguagens Formais/Trabalho.txt",
@@ -777,15 +783,7 @@
 		"/C/Users/judis/AppData/Local/Temp/Temp1_wiki.zip/wiki/public/assets/css/admin/estilo.css",
 		"/C/wamp/www/sonhamundo/public/css/style.css",
 		"/C/wamp/www/sonhamundo/resources/views/index.blade.php",
-		"/C/wamp/www/sonhamundo/resources/views/articles/_article.blade.php",
-		"/C/wamp/www/sonhamundo/resources/views/articles/_news_headlines.blade.php",
-		"/C/wamp/www/sonhamundo/resources/views/articles/_news_articles_2.blade.php",
-		"/C/wamp/www/sonhamundo/resources/views/articles/_news_articles_1.blade.php",
-		"/C/wamp/www/sonhamundo/app/Article.php",
-		"/C/wamp/www/sonhamundo/app/Category.php",
-		"/C/wamp/www/sonhamundo/resources/views/articles/_most_viewed.blade.php",
-		"/C/wamp/www/sonhamundo/app/User.php",
-		"/C/wamp/www/sonhamundo/app/Permission.php"
+		"/C/wamp/www/sonhamundo/resources/views/articles/_article.blade.php"
 	],
 	"find":
 	{
@@ -803,6 +801,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"ab-dark",
+			"',\n",
 			"diff",
 			"old",
 			"listen",
@@ -812,7 +812,7 @@
 			"'",
 			"bac",
 			"hssubmenu",
-			"<div class=\"row\">\n	  								<div class=\"col-md-4\">\n	  									CVERDE \n	  									<small class=\"text-info\">(Metros Cúbicos por Hectares)</small>\n	  								</div>\n	  								<div class=\"col-md-4\">\n	  									<span class=\"form-control cverde\"></span>\n	  								</div>\n	  							</div>\n	  							",
+			"<div class=\"row\">\n\t  \t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t  \t\t\t\t\t\t\t\t\tCVERDE \n\t  \t\t\t\t\t\t\t\t\t<small class=\"text-info\">(Metros Cúbicos por Hectares)</small>\n\t  \t\t\t\t\t\t\t\t</div>\n\t  \t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t  \t\t\t\t\t\t\t\t\t<span class=\"form-control cverde\"></span>\n\t  \t\t\t\t\t\t\t\t</div>\n\t  \t\t\t\t\t\t\t</div>\n\t  \t\t\t\t\t\t\t",
 			"car",
 			"provi",
 			"image",
@@ -828,7 +828,7 @@
 			"loga",
 			"sess",
 			"utf",
-			"<?php\n	include 'include/topo.php';\n?>",
+			"<?php\n\tinclude 'include/topo.php';\n?>",
 			"topo",
 			"rodape",
 			"button",
@@ -928,9 +928,7 @@
 			"a{",
 			".outras_coisas a",
 			"outras_coi",
-			"tran",
-			"paginaca",
-			"sintese"
+			"tran"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -953,137 +951,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "resources/views/users/articles.blade.php",
+					"file": "app/Http/routes.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4081,
+						"buffer_size": 1959,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1523,
-								1523
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 256.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/home/judison1/Área de Trabalho/programação relatório renan.txt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 451,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								408,
-								408
-							]
-						],
-						"settings":
-						{
-							"auto_name": "- Tentativa de criar a central multimidia com a ra",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "composer.json",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 1310,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 229.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "resources/views/category/articles.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3243,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1668,
-								1668
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1984.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/Http/Controllers/UserController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1065,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								603,
-								603
+								1879,
+								1879
 							]
 						],
 						"settings":
@@ -1091,27 +971,27 @@
 							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 406.0,
+						"translation.y": 1152.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "resources/views/layouts/default.blade.php",
+					"buffer": 1,
+					"file": "resources/views/users/register.blade.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3054,
+						"buffer_size": 3675,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								786,
-								786
+								318,
+								275
 							]
 						],
 						"settings":
@@ -1120,27 +1000,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 214.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 2,
 					"file": "public/css/style.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2465,
+						"buffer_size": 2819,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2438,
-								2438
+								2048,
+								2048
 							]
 						],
 						"settings":
@@ -1149,27 +1029,56 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3931.0,
+						"translation.y": 3456.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "resources/views/index.blade.php",
+					"buffer": 3,
+					"file": "public/css/component.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2332,
+						"buffer_size": 6104,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1176,
-								1176
+								3447,
+								3447
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 4849.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "resources/views/category/articles.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3576,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								203,
+								203
 							]
 						],
 						"settings":
@@ -1178,10 +1087,67 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1312.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/Http/Controllers/UserController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2963,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2090,
+								2096
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2099.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/Http/Controllers/CategoryController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4162,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1349,
+								1408
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 384.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
 					"type": "text"
 				}
 			]
@@ -1189,7 +1155,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 52.0
+		"height": 40.0
 	},
 	"input":
 	{

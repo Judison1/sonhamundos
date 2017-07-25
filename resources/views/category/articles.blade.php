@@ -3,25 +3,28 @@
 @section('title', $category->name)
 @section('container-fluid')
 	<section class="category-info row">
-
-		<div class="jumbotron">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-4">
-						<img src='{{ asset("img/category/$category->filename") }}' class="category-img img-circle" data-adaptive-background data-ab-parent='.jumbotron'>
-					</div>
-					<div class="col-md-7 col-md-offset-1">
+		<div class="adaptive-background">
+			<div class="adaptive-background-img">
+				<div class="jumbotron">
+					<div class="container">
 						<div class="row">
-							<h1 class='text'>{{ $category->name }}</h1>
-							<p>{{ $category->description }}</p>
-						</div>
-						<div class="row">
-							<span>Quantidade de artigos: {{ $qtd_articles }}</span>
+							<div class="col-md-4">
+								<img src='{{ asset("img/category/$category->filename") }}' class="category-img img-circle" data-adaptive-background data-ab-parent='.adaptive-background'>
+							</div>
+							<div class="col-md-7 col-md-offset-1">
+								<div class="row">
+									<h1 class='text'>{{ $category->name }}</h1>
+									<p>{{ $category->description }}</p>
+								</div>
+								<div class="row">
+									<span>Quantidade de artigos: {{ $qtd_articles }}</span>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-
+			<!-- </div> -->
+		</div>
 
 		</div>
 	</section>

@@ -52,6 +52,11 @@ Route::group(['middleware' => ['auth']], function () {
 		'deleteRemover' => 'article.delete',
 	]);
 
+	Route::controller('/admin/usuario', 'UserController', [
+		'getRegistro'	=> 'user.register',
+		'getEditar' 	=> 'user.edit',
+	]);
+
 });
 
 Route::auth();
