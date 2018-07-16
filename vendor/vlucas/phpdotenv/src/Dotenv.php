@@ -2,6 +2,8 @@
 
 namespace Dotenv;
 
+use Dotenv\Exception\InvalidPathException;
+
 /**
  * This is the dotenv class.
  *
@@ -39,27 +41,38 @@ class Dotenv
     }
 
     /**
-     * Load `.env` file in given directory.
+     * Load environment file in given directory.
      *
      * @return array
      */
     public function load()
     {
-        $this->loader = new Loader($this->filePath, true);
-
-        return $this->loader->load();
+        return $this->loadData();
     }
 
     /**
-     * Load `.env` file in given directory.
+     * Load environment file in given directory, suppress InvalidPathException.
+     *
+     * @return array
+     */
+    public function safeLoad()
+    {
+        try {
+            return $this->loadData();
+        } catch (InvalidPathException $e) {
+            // suppressing exception
+            return array();
+        }
+    }
+
+    /**
+     * Load environment file in given directory.
      *
      * @return array
      */
     public function overload()
     {
-        $this->loader = new Loader($this->filePath, false);
-
-        return $this->loader->load();
+        return $this->loadData(true);
     }
 
     /**
@@ -82,7 +95,19 @@ class Dotenv
     }
 
     /**
-     * Required ensures that the specified variables exist, and returns a new Validator object.
+     * Actually load the data.
+     *
+     * @param bool $overload
+     *
+     * @return array
+     */
+    protected function loadData($overload = false)
+    {
+        return $this->loader->setImmutable(!$overload)->load();
+    }
+
+    /**
+     * Required ensures that the specified variables exist, and returns a new validator object.
      *
      * @param string|string[] $variable
      *
@@ -91,5 +116,15 @@ class Dotenv
     public function required($variable)
     {
         return new Validator((array) $variable, $this->loader);
+    }
+
+    /**
+     * Get the list of environment variables declared inside the 'env' file.
+     *
+     * @return array
+     */
+    public function getEnvironmentVariableNames()
+    {
+        return $this->loader->variableNames;
     }
 }

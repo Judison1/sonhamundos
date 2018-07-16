@@ -9,8 +9,9 @@
       <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
       <user-name>root</user-name>
-      <introspection-scope>sonhamundos:</introspection-scope>
+      <introspection-schemas>*:sonhamundos|sonhamundos:</introspection-schemas>
       <resolve-scope>sonhamundos:</resolve-scope>
+      <unqualified-resolve-schemas>sonhamundos:</unqualified-resolve-schemas>
     </data-source>
   </component>
 </project>
